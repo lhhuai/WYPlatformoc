@@ -1,0 +1,469 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		55177D6E1C88130500C02910 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55177D6D1C88130500C02910 /* main.m */; };
+		55177D711C88130500C02910 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55177D701C88130500C02910 /* AppDelegate.m */; };
+		55177D771C88130500C02910 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55177D751C88130500C02910 /* Main.storyboard */; };
+		55177D791C88130500C02910 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55177D781C88130500C02910 /* Assets.xcassets */; };
+		55177D7C1C88130500C02910 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55177D7A1C88130500C02910 /* LaunchScreen.storyboard */; };
+		55177D871C88130500C02910 /* WYPlatformocTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 55177D861C88130500C02910 /* WYPlatformocTests.m */; };
+		55177D9E1C88137D00C02910 /* LHHLoginTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55177D951C88137D00C02910 /* LHHLoginTableViewCell.m */; };
+		55177D9F1C88137D00C02910 /* LHHLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55177D971C88137D00C02910 /* LHHLoginViewController.m */; };
+		55177DA01C88137D00C02910 /* LHHMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55177D991C88137D00C02910 /* LHHMainViewController.m */; };
+		55177DA11C88137D00C02910 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55177D9B1C88137D00C02910 /* Default-568h@2x.png */; };
+		55177DA21C88137D00C02910 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 55177D9C1C88137D00C02910 /* Default.png */; };
+		55177DA31C88137D00C02910 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55177D9D1C88137D00C02910 /* Default@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		55177D831C88130500C02910 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55177D611C88130400C02910 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55177D681C88130400C02910;
+			remoteInfo = WYPlatformoc;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		55177D691C88130400C02910 /* WYPlatformoc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WYPlatformoc.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		55177D6D1C88130500C02910 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		55177D6F1C88130500C02910 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		55177D701C88130500C02910 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		55177D761C88130500C02910 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		55177D781C88130500C02910 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		55177D7B1C88130500C02910 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		55177D7D1C88130500C02910 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55177D821C88130500C02910 /* WYPlatformocTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WYPlatformocTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		55177D861C88130500C02910 /* WYPlatformocTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYPlatformocTests.m; sourceTree = "<group>"; };
+		55177D881C88130500C02910 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55177D921C88137D00C02910 /* LHHDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHDefines.h; sourceTree = "<group>"; };
+		55177D941C88137D00C02910 /* LHHLoginTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHLoginTableViewCell.h; sourceTree = "<group>"; };
+		55177D951C88137D00C02910 /* LHHLoginTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHLoginTableViewCell.m; sourceTree = "<group>"; };
+		55177D961C88137D00C02910 /* LHHLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHLoginViewController.h; sourceTree = "<group>"; };
+		55177D971C88137D00C02910 /* LHHLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHLoginViewController.m; sourceTree = "<group>"; };
+		55177D981C88137D00C02910 /* LHHMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHMainViewController.h; sourceTree = "<group>"; };
+		55177D991C88137D00C02910 /* LHHMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHMainViewController.m; sourceTree = "<group>"; };
+		55177D9B1C88137D00C02910 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		55177D9C1C88137D00C02910 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		55177D9D1C88137D00C02910 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		55177D661C88130400C02910 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55177D7F1C88130500C02910 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		55177D601C88130400C02910 = {
+			isa = PBXGroup;
+			children = (
+				55177D6B1C88130500C02910 /* WYPlatformoc */,
+				55177D851C88130500C02910 /* WYPlatformocTests */,
+				55177D6A1C88130400C02910 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		55177D6A1C88130400C02910 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				55177D691C88130400C02910 /* WYPlatformoc.app */,
+				55177D821C88130500C02910 /* WYPlatformocTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		55177D6B1C88130500C02910 /* WYPlatformoc */ = {
+			isa = PBXGroup;
+			children = (
+				55177D911C88137D00C02910 /* LHHBase */,
+				55177D931C88137D00C02910 /* LHHLogin */,
+				55177D6F1C88130500C02910 /* AppDelegate.h */,
+				55177D701C88130500C02910 /* AppDelegate.m */,
+				55177D981C88137D00C02910 /* LHHMainViewController.h */,
+				55177D991C88137D00C02910 /* LHHMainViewController.m */,
+				55177D751C88130500C02910 /* Main.storyboard */,
+				55177D781C88130500C02910 /* Assets.xcassets */,
+				55177D7A1C88130500C02910 /* LaunchScreen.storyboard */,
+				55177D6C1C88130500C02910 /* Supporting Files */,
+				55177D9A1C88137D00C02910 /* Resource */,
+			);
+			path = WYPlatformoc;
+			sourceTree = "<group>";
+		};
+		55177D6C1C88130500C02910 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				55177D7D1C88130500C02910 /* Info.plist */,
+				55177D6D1C88130500C02910 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		55177D851C88130500C02910 /* WYPlatformocTests */ = {
+			isa = PBXGroup;
+			children = (
+				55177D861C88130500C02910 /* WYPlatformocTests.m */,
+				55177D881C88130500C02910 /* Info.plist */,
+			);
+			path = WYPlatformocTests;
+			sourceTree = "<group>";
+		};
+		55177D911C88137D00C02910 /* LHHBase */ = {
+			isa = PBXGroup;
+			children = (
+				55177D921C88137D00C02910 /* LHHDefines.h */,
+			);
+			path = LHHBase;
+			sourceTree = "<group>";
+		};
+		55177D931C88137D00C02910 /* LHHLogin */ = {
+			isa = PBXGroup;
+			children = (
+				55177D941C88137D00C02910 /* LHHLoginTableViewCell.h */,
+				55177D951C88137D00C02910 /* LHHLoginTableViewCell.m */,
+				55177D961C88137D00C02910 /* LHHLoginViewController.h */,
+				55177D971C88137D00C02910 /* LHHLoginViewController.m */,
+			);
+			path = LHHLogin;
+			sourceTree = "<group>";
+		};
+		55177D9A1C88137D00C02910 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				55177D9B1C88137D00C02910 /* Default-568h@2x.png */,
+				55177D9C1C88137D00C02910 /* Default.png */,
+				55177D9D1C88137D00C02910 /* Default@2x.png */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		55177D681C88130400C02910 /* WYPlatformoc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55177D8B1C88130500C02910 /* Build configuration list for PBXNativeTarget "WYPlatformoc" */;
+			buildPhases = (
+				55177D651C88130400C02910 /* Sources */,
+				55177D661C88130400C02910 /* Frameworks */,
+				55177D671C88130400C02910 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WYPlatformoc;
+			productName = WYPlatformoc;
+			productReference = 55177D691C88130400C02910 /* WYPlatformoc.app */;
+			productType = "com.apple.product-type.application";
+		};
+		55177D811C88130500C02910 /* WYPlatformocTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55177D8E1C88130500C02910 /* Build configuration list for PBXNativeTarget "WYPlatformocTests" */;
+			buildPhases = (
+				55177D7E1C88130500C02910 /* Sources */,
+				55177D7F1C88130500C02910 /* Frameworks */,
+				55177D801C88130500C02910 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				55177D841C88130500C02910 /* PBXTargetDependency */,
+			);
+			name = WYPlatformocTests;
+			productName = WYPlatformocTests;
+			productReference = 55177D821C88130500C02910 /* WYPlatformocTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		55177D611C88130400C02910 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = seaphy;
+				TargetAttributes = {
+					55177D681C88130400C02910 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = N6NA53R7EH;
+					};
+					55177D811C88130500C02910 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = N6NA53R7EH;
+						TestTargetID = 55177D681C88130400C02910;
+					};
+				};
+			};
+			buildConfigurationList = 55177D641C88130400C02910 /* Build configuration list for PBXProject "WYPlatformoc" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 55177D601C88130400C02910;
+			productRefGroup = 55177D6A1C88130400C02910 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				55177D681C88130400C02910 /* WYPlatformoc */,
+				55177D811C88130500C02910 /* WYPlatformocTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		55177D671C88130400C02910 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55177DA31C88137D00C02910 /* Default@2x.png in Resources */,
+				55177D7C1C88130500C02910 /* LaunchScreen.storyboard in Resources */,
+				55177DA11C88137D00C02910 /* Default-568h@2x.png in Resources */,
+				55177D791C88130500C02910 /* Assets.xcassets in Resources */,
+				55177D771C88130500C02910 /* Main.storyboard in Resources */,
+				55177DA21C88137D00C02910 /* Default.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55177D801C88130500C02910 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		55177D651C88130400C02910 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55177D711C88130500C02910 /* AppDelegate.m in Sources */,
+				55177D9E1C88137D00C02910 /* LHHLoginTableViewCell.m in Sources */,
+				55177D9F1C88137D00C02910 /* LHHLoginViewController.m in Sources */,
+				55177DA01C88137D00C02910 /* LHHMainViewController.m in Sources */,
+				55177D6E1C88130500C02910 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55177D7E1C88130500C02910 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55177D871C88130500C02910 /* WYPlatformocTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		55177D841C88130500C02910 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 55177D681C88130400C02910 /* WYPlatformoc */;
+			targetProxy = 55177D831C88130500C02910 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		55177D751C88130500C02910 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55177D761C88130500C02910 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		55177D7A1C88130500C02910 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55177D7B1C88130500C02910 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		55177D891C88130500C02910 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		55177D8A1C88130500C02910 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		55177D8C1C88130500C02910 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WYPlatformoc/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.seaphy.WYPlatformoc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		55177D8D1C88130500C02910 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WYPlatformoc/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.seaphy.WYPlatformoc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		55177D8F1C88130500C02910 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = WYPlatformocTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.seaphy.WYPlatformocTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WYPlatformoc.app/WYPlatformoc";
+			};
+			name = Debug;
+		};
+		55177D901C88130500C02910 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = WYPlatformocTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.seaphy.WYPlatformocTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WYPlatformoc.app/WYPlatformoc";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		55177D641C88130400C02910 /* Build configuration list for PBXProject "WYPlatformoc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55177D891C88130500C02910 /* Debug */,
+				55177D8A1C88130500C02910 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55177D8B1C88130500C02910 /* Build configuration list for PBXNativeTarget "WYPlatformoc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55177D8C1C88130500C02910 /* Debug */,
+				55177D8D1C88130500C02910 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		55177D8E1C88130500C02910 /* Build configuration list for PBXNativeTarget "WYPlatformocTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55177D8F1C88130500C02910 /* Debug */,
+				55177D901C88130500C02910 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 55177D611C88130400C02910 /* Project object */;
+}
