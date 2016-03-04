@@ -40,6 +40,8 @@
     self.separatorLine = [[UILabel alloc]initWithFrame:CGRectMake(14, 36, self.bounds.size.width - 14, 0.5)];
     self.separatorLine.backgroundColor = RGBCOLOR(239, 239, 239);
     [self addSubview:self.separatorLine];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldTextDidChanged:) name:UITextFieldTextDidChangeNotification object:self.textField];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -49,10 +51,25 @@
 }
 
 #pragma mark - UITextFieldDelegate
-- (void)textFieldDidEndEditing:(UITextField *)textField {
-    if ([self.delegate respondsToSelector:@selector(cellTextFieldDidEndEditing:)]) {
-        [self.delegate cellTextFieldDidEndEditing:self];
+- (void)textFieldTextDidChanged:(NSNotification *)notification {
+    if ([self.delegate respondsToSelector:@selector(cellTextFieldTextDidChanged:)]) {
+        [self.delegate cellTextFieldTextDidChanged:self];
     }
+}
+
+//- (void)textFieldDidEndEditing:(UITextField *)textField {
+//    if ([self.delegate respondsToSelector:@selector(cellTextFieldDidEndEditing:)]) {
+//        [self.delegate cellTextFieldDidEndEditing:self];
+//    }
+//}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    if ([self.delegate respondsToSelector:@selector(cellTextFieldShouldReturn:)]) {
+        [self.delegate cellTextFieldShouldReturn:self];
+    }
+    
+    [textField resignFirstResponder];
+    return YES;
 }
 
 @end

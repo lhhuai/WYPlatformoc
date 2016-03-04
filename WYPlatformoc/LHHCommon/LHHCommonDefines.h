@@ -33,3 +33,10 @@
 
 // 此项目中隐藏tabbar后UIViewController的view的高度
 #define VIEW_HIDETABBAR_HEIGHT     (SCREEN_HEIGHT - PHONE_NAVIGATIONBAR_HEIGHT - PHONE_STATUSBAR_HEIGHT)
+
+
+#if __IPHONE_OS_VERSION_MIN_REQUIRED >= 70000
+#define WY_TEXTSIZE(text, font) [text length] > 0 ? [text sizeWithAttributes:@{NSFontAttributeName:font}] : CGSizeZero;
+#else
+#define WY_TEXTSIZE(text, font) [text length] > 0 ? [text sizeWithFont:font] : CGSizeZero;
+#endif

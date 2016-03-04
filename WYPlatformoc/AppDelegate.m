@@ -24,7 +24,6 @@
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:loginViewController];
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    nav.navigationBar.translucent = YES;
     
     self.window.rootViewController = nav;
     self.window.backgroundColor = [UIColor whiteColor];

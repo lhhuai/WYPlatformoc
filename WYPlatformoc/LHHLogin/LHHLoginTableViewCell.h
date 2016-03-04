@@ -27,6 +27,8 @@ typedef NS_ENUM(NSInteger, LHHLoginCellType) {
 
 @protocol LHHLoginTableViewCellDelegate <NSObject>
 
-- (void)cellTextFieldDidEndEditing:(LHHLoginTableViewCell *)cell;
+- (void)cellTextFieldTextDidChanged:(LHHLoginTableViewCell *)cell;
+//- (void)cellTextFieldDidEndEditing:(LHHLoginTableViewCell *)cell;
+- (void)cellTextFieldShouldReturn:(LHHLoginTableViewCell *)cell;
 
 @end

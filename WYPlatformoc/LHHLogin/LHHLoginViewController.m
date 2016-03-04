@@ -11,12 +11,14 @@
 #import "LHHCommonColors.h"
 #import "LHHLoginTableViewCell.h"
 #import "LHHMainViewController.h"
+#import "LHHActionSheet.h"
 
 static NSString *kLHHLoginTableViewCellIdentifier = @"LHHLoginTableViewCellIdentifier";
 
 @interface LHHLoginViewController () <UITableViewDelegate, UITableViewDataSource, LHHLoginTableViewCellDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) UIButton *loginButton;
 
 @property (nonatomic, strong) NSString *accountString;
 @property (nonatomic, strong) NSString *passwordString;
@@ -29,8 +31,10 @@ static NSString *kLHHLoginTableViewCellIdentifier = @"LHHLoginTableViewCellIdent
     [super loadView];
     
     [self.navigationController.navigationBar setBarTintColor:[UIColor whiteColor]];
+//    UIImage *bgImage = [UIImage imageNamed:@"blank_Translucent_44"];
+//    [self.navigationController.navigationBar setBackgroundImage:bgImage forBarMetrics:UIBarMetricsDefault];
     [self.navigationController.navigationBar setTranslucent:YES];
-//    self.navigationController.navigationBar.alpha = 0.4;
+//    self.navigationController.navigationBar.alpha = 0.5;
     NSArray *list = self.navigationController.navigationBar.subviews;
     for (id obj in list) {
         if ([obj isKindOfClass:[UIImageView class]]) {
@@ -44,8 +48,6 @@ static NSString *kLHHLoginTableViewCellIdentifier = @"LHHLoginTableViewCellIdent
             }
         }
     }
-//    UIBarButtonItem *cancel
-//    self.navigationItem.leftBarButtonItem = 
     
     self.view.backgroundColor = [UIColor whiteColor];
     
@@ -54,38 +56,53 @@ static NSString *kLHHLoginTableViewCellIdentifier = @"LHHLoginTableViewCellIdent
     self.tableView = [[UITableView alloc] initWithFrame:tableViewFrame style:UITableViewStylePlain];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    self.tableView.backgroundColor = [UIColor clearColor];
+    self.tableView.backgroundColor = [UIColor whiteColor];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.showsVerticalScrollIndicator = NO;
     [self.view addSubview:self.tableView];
     
     // table header view
     UIView *tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 80)];
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(40, 20, SCREEN_WIDTH - 80, 20)];
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(40, 15, SCREEN_WIDTH - 80, 20)];
     titleLabel.text = @"Log In";
     titleLabel.textAlignment = NSTextAlignmentCenter;
     [tableHeaderView addSubview:titleLabel];
     self.tableView.tableHeaderView = tableHeaderView;
     
     // table footer view
-    UIView *tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 60)];
-    UIButton *loginButton = [[UIButton alloc] initWithFrame:CGRectMake(15, 20, SCREEN_WIDTH - 30, 30)];
-    [loginButton setTitle:@"Log In" forState:UIControlStateNormal];
-    [loginButton setTitleColor:RGBCOLOR(166, 232, 166) forState:UIControlStateNormal];
-    loginButton.backgroundColor = RGBCOLOR(106, 217, 104);
-    loginButton.titleLabel.font = [UIFont systemFontOfSize:14];
-    [loginButton addTarget:self action:@selector(onLogin) forControlEvents:UIControlEventTouchUpInside];
-    loginButton.layer.cornerRadius = 3;
-    loginButton.layer.masksToBounds = YES;
-    [tableFooterView addSubview:loginButton];
-    
-    UILabel *forgotPasswordLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(loginButton.frame) + 15, SCREEN_WIDTH, 20)];
-    forgotPasswordLabel.text = @"Forgot password?";
-    forgotPasswordLabel.textAlignment = NSTextAlignmentCenter;
+    UIView *tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, VIEW_HIDETABBAR_HEIGHT - 160)];
+    // log in
+    self.loginButton = [[UIButton alloc] initWithFrame:CGRectMake(15, 20, SCREEN_WIDTH - 30, 30)];
+    [self.loginButton setTitle:@"Log In" forState:UIControlStateNormal];
+    self.loginButton.titleLabel.font = [UIFont systemFontOfSize:14];
+    [self.loginButton addTarget:self action:@selector(onLogin) forControlEvents:UIControlEventTouchUpInside];
+    self.loginButton.layer.cornerRadius = 3;
+    self.loginButton.layer.masksToBounds = YES;
+    [self loginButtonIsEnabled:NO];
+    [tableFooterView addSubview:self.loginButton];
+    // forgot password
+    NSString *fpString = @"Forgot password?";
+    UIFont *fpFont = [UIFont systemFontOfSize:11];
+    CGSize fpSize = WY_TEXTSIZE(fpString, fpFont);
+    UILabel *forgotPasswordLabel = [[UILabel alloc] initWithFrame:CGRectMake((SCREEN_WIDTH - fpSize.width) / 2, CGRectGetMaxY(self.loginButton.frame) + 15, fpSize.width, fpSize.height)];
+    forgotPasswordLabel.text = fpString;
     forgotPasswordLabel.textColor = RGBCOLOR(94, 115, 156);
-    forgotPasswordLabel.font = [UIFont systemFontOfSize:11];
+    forgotPasswordLabel.font = fpFont;
     [tableFooterView addSubview:forgotPasswordLabel];
-
     self.tableView.tableFooterView = tableFooterView;
+    
+    NSString *moreString = @"More";
+    UIFont *moreFont = [UIFont systemFontOfSize:11];
+    CGSize moreSize = WY_TEXTSIZE(moreString, moreFont);
+    UILabel *moreLabel = [[UILabel alloc] initWithFrame:CGRectMake((SCREEN_WIDTH - moreSize.width * 2) / 2, VIEW_HIDETABBAR_HEIGHT - 30, moreSize.width * 2, 15)];
+    moreLabel.text = moreString;
+    moreLabel.textColor = RGBCOLOR(94, 115, 156);
+    moreLabel.font = moreFont;
+    moreLabel.userInteractionEnabled = YES;
+    moreLabel.textAlignment = NSTextAlignmentCenter;
+    UITapGestureRecognizer *moreTapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTouchUpInsideMoreLabel)];
+    [moreLabel addGestureRecognizer:moreTapGestureRecognizer];
+    [self.view addSubview:moreLabel];
 }
 
 - (void)onLogin {
@@ -95,14 +112,38 @@ static NSString *kLHHLoginTableViewCellIdentifier = @"LHHLoginTableViewCellIdent
     [self.navigationController pushViewController:mvc animated:YES];
 }
 
+- (void)didTouchUpInsideMoreLabel {
+    LHHActionSheet *action = [[LHHActionSheet alloc] initWithCancelStr:@"Cancel" otherButtonTitles:@[@"Sign Up", @"Other"] attachTitle:nil];
+    
+//    [action ChangeTitleColor:[UIColor redColor] AndIndex:1];
+    
+    [action buttonIndex:^(NSInteger buttonindex) {
+        
+        NSLog(@"index--%ld", buttonindex);
+        
+    }];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)loginButtonIsEnabled:(BOOL)isEnabled {
+    if (isEnabled) {
+        [self.loginButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        self.loginButton.backgroundColor = RGBCOLOR(7, 191, 5);
+        self.loginButton.enabled = YES;
+    } else {
+        [self.loginButton setTitleColor:RGBCOLOR(166, 232, 166) forState:UIControlStateNormal];
+        self.loginButton.backgroundColor = RGBCOLOR(106, 217, 104);
+        self.loginButton.enabled = NO;
+    }
 }
 
 #pragma mark - UITableViewDataSource
@@ -140,7 +181,7 @@ static NSString *kLHHLoginTableViewCellIdentifier = @"LHHLoginTableViewCellIdent
 }
 
 #pragma mark - LHHLoginTableViewCellDelegate
-- (void)cellTextFieldDidEndEditing:(LHHLoginTableViewCell *)cell {
+- (void)cellTextFieldTextDidChanged:(LHHLoginTableViewCell *)cell {
     switch (cell.cellType) {
         case LHHLoginCellTypeAccount:
         {
@@ -150,9 +191,50 @@ static NSString *kLHHLoginTableViewCellIdentifier = @"LHHLoginTableViewCellIdent
         case LHHLoginCellTypePassword:
         {
             self.passwordString = cell.textField.text;
+            break;
         }
         default:
             break;
+    }
+    
+    [self loginButtonIsEnabled:(self.accountString.length > 0 && self.passwordString.length > 0)];
+
+}
+
+//- (void)cellTextFieldDidEndEditing:(LHHLoginTableViewCell *)cell {
+//    switch (cell.cellType) {
+//        case LHHLoginCellTypeAccount:
+//        {
+//            self.accountString = cell.textField.text;
+//            break;
+//        }
+//        case LHHLoginCellTypePassword:
+//        {
+//            self.passwordString = cell.textField.text;
+//        }
+//        default:
+//            break;
+//    }
+//}
+
+- (void)cellTextFieldShouldReturn:(LHHLoginTableViewCell *)cell {
+    LHHLoginTableViewCell *nextCell = nil;
+    switch (cell.cellType) {
+        case LHHLoginCellTypeAccount:
+        {
+            nextCell = (LHHLoginTableViewCell *)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0]];
+            break;
+        }
+        case LHHLoginCellTypePassword:
+        {
+            [self onLogin];
+            break;
+        }
+        default:
+            break;
+    }
+    if (nextCell) {
+        [nextCell.textField becomeFirstResponder];
     }
 }
 
