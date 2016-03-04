@@ -167,6 +167,7 @@ static NSString *kLHHLoginTableViewCellIdentifier = @"LHHLoginTableViewCellIdent
         cell.cellType = LHHLoginCellTypeAccount;
         cell.label.text = @"Account";
         cell.textField.returnKeyType = UIReturnKeyNext;
+        cell.textField.enablesReturnKeyAutomatically = YES;
         cell.textField.secureTextEntry = NO;
         cell.textField.placeholder = @"Enter account";
     }
@@ -174,6 +175,7 @@ static NSString *kLHHLoginTableViewCellIdentifier = @"LHHLoginTableViewCellIdent
         cell.cellType = LHHLoginCellTypePassword;
         cell.label.text = @"Password";
         cell.textField.returnKeyType = UIReturnKeyDone;
+        cell.textField.enablesReturnKeyAutomatically = YES;
         cell.textField.secureTextEntry = YES;
         cell.textField.placeholder = @"Enter password";
     }
