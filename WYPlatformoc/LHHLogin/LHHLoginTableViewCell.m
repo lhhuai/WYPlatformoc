@@ -7,11 +7,12 @@
 //
 
 #import "LHHLoginTableViewCell.h"
-#import "LHHDefines.h"
+#import "LHHCommonDefines.h"
+#import "LHHCommonColors.h"
 
 @interface LHHLoginTableViewCell()<UITextFieldDelegate>
 
-@property (nonatomic, strong) UIView *separatorLine;
+@property (nonatomic, strong) UILabel *separatorLine;
 
 @end
 
@@ -26,15 +27,19 @@
 }
 
 - (void)setupView {
-    self.label = [[UILabel alloc] initWithFrame:CGRectMake(14, 10, 80, 20)];
+    self.label = [[UILabel alloc] initWithFrame:CGRectMake(15, 10, 80, 20)];
     self.label.textAlignment = NSTextAlignmentLeft;
     self.label.font = [UIFont systemFontOfSize:13];
     [self addSubview:self.label];
     
-    self.textField = [[UITextField alloc] initWithFrame:CGRectMake(94, 10, SCREEN_WIDTH - 94 - 10, 20)];
+    self.textField = [[UITextField alloc] initWithFrame:CGRectMake(95, 10, SCREEN_WIDTH - 95 - 10, 20)];
     self.textField.font = [UIFont systemFontOfSize:13];
     self.textField.delegate = self;
     [self addSubview:self.textField];
+    
+    self.separatorLine = [[UILabel alloc]initWithFrame:CGRectMake(14, 36, self.bounds.size.width - 14, 0.5)];
+    self.separatorLine.backgroundColor = RGBCOLOR(239, 239, 239);
+    [self addSubview:self.separatorLine];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

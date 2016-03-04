@@ -7,7 +7,7 @@
 //
 
 #import "LHHMainViewController.h"
-#import "LHHDefines.h"
+#import "LHHCommonDefines.h"
 
 @interface LHHMainViewController ()<UITableViewDataSource, UITableViewDelegate>
 

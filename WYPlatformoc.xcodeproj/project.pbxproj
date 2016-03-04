@@ -43,7 +43,6 @@
 		55177D821C88130500C02910 /* WYPlatformocTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WYPlatformocTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55177D861C88130500C02910 /* WYPlatformocTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYPlatformocTests.m; sourceTree = "<group>"; };
 		55177D881C88130500C02910 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		55177D921C88137D00C02910 /* LHHDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHDefines.h; sourceTree = "<group>"; };
 		55177D941C88137D00C02910 /* LHHLoginTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHLoginTableViewCell.h; sourceTree = "<group>"; };
 		55177D951C88137D00C02910 /* LHHLoginTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHLoginTableViewCell.m; sourceTree = "<group>"; };
 		55177D961C88137D00C02910 /* LHHLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHLoginViewController.h; sourceTree = "<group>"; };
@@ -53,6 +52,8 @@
 		55177D9B1C88137D00C02910 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		55177D9C1C88137D00C02910 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		55177D9D1C88137D00C02910 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		55177DA51C88205A00C02910 /* LHHCommonDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHCommonDefines.h; sourceTree = "<group>"; };
+		55177DA61C88207C00C02910 /* LHHCommonColors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHHCommonColors.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +95,7 @@
 		55177D6B1C88130500C02910 /* WYPlatformoc */ = {
 			isa = PBXGroup;
 			children = (
-				55177D911C88137D00C02910 /* LHHBase */,
+				55177DA41C88205A00C02910 /* LHHCommon */,
 				55177D931C88137D00C02910 /* LHHLogin */,
 				55177D6F1C88130500C02910 /* AppDelegate.h */,
 				55177D701C88130500C02910 /* AppDelegate.m */,
@@ -127,21 +128,13 @@
 			path = WYPlatformocTests;
 			sourceTree = "<group>";
 		};
-		55177D911C88137D00C02910 /* LHHBase */ = {
-			isa = PBXGroup;
-			children = (
-				55177D921C88137D00C02910 /* LHHDefines.h */,
-			);
-			path = LHHBase;
-			sourceTree = "<group>";
-		};
 		55177D931C88137D00C02910 /* LHHLogin */ = {
 			isa = PBXGroup;
 			children = (
-				55177D941C88137D00C02910 /* LHHLoginTableViewCell.h */,
-				55177D951C88137D00C02910 /* LHHLoginTableViewCell.m */,
 				55177D961C88137D00C02910 /* LHHLoginViewController.h */,
 				55177D971C88137D00C02910 /* LHHLoginViewController.m */,
+				55177D941C88137D00C02910 /* LHHLoginTableViewCell.h */,
+				55177D951C88137D00C02910 /* LHHLoginTableViewCell.m */,
 			);
 			path = LHHLogin;
 			sourceTree = "<group>";
@@ -154,6 +147,15 @@
 				55177D9D1C88137D00C02910 /* Default@2x.png */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		55177DA41C88205A00C02910 /* LHHCommon */ = {
+			isa = PBXGroup;
+			children = (
+				55177DA51C88205A00C02910 /* LHHCommonDefines.h */,
+				55177DA61C88207C00C02910 /* LHHCommonColors.h */,
+			);
+			path = LHHCommon;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -454,6 +456,7 @@
 				55177D8D1C88130500C02910 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		55177D8E1C88130500C02910 /* Build configuration list for PBXNativeTarget "WYPlatformocTests" */ = {
 			isa = XCConfigurationList;
@@ -462,6 +465,7 @@
 				55177D901C88130500C02910 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
