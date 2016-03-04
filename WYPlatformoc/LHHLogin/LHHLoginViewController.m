@@ -229,7 +229,10 @@ static NSString *kLHHLoginTableViewCellIdentifier = @"LHHLoginTableViewCellIdent
         }
         case LHHLoginCellTypePassword:
         {
-            [self onLogin];
+            if (self.accountString.length > 0 && self.passwordString > 0) {
+                [self onLogin];
+            }
+            
             break;
         }
         default:
