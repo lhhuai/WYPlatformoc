@@ -1,22 +1,22 @@
 //
-//  LHHLoginTableViewCell.m
-//  LHHOCStudy
+//  LHHRegistTableViewCell.m
+//  WYPlatformoc
 //
-//  Created by seaphy on 16/3/1.
+//  Created by seaphy on 16/3/7.
 //  Copyright © 2016年 seaphy. All rights reserved.
 //
 
-#import "LHHLoginTableViewCell.h"
+#import "LHHRegistTableViewCell.h"
 #import "LHHCommonDefines.h"
 #import "LHHCommonColors.h"
 
-@interface LHHLoginTableViewCell()<UITextFieldDelegate>
+@interface LHHRegistTableViewCell()
 
 @property (nonatomic, strong) UILabel *separatorLine;
 
 @end
 
-@implementation LHHLoginTableViewCell
+@implementation LHHRegistTableViewCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -34,37 +34,12 @@
     
     self.textField = [[UITextField alloc] initWithFrame:CGRectMake(95, 10, SCREEN_WIDTH - 95 - 10, 20)];
     self.textField.font = [UIFont systemFontOfSize:13];
-    self.textField.delegate = self;
     self.textField.clearButtonMode = UITextFieldViewModeWhileEditing;
     [self addSubview:self.textField];
     
     self.separatorLine = [[UILabel alloc]initWithFrame:CGRectMake(14, 36, self.bounds.size.width - 14, 0.5)];
     self.separatorLine.backgroundColor = RGBCOLOR(239, 239, 239);
     [self addSubview:self.separatorLine];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldTextDidChanged:) name:UITextFieldTextDidChangeNotification object:self.textField];
-}
-
-#pragma mark - UITextFieldDelegate
-- (void)textFieldTextDidChanged:(NSNotification *)notification {
-    if ([self.delegate respondsToSelector:@selector(cellTextFieldTextDidChanged:)]) {
-        [self.delegate cellTextFieldTextDidChanged:self];
-    }
-}
-
-//- (void)textFieldDidEndEditing:(UITextField *)textField {
-//    if ([self.delegate respondsToSelector:@selector(cellTextFieldDidEndEditing:)]) {
-//        [self.delegate cellTextFieldDidEndEditing:self];
-//    }
-//}
-
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    if ([self.delegate respondsToSelector:@selector(cellTextFieldShouldReturn:)]) {
-        [self.delegate cellTextFieldShouldReturn:self];
-    }
-    
-    [textField resignFirstResponder];
-    return YES;
 }
 
 @end

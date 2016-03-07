@@ -9,12 +9,18 @@
 #import "LHHBaseViewController.h"
 #import "LHHCommonDefines.h"
 #import "LHHCommonColors.h"
+#import "LHHBarButtonItem.h"
 
 @interface LHHBaseViewController ()
 
 @end
 
 @implementation LHHBaseViewController
+
+- (void)loadView {
+    [super loadView];
+    self.view.backgroundColor = [UIColor whiteColor];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -29,6 +35,19 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)dismiss {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+#pragma mark - LHHBarButtonItemDelegate
+- (void)barBack {
+    [self dismiss];
+}
+
+- (void)dealloc {
+    NSLog(@"<%@>%@ %@", NSStringFromClass(self.class), self.title, NSStringFromSelector(_cmd));
 }
 
 @end

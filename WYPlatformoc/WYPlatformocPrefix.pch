@@ -1,0 +1,18 @@
+//
+//  WYPlatformocPrefix.pch
+//  WYPlatformoc
+//
+//  Created by seaphy on 16/3/7.
+//  Copyright © 2016年 seaphy. All rights reserved.
+//
+
+#ifdef __OBJC__
+
+    #import <UIKit/UIKit.h>
+//    #import <Foundation/Foundation.h>
+//    #import <SystemConfiguration/SystemConfiguration.h>
+//    #import <CoreLocation/CoreLocation.h>
+//    #import <AudioToolbox/AudioToolbox.h>
+    #import "extobjc.h"
+
+#endif

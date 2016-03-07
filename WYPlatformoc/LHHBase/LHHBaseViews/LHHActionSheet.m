@@ -391,7 +391,7 @@
 }
 
 -(void)dealloc{
-    NSLog(@"正常释放");
+//    NSLog(@"正常释放");
 }
 
 -(void)removeFromSuperview{
@@ -404,7 +404,7 @@
     window = nil;
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     [super removeFromSuperview];
-    NSLog(@"不能正常结束?");
+//    NSLog(@"不能正常结束?");
 }
 
 -(CGSize)markGetAuthenticSize:(NSString *)text Font:(UIFont *)font MaxSize:(CGSize)size{

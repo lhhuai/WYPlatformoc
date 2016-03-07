@@ -19,6 +19,9 @@
 		55177DA11C88137D00C02910 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55177D9B1C88137D00C02910 /* Default-568h@2x.png */; };
 		55177DA21C88137D00C02910 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 55177D9C1C88137D00C02910 /* Default.png */; };
 		55177DA31C88137D00C02910 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55177D9D1C88137D00C02910 /* Default@2x.png */; };
+		55C77F4A1C8D209000623D74 /* LHHRegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C77F491C8D209000623D74 /* LHHRegistViewController.m */; };
+		55C77F4D1C8D263400623D74 /* LHHBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C77F4C1C8D263400623D74 /* LHHBarButtonItem.m */; };
+		55C77F501C8D503800623D74 /* LHHRegistTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C77F4F1C8D503800623D74 /* LHHRegistTableViewCell.m */; };
 		55D584DA1C8975AE003138AF /* blank_44.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D584D41C8975AE003138AF /* blank_44.png */; };
 		55D584DB1C8975AE003138AF /* blank_44@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D584D51C8975AE003138AF /* blank_44@2x.png */; };
 		55D584DC1C8975AE003138AF /* blank_44@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D584D61C8975AE003138AF /* blank_44@3x.png */; };
@@ -27,6 +30,7 @@
 		55D584DF1C8975AE003138AF /* blank_Translucent_44@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D584D91C8975AE003138AF /* blank_Translucent_44@3x.png */; };
 		55D584E41C898EA7003138AF /* LHHBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D584E21C898EA7003138AF /* LHHBaseViewController.m */; };
 		55D584E71C898EF0003138AF /* LHHActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D584E61C898EF0003138AF /* LHHActionSheet.m */; };
+		ABF243A4A658A8B807025007 /* libPods-WYPlatformoc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9856103711FA68ED91FC8345 /* libPods-WYPlatformoc.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A39305CDA1318445EE7F8DF /* Pods-WYPlatformoc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WYPlatformoc.release.xcconfig"; path = "Pods/Target Support Files/Pods-WYPlatformoc/Pods-WYPlatformoc.release.xcconfig"; sourceTree = "<group>"; };
 		55177D691C88130400C02910 /* WYPlatformoc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WYPlatformoc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55177D6D1C88130500C02910 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		55177D6F1C88130500C02910 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -62,6 +67,13 @@
 		55177D9D1C88137D00C02910 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		55177DA51C88205A00C02910 /* LHHCommonDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHCommonDefines.h; sourceTree = "<group>"; };
 		55177DA61C88207C00C02910 /* LHHCommonColors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHHCommonColors.h; sourceTree = "<group>"; };
+		55C77F481C8D209000623D74 /* LHHRegistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHRegistViewController.h; sourceTree = "<group>"; };
+		55C77F491C8D209000623D74 /* LHHRegistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHRegistViewController.m; sourceTree = "<group>"; };
+		55C77F4B1C8D263400623D74 /* LHHBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHBarButtonItem.h; sourceTree = "<group>"; };
+		55C77F4C1C8D263400623D74 /* LHHBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHBarButtonItem.m; sourceTree = "<group>"; };
+		55C77F4E1C8D503800623D74 /* LHHRegistTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHRegistTableViewCell.h; sourceTree = "<group>"; };
+		55C77F4F1C8D503800623D74 /* LHHRegistTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHRegistTableViewCell.m; sourceTree = "<group>"; };
+		55C77F511C8D825600623D74 /* WYPlatformocPrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYPlatformocPrefix.pch; sourceTree = "<group>"; };
 		55D584D41C8975AE003138AF /* blank_44.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blank_44.png; sourceTree = "<group>"; };
 		55D584D51C8975AE003138AF /* blank_44@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blank_44@2x.png"; sourceTree = "<group>"; };
 		55D584D61C8975AE003138AF /* blank_44@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blank_44@3x.png"; sourceTree = "<group>"; };
@@ -72,6 +84,8 @@
 		55D584E21C898EA7003138AF /* LHHBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHBaseViewController.m; sourceTree = "<group>"; };
 		55D584E51C898EF0003138AF /* LHHActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHActionSheet.h; sourceTree = "<group>"; };
 		55D584E61C898EF0003138AF /* LHHActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHActionSheet.m; sourceTree = "<group>"; };
+		9856103711FA68ED91FC8345 /* libPods-WYPlatformoc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WYPlatformoc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB0969D981605CCB1A4443E8 /* Pods-WYPlatformoc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WYPlatformoc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WYPlatformoc/Pods-WYPlatformoc.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABF243A4A658A8B807025007 /* libPods-WYPlatformoc.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,12 +107,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4FFD736167561395F97F4D84 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FB0969D981605CCB1A4443E8 /* Pods-WYPlatformoc.debug.xcconfig */,
+				3A39305CDA1318445EE7F8DF /* Pods-WYPlatformoc.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		55177D601C88130400C02910 = {
 			isa = PBXGroup;
 			children = (
 				55177D6B1C88130500C02910 /* WYPlatformoc */,
 				55177D851C88130500C02910 /* WYPlatformocTests */,
 				55177D6A1C88130400C02910 /* Products */,
+				4FFD736167561395F97F4D84 /* Pods */,
+				B75681826F916AD471DFB825 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,6 +142,7 @@
 				55D584CA1C8968FA003138AF /* LHHBase */,
 				55177DA41C88205A00C02910 /* LHHCommon */,
 				55177D931C88137D00C02910 /* LHHLogin */,
+				55C77F471C8D206400623D74 /* LHHRegist */,
 				55177D6F1C88130500C02910 /* AppDelegate.h */,
 				55177D701C88130500C02910 /* AppDelegate.m */,
 				55177D981C88137D00C02910 /* LHHMainViewController.h */,
@@ -134,6 +161,7 @@
 			children = (
 				55177D7D1C88130500C02910 /* Info.plist */,
 				55177D6D1C88130500C02910 /* main.m */,
+				55C77F511C8D825600623D74 /* WYPlatformocPrefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -183,6 +211,17 @@
 			path = LHHCommon;
 			sourceTree = "<group>";
 		};
+		55C77F471C8D206400623D74 /* LHHRegist */ = {
+			isa = PBXGroup;
+			children = (
+				55C77F481C8D209000623D74 /* LHHRegistViewController.h */,
+				55C77F491C8D209000623D74 /* LHHRegistViewController.m */,
+				55C77F4E1C8D503800623D74 /* LHHRegistTableViewCell.h */,
+				55C77F4F1C8D503800623D74 /* LHHRegistTableViewCell.m */,
+			);
+			path = LHHRegist;
+			sourceTree = "<group>";
+		};
 		55D584CA1C8968FA003138AF /* LHHBase */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,8 +245,18 @@
 			children = (
 				55D584E51C898EF0003138AF /* LHHActionSheet.h */,
 				55D584E61C898EF0003138AF /* LHHActionSheet.m */,
+				55C77F4B1C8D263400623D74 /* LHHBarButtonItem.h */,
+				55C77F4C1C8D263400623D74 /* LHHBarButtonItem.m */,
 			);
 			path = LHHBaseViews;
+			sourceTree = "<group>";
+		};
+		B75681826F916AD471DFB825 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9856103711FA68ED91FC8345 /* libPods-WYPlatformoc.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,9 +266,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 55177D8B1C88130500C02910 /* Build configuration list for PBXNativeTarget "WYPlatformoc" */;
 			buildPhases = (
+				AD689B708A97812DBE5F6635 /* Check Pods Manifest.lock */,
 				55177D651C88130400C02910 /* Sources */,
 				55177D661C88130400C02910 /* Frameworks */,
 				55177D671C88130400C02910 /* Resources */,
+				ED272763744E46CFB2A47B4F /* Embed Pods Frameworks */,
+				6A255B36A316F3DE5E4D6A67 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -316,6 +368,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6A255B36A316F3DE5E4D6A67 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WYPlatformoc/Pods-WYPlatformoc-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD689B708A97812DBE5F6635 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		ED272763744E46CFB2A47B4F /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WYPlatformoc/Pods-WYPlatformoc-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		55177D651C88130400C02910 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -323,9 +423,12 @@
 			files = (
 				55177D711C88130500C02910 /* AppDelegate.m in Sources */,
 				55177D9E1C88137D00C02910 /* LHHLoginTableViewCell.m in Sources */,
+				55C77F501C8D503800623D74 /* LHHRegistTableViewCell.m in Sources */,
 				55D584E41C898EA7003138AF /* LHHBaseViewController.m in Sources */,
 				55D584E71C898EF0003138AF /* LHHActionSheet.m in Sources */,
+				55C77F4D1C8D263400623D74 /* LHHBarButtonItem.m in Sources */,
 				55177D9F1C88137D00C02910 /* LHHLoginViewController.m in Sources */,
+				55C77F4A1C8D209000623D74 /* LHHRegistViewController.m in Sources */,
 				55177DA01C88137D00C02910 /* LHHMainViewController.m in Sources */,
 				55177D6E1C88130500C02910 /* main.m in Sources */,
 			);
@@ -405,7 +508,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -442,7 +545,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -451,10 +554,12 @@
 		};
 		55177D8C1C88130500C02910 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB0969D981605CCB1A4443E8 /* Pods-WYPlatformoc.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = WYPlatformoc/WYPlatformocPrefix.pch;
 				INFOPLIST_FILE = WYPlatformoc/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.seaphy.WYPlatformoc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -463,10 +568,12 @@
 		};
 		55177D8D1C88130500C02910 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A39305CDA1318445EE7F8DF /* Pods-WYPlatformoc.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = WYPlatformoc/WYPlatformocPrefix.pch;
 				INFOPLIST_FILE = WYPlatformoc/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.seaphy.WYPlatformoc;
 				PRODUCT_NAME = "$(TARGET_NAME)";

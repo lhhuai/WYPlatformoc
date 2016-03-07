@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LHHBarButtonItem.h"
 
-@interface LHHBaseViewController : UIViewController
+@interface LHHBaseViewController : UIViewController <LHHBarButtonItemDelegate>
+
+- (void)dismiss;
 
 @end

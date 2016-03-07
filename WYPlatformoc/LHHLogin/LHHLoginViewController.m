@@ -12,6 +12,7 @@
 #import "LHHLoginTableViewCell.h"
 #import "LHHMainViewController.h"
 #import "LHHActionSheet.h"
+#import "LHHRegistViewController.h"
 
 static NSString *kLHHLoginTableViewCellIdentifier = @"LHHLoginTableViewCellIdentifier";
 
@@ -48,8 +49,6 @@ static NSString *kLHHLoginTableViewCellIdentifier = @"LHHLoginTableViewCellIdent
             }
         }
     }
-    
-    self.view.backgroundColor = [UIColor whiteColor];
     
     // table view
     CGRect tableViewFrame = CGRectMake(0, 0, SCREEN_WIDTH, VIEW_HIDETABBAR_HEIGHT);
@@ -106,6 +105,7 @@ static NSString *kLHHLoginTableViewCellIdentifier = @"LHHLoginTableViewCellIdent
 }
 
 - (void)onLogin {
+    self.loginButton.enabled = false;
     LHHMainViewController *mvc = [[LHHMainViewController alloc] init];
     mvc.account = self.accountString;
     mvc.password = self.passwordString;
@@ -117,10 +117,20 @@ static NSString *kLHHLoginTableViewCellIdentifier = @"LHHLoginTableViewCellIdent
     
 //    [action ChangeTitleColor:[UIColor redColor] AndIndex:1];
     
+//    @weakify(self);
+//    __weak __typeof(&*self)weakSelf = self;
     [action buttonIndex:^(NSInteger buttonindex) {
-        
-        NSLog(@"index--%ld", buttonindex);
-        
+//        @strongify(self);
+        switch (buttonindex) {
+            case 1:
+            {
+                LHHRegistViewController *registVC = [[LHHRegistViewController alloc] init];
+                [self.navigationController pushViewController:registVC animated:YES];
+                break;
+            }
+            default:
+                break;
+        }
     }];
 }
 
