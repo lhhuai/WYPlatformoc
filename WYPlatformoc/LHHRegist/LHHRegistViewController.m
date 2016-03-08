@@ -11,7 +11,10 @@
 #import "LHHCommonDefines.h"
 #import "LHHCommonColors.h"
 #import "LHHRegistTableViewCell.h"
+#import "LHHAlertView.h"
+
 #import <MBProgressHUD.h>
+#import <FMDB.h>
 
 @interface LHHRegistViewController () <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
 
@@ -86,7 +89,27 @@
 }
 
 - (void)onSignUp {
-    
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+    hud.labelText = @"Please wait...";
+    hud.minSize = CGSizeMake(110.f, 110.f);
+    hud.labelFont = [UIFont systemFontOfSize:11];
+    hud.opacity = 0.5;
+    hud.frame = CGRectMake(hud.frame.origin.x, hud.frame.origin.y, hud.frame.size.width, hud.frame.size.width);
+    dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0), ^{
+        sleep(2);
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            UIImage *image = [[UIImage imageNamed:@"Checkmark"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+            UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+            hud.customView = imageView;
+            hud.mode = MBProgressHUDModeCustomView;
+            hud.labelText = @"success.";
+        });
+        
+        sleep(2);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [hud hide:YES];
+        });
+    });
 }
 
 - (void)viewDidLoad {

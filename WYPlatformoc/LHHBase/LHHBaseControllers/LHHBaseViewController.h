@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "LHHBarButtonItem.h"
+#import "LHHAlertView.h"
 
 @interface LHHBaseViewController : UIViewController <LHHBarButtonItemDelegate>
+
+@property (nonatomic, strong) LHHAlertView *hud;
 
 - (void)dismiss;
 

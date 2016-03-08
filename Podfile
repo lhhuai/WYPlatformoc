@@ -5,5 +5,6 @@ target 'WYPlatformoc' do
 
 pod 'libextobjc', '0.4.1'
 pod 'MBProgressHUD', '~> 0.9.2'
+pod 'FMDB', '~> 2.6'
 
 end
