@@ -9,9 +9,7 @@
 /* Begin PBXBuildFile section */
 		55177D6E1C88130500C02910 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55177D6D1C88130500C02910 /* main.m */; };
 		55177D711C88130500C02910 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55177D701C88130500C02910 /* AppDelegate.m */; };
-		55177D771C88130500C02910 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55177D751C88130500C02910 /* Main.storyboard */; };
 		55177D791C88130500C02910 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55177D781C88130500C02910 /* Assets.xcassets */; };
-		55177D7C1C88130500C02910 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55177D7A1C88130500C02910 /* LaunchScreen.storyboard */; };
 		55177D871C88130500C02910 /* WYPlatformocTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 55177D861C88130500C02910 /* WYPlatformocTests.m */; };
 		55177D9E1C88137D00C02910 /* LHHLoginTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55177D951C88137D00C02910 /* LHHLoginTableViewCell.m */; };
 		55177D9F1C88137D00C02910 /* LHHLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55177D971C88137D00C02910 /* LHHLoginViewController.m */; };
@@ -22,6 +20,7 @@
 		5539F7E21C8E6E61007C808A /* LHHAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5539F7E11C8E6E61007C808A /* LHHAlertView.m */; };
 		5539F7E61C8EAD59007C808A /* LHHUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5539F7E51C8EAD59007C808A /* LHHUserManager.m */; };
 		5539F7E91C8EB134007C808A /* LHHUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5539F7E81C8EB134007C808A /* LHHUser.m */; };
+		553E57D41C9912F500AB74B6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 553E57D31C9912F500AB74B6 /* InfoPlist.strings */; };
 		55C77F4A1C8D209000623D74 /* LHHRegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C77F491C8D209000623D74 /* LHHRegistViewController.m */; };
 		55C77F4D1C8D263400623D74 /* LHHBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C77F4C1C8D263400623D74 /* LHHBarButtonItem.m */; };
 		55C77F501C8D503800623D74 /* LHHRegistTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C77F4F1C8D503800623D74 /* LHHRegistTableViewCell.m */; };
@@ -52,9 +51,7 @@
 		55177D6D1C88130500C02910 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		55177D6F1C88130500C02910 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		55177D701C88130500C02910 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		55177D761C88130500C02910 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		55177D781C88130500C02910 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		55177D7B1C88130500C02910 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55177D7D1C88130500C02910 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55177D821C88130500C02910 /* WYPlatformocTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WYPlatformocTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55177D861C88130500C02910 /* WYPlatformocTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYPlatformocTests.m; sourceTree = "<group>"; };
@@ -76,6 +73,7 @@
 		5539F7E51C8EAD59007C808A /* LHHUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHUserManager.m; sourceTree = "<group>"; };
 		5539F7E71C8EB134007C808A /* LHHUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHUser.h; sourceTree = "<group>"; };
 		5539F7E81C8EB134007C808A /* LHHUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHUser.m; sourceTree = "<group>"; };
+		553E57D31C9912F500AB74B6 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		55C77F481C8D209000623D74 /* LHHRegistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHRegistViewController.h; sourceTree = "<group>"; };
 		55C77F491C8D209000623D74 /* LHHRegistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHRegistViewController.m; sourceTree = "<group>"; };
 		55C77F4B1C8D263400623D74 /* LHHBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHBarButtonItem.h; sourceTree = "<group>"; };
@@ -157,9 +155,7 @@
 				55177D701C88130500C02910 /* AppDelegate.m */,
 				55177D981C88137D00C02910 /* LHHMainViewController.h */,
 				55177D991C88137D00C02910 /* LHHMainViewController.m */,
-				55177D751C88130500C02910 /* Main.storyboard */,
 				55177D781C88130500C02910 /* Assets.xcassets */,
-				55177D7A1C88130500C02910 /* LaunchScreen.storyboard */,
 				55177D6C1C88130500C02910 /* Supporting Files */,
 				55177D9A1C88137D00C02910 /* Resource */,
 			);
@@ -172,6 +168,7 @@
 				55177D7D1C88130500C02910 /* Info.plist */,
 				55177D6D1C88130500C02910 /* main.m */,
 				55C77F511C8D825600623D74 /* WYPlatformocPrefix.pch */,
+				553E57D31C9912F500AB74B6 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -368,15 +365,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				55177DA31C88137D00C02910 /* Default@2x.png in Resources */,
-				55177D7C1C88130500C02910 /* LaunchScreen.storyboard in Resources */,
 				55D584DF1C8975AE003138AF /* blank_Translucent_44@3x.png in Resources */,
+				553E57D41C9912F500AB74B6 /* InfoPlist.strings in Resources */,
 				55D584DD1C8975AE003138AF /* blank_Translucent_44.png in Resources */,
 				55177DA11C88137D00C02910 /* Default-568h@2x.png in Resources */,
 				55D584DB1C8975AE003138AF /* blank_44@2x.png in Resources */,
 				55D584DE1C8975AE003138AF /* blank_Translucent_44@2x.png in Resources */,
 				55D584DA1C8975AE003138AF /* blank_44.png in Resources */,
 				55177D791C88130500C02910 /* Assets.xcassets in Resources */,
-				55177D771C88130500C02910 /* Main.storyboard in Resources */,
 				55177DA21C88137D00C02910 /* Default.png in Resources */,
 				55D584DC1C8975AE003138AF /* blank_44@3x.png in Resources */,
 			);
@@ -477,25 +473,6 @@
 			targetProxy = 55177D831C88130500C02910 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		55177D751C88130500C02910 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				55177D761C88130500C02910 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		55177D7A1C88130500C02910 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				55177D7B1C88130500C02910 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		55177D891C88130500C02910 /* Debug */ = {

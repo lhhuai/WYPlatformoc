@@ -7,7 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "LHHUser.h"
 
 @interface LHHUserManager : NSObject
+
++ (instancetype)shareInstance;
+
+- (BOOL)insertUser:(LHHUser *)user;
+- (LHHUser *)userWithAccount:(NSString *)account;
 
 @end

@@ -7,10 +7,45 @@
 //
 
 #import "LHHUserManager.h"
-#import "LHHUser.h"
+#import <FMDB.h>
+
+@interface LHHUserManager()
+
+@property (nonatomic, strong) FMDatabaseQueue *databaseQueue;
+
+@end
 
 @implementation LHHUserManager
 
++ (instancetype)shareInstance {
+    static id instance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        instance = [self new];
+    });
+    return instance;
+}
 
+- (id)init {
+    self = [super init];
+    
+    
+    
+    return self;
+}
+
+- (BOOL)insertUser:(LHHUser *)user {
+    
+    return false;
+}
+
+- (LHHUser *)userWithAccount:(NSString *)account {
+    
+    return nil;
+}
+
+- (void)dealloc {
+    [self.databaseQueue close];
+}
 
 @end
