@@ -10,4 +10,14 @@
 
 @implementation LHHLoginSession
 
+- (void)loginWithUser:(LHHUser *)user completeBlock:(void(^)())complete exceptionBlock:(void(^)())exception {
+    LHHUserManager *userManager = [[LHHUserManager alloc] init];
+    LHHUser *existUser = [userManager userWithAccount:user.account];
+    if (existUser && [existUser.password isEqualToString:user.password]) {
+        complete();
+    } else {
+        exception();
+    }
+}
+
 @end

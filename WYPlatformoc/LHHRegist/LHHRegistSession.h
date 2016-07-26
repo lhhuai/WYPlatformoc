@@ -8,6 +8,10 @@
 
 #import "LHHBaseServiceSession.h"
 
+@class LHHUser;
+
 @interface LHHRegistSession : LHHBaseServiceSession
+
+- (void)registWithUser:(LHHUser *)user completeBlock:(void(^)())complete exceptionBlock:(void(^)())exception;
 
 @end

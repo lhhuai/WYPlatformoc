@@ -1,0 +1,6 @@
+framework module WYLibraries {
+  umbrella header "WYLibraries-umbrella.h"
+
+  export *
+  module * { export * }
+}

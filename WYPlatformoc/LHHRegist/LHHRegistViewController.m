@@ -12,9 +12,11 @@
 #import "LHHCommonColors.h"
 #import "LHHRegistTableViewCell.h"
 #import "LHHAlertView.h"
+#import "LHHUser.h"
+#import "LHHRegistSession.h"
 
-#import <MBProgressHUD.h>
-#import <FMDB.h>
+#import "MBProgressHUD.h"
+#import "FMDB.h"
 
 @interface LHHRegistViewController () <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
 
@@ -25,9 +27,21 @@
 @property (nonatomic, strong) NSString *passwordString;
 @property (nonatomic, strong) NSString *rePasswordString;
 
+@property (nonatomic, strong) LHHRegistSession *registSession;
+
+@property (nonatomic, strong) MBProgressHUD *hud;
+
 @end
 
 @implementation LHHRegistViewController
+
+- (id)init {
+    self = [super init];
+    if (self) {
+        self.registSession = [[LHHRegistSession alloc] init];
+    }
+    return self;
+}
 
 - (void)loadView {
     [super loadView];
@@ -89,27 +103,36 @@
 }
 
 - (void)onSignUp {
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
-    hud.labelText = @"Please wait...";
-    hud.minSize = CGSizeMake(110.f, 110.f);
-    hud.labelFont = [UIFont systemFontOfSize:11];
-    hud.opacity = 0.5;
-    hud.frame = CGRectMake(hud.frame.origin.x, hud.frame.origin.y, hud.frame.size.width, hud.frame.size.width);
-    dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0), ^{
-        sleep(2);
-        dispatch_sync(dispatch_get_main_queue(), ^{
-            UIImage *image = [[UIImage imageNamed:@"Checkmark"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-            UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
-            hud.customView = imageView;
-            hud.mode = MBProgressHUDModeCustomView;
-            hud.labelText = @"success.";
-        });
-        
-        sleep(2);
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [hud hide:YES];
-        });
-    });
+    self.hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+    self.hud.labelText = @"Please wait...";
+    self.hud.minSize = CGSizeMake(110.f, 110.f);
+    self.hud.labelFont = [UIFont systemFontOfSize:11];
+    self.hud.opacity = 0.5;
+    self.hud.frame = CGRectMake(self.hud.frame.origin.x, self.hud.frame.origin.y, self.hud.frame.size.width, self.hud.frame.size.width);
+    
+    LHHUser *user = [[LHHUser alloc] init];
+    user.account = self.accountString;
+    user.password = self.passwordString;
+    
+    @weakify(self);
+    [self.registSession registWithUser:user completeBlock:^{
+        @strongify(self);
+        UIImage *image = [[UIImage imageNamed:@"Checkmark"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+        UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+        self.hud.customView = imageView;
+        self.hud.mode = MBProgressHUDModeCustomView;
+        self.hud.labelText = @"success.";
+        [self.hud hide:YES afterDelay:2];
+        [self barBack];
+    } exceptionBlock:^{
+        @strongify(self);
+        UIImage *image = [[UIImage imageNamed:@"hud_error"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+        UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+        self.hud.customView = imageView;
+        self.hud.mode = MBProgressHUDModeCustomView;
+        self.hud.labelText = @"account exists.";
+        [self.hud hide:YES afterDelay:2];
+    }];
 }
 
 - (void)viewDidLoad {

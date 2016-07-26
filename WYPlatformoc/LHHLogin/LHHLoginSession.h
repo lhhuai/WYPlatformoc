@@ -7,7 +7,10 @@
 //
 
 #import "LHHBaseServiceSession.h"
+#import "LHHUserManager.h"
 
 @interface LHHLoginSession : LHHBaseServiceSession
+
+- (void)loginWithUser:(LHHUser *)user completeBlock:(void(^)())complete exceptionBlock:(void(^)())exception;
 
 @end
