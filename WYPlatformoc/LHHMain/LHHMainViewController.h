@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LHHBaseViewController.h"
 
-@interface LHHMainViewController : UIViewController
+@interface LHHMainViewController : LHHBaseViewController
 
 @property (nonatomic, strong) NSString *account;
 @property (nonatomic, strong) NSString *password;

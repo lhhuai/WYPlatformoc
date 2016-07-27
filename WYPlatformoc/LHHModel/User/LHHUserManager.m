@@ -68,7 +68,7 @@
 }
 
 - (void)createTableOfUser {
-    NSString *userSql = @"create table if not exists user(id integer primary key autoincrement, account varchar(50) unique, username varchar(100) unique, password varchar(20), createtime datetime)";
+    NSString *userSql = @"create table if not exists user(id integer primary key autoincrement, account varchar(50) unique, username varchar(100), password varchar(20), createtime datetime)";
     [self executeQuery:userSql arguments:nil];
 }
 

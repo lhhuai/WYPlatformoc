@@ -1,20 +1,20 @@
 //
-//  AppDelegate.m
+//  LHHAppDelegate.m
 //  WYPlatformoc
 //
 //  Created by seaphy on 16/3/3.
 //  Copyright © 2016年 seaphy. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "LHHAppDelegate.h"
 #import "LHHMainViewController.h"
 #import "LHHLoginViewController.h"
 
-@interface AppDelegate ()
+@interface LHHAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation LHHAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {

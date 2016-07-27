@@ -7,8 +7,6 @@
 //
 
 #import "LHHBaseViewController.h"
-#import "LHHCommonDefines.h"
-#import "LHHCommonColors.h"
 #import "LHHBarButtonItem.h"
 
 @interface LHHBaseViewController ()
@@ -24,12 +22,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    if (IOS_VERSION >= 7.0) {
-        self.edgesForExtendedLayout = UIRectEdgeNone;
-    } else {
-        self.wantsFullScreenLayout = YES;
-    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,7 +33,18 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-#pragma mark - LHHBarButtonItemDelegate
+// 设置页面Title
+- (void)setWYTitle:(NSString *)title {
+    UILabel *label = [[UILabel alloc] init];
+    label.frame = CGRectMake(0, 0, WY_SIZE(180), PHONE_NAVIGATIONBAR_HEIGHT);
+    label.backgroundColor = [UIColor clearColor];
+    label.font = WY_FONT(17);
+    label.textColor = [UIColor whiteColor];
+    label.textAlignment = NSTextAlignmentCenter;
+    label.text = title;
+    self.navigationItem.titleView = label;
+}
+
 - (void)barBack {
     [self dismiss];
 }

@@ -20,9 +20,7 @@
 - (void)loadView {
     [super loadView];
     
-//    self.navigationItem.title = @"Study OC";
-    
-    self.title = @"wenyuan";
+    [self setWYTitle:@"wymain"];
     
     CGRect tableViewFrame = CGRectMake(0, 0, SCREEN_WIDTH, VIEW_HIDETABBAR_HEIGHT);
     _tableView = [[UITableView alloc] initWithFrame:tableViewFrame style:UITableViewStylePlain];
@@ -34,12 +32,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-//    if (IOS_VERSION >= 7.0) {
-//        self.edgesForExtendedLayout = UIRectEdgeNone;
-//    } else {
-//        self.wantsFullScreenLayout = YES;
-//    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -49,7 +41,7 @@
 
 #pragma - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2;
+    return 5;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -58,12 +50,8 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"kLHHIdentifier"];
         cell.backgroundColor = [UIColor grayColor];
     }
-    if (indexPath.row == 0) {
-        cell.textLabel.text = self.account;
-    }
-    if (indexPath.row == 1) {
-        cell.textLabel.text = self.password;
-    }
+    cell.textLabel.text = [NSString stringWithFormat:@"%ld.%@", (long)indexPath.row, self.account];
+
     return cell;
 }
 

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		55177D6E1C88130500C02910 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55177D6D1C88130500C02910 /* main.m */; };
-		55177D711C88130500C02910 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55177D701C88130500C02910 /* AppDelegate.m */; };
+		55177D711C88130500C02910 /* LHHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55177D701C88130500C02910 /* LHHAppDelegate.m */; };
 		55177D791C88130500C02910 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55177D781C88130500C02910 /* Assets.xcassets */; };
 		55177D871C88130500C02910 /* WYPlatformocTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 55177D861C88130500C02910 /* WYPlatformocTests.m */; };
 		55177D9E1C88137D00C02910 /* LHHLoginTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55177D951C88137D00C02910 /* LHHLoginTableViewCell.m */; };
@@ -17,12 +17,18 @@
 		55177DA21C88137D00C02910 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 55177D9C1C88137D00C02910 /* Default.png */; };
 		55177DA31C88137D00C02910 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55177D9D1C88137D00C02910 /* Default@2x.png */; };
 		5539F7E21C8E6E61007C808A /* LHHAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5539F7E11C8E6E61007C808A /* LHHAlertView.m */; };
-		5539F7E61C8EAD59007C808A /* LHHUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5539F7E51C8EAD59007C808A /* LHHUserManager.m */; };
-		5539F7E91C8EB134007C808A /* LHHUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5539F7E81C8EB134007C808A /* LHHUser.m */; };
 		553E57DB1C99159F00AB74B6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 553E57DA1C99159F00AB74B6 /* InfoPlist.strings */; };
 		55C77F4A1C8D209000623D74 /* LHHRegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C77F491C8D209000623D74 /* LHHRegistViewController.m */; };
 		55C77F4D1C8D263400623D74 /* LHHBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C77F4C1C8D263400623D74 /* LHHBarButtonItem.m */; };
 		55C77F501C8D503800623D74 /* LHHRegistTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C77F4F1C8D503800623D74 /* LHHRegistTableViewCell.m */; };
+		55CE33621D489B7E000621F2 /* LHHChatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CE33591D489B7E000621F2 /* LHHChatsViewController.m */; };
+		55CE33631D489B7E000621F2 /* LHHContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CE335B1D489B7E000621F2 /* LHHContactsViewController.m */; };
+		55CE33641D489B7E000621F2 /* LHHDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CE335D1D489B7E000621F2 /* LHHDiscoverViewController.m */; };
+		55CE33651D489B7E000621F2 /* LHHMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CE335F1D489B7E000621F2 /* LHHMeViewController.m */; };
+		55CE336A1D489EC7000621F2 /* LHHAdaptiveManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CE33671D489EC7000621F2 /* LHHAdaptiveManager.m */; };
+		55CE336B1D489EC7000621F2 /* UIDevice+UIDeviceExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CE33691D489EC7000621F2 /* UIDevice+UIDeviceExt.m */; };
+		55CE33771D48A4A3000621F2 /* LHHUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CE33741D48A4A3000621F2 /* LHHUser.m */; };
+		55CE33781D48A4A3000621F2 /* LHHUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CE33761D48A4A3000621F2 /* LHHUserManager.m */; };
 		55D584DA1C8975AE003138AF /* blank_44.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D584D41C8975AE003138AF /* blank_44.png */; };
 		55D584DB1C8975AE003138AF /* blank_44@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D584D51C8975AE003138AF /* blank_44@2x.png */; };
 		55D584DC1C8975AE003138AF /* blank_44@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D584D61C8975AE003138AF /* blank_44@3x.png */; };
@@ -52,8 +58,8 @@
 		17D64C58974721ABB540B803 /* Pods_WYPlatformoc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WYPlatformoc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55177D691C88130400C02910 /* WYPlatformoc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WYPlatformoc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55177D6D1C88130500C02910 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		55177D6F1C88130500C02910 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		55177D701C88130500C02910 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		55177D6F1C88130500C02910 /* LHHAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHHAppDelegate.h; sourceTree = "<group>"; };
+		55177D701C88130500C02910 /* LHHAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHHAppDelegate.m; sourceTree = "<group>"; };
 		55177D781C88130500C02910 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55177D7D1C88130500C02910 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55177D821C88130500C02910 /* WYPlatformocTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WYPlatformocTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,10 +76,6 @@
 		55177DA61C88207C00C02910 /* LHHCommonColors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHHCommonColors.h; sourceTree = "<group>"; };
 		5539F7E01C8E6E61007C808A /* LHHAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHAlertView.h; sourceTree = "<group>"; };
 		5539F7E11C8E6E61007C808A /* LHHAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHAlertView.m; sourceTree = "<group>"; };
-		5539F7E41C8EAD59007C808A /* LHHUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHUserManager.h; sourceTree = "<group>"; };
-		5539F7E51C8EAD59007C808A /* LHHUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHUserManager.m; sourceTree = "<group>"; };
-		5539F7E71C8EB134007C808A /* LHHUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHUser.h; sourceTree = "<group>"; };
-		5539F7E81C8EB134007C808A /* LHHUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHUser.m; sourceTree = "<group>"; };
 		553E57DA1C99159F00AB74B6 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		55C77F481C8D209000623D74 /* LHHRegistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHRegistViewController.h; sourceTree = "<group>"; };
 		55C77F491C8D209000623D74 /* LHHRegistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHRegistViewController.m; sourceTree = "<group>"; };
@@ -82,6 +84,24 @@
 		55C77F4E1C8D503800623D74 /* LHHRegistTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHRegistTableViewCell.h; sourceTree = "<group>"; };
 		55C77F4F1C8D503800623D74 /* LHHRegistTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHRegistTableViewCell.m; sourceTree = "<group>"; };
 		55C77F511C8D825600623D74 /* WYPlatformocPrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYPlatformocPrefix.pch; sourceTree = "<group>"; };
+		55CE33581D489B7E000621F2 /* LHHChatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHChatsViewController.h; sourceTree = "<group>"; };
+		55CE33591D489B7E000621F2 /* LHHChatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHChatsViewController.m; sourceTree = "<group>"; };
+		55CE335A1D489B7E000621F2 /* LHHContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHContactsViewController.h; sourceTree = "<group>"; };
+		55CE335B1D489B7E000621F2 /* LHHContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHContactsViewController.m; sourceTree = "<group>"; };
+		55CE335C1D489B7E000621F2 /* LHHDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHDiscoverViewController.h; sourceTree = "<group>"; };
+		55CE335D1D489B7E000621F2 /* LHHDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHDiscoverViewController.m; sourceTree = "<group>"; };
+		55CE335E1D489B7E000621F2 /* LHHMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHMeViewController.h; sourceTree = "<group>"; };
+		55CE335F1D489B7E000621F2 /* LHHMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHMeViewController.m; sourceTree = "<group>"; };
+		55CE33661D489EC7000621F2 /* LHHAdaptiveManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHAdaptiveManager.h; sourceTree = "<group>"; };
+		55CE33671D489EC7000621F2 /* LHHAdaptiveManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHAdaptiveManager.m; sourceTree = "<group>"; };
+		55CE33681D489EC7000621F2 /* UIDevice+UIDeviceExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+UIDeviceExt.h"; sourceTree = "<group>"; };
+		55CE33691D489EC7000621F2 /* UIDevice+UIDeviceExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+UIDeviceExt.m"; sourceTree = "<group>"; };
+		55CE336F1D489F64000621F2 /* LHHConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHConstant.h; sourceTree = "<group>"; };
+		55CE33701D48A0AF000621F2 /* LHHMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHHMacros.h; sourceTree = "<group>"; };
+		55CE33731D48A4A3000621F2 /* LHHUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHUser.h; sourceTree = "<group>"; };
+		55CE33741D48A4A3000621F2 /* LHHUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHUser.m; sourceTree = "<group>"; };
+		55CE33751D48A4A3000621F2 /* LHHUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHUserManager.h; sourceTree = "<group>"; };
+		55CE33761D48A4A3000621F2 /* LHHUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHUserManager.m; sourceTree = "<group>"; };
 		55D584D41C8975AE003138AF /* blank_44.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blank_44.png; sourceTree = "<group>"; };
 		55D584D51C8975AE003138AF /* blank_44@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blank_44@2x.png"; sourceTree = "<group>"; };
 		55D584D61C8975AE003138AF /* blank_44@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blank_44@3x.png"; sourceTree = "<group>"; };
@@ -156,12 +176,13 @@
 			children = (
 				55D584CA1C8968FA003138AF /* LHHBase */,
 				55177DA41C88205A00C02910 /* LHHCommon */,
+				55CE33711D48A4A3000621F2 /* LHHModel */,
 				55F2CF671D484F8B007F06CA /* LHHMain */,
 				55177D931C88137D00C02910 /* LHHLogin */,
 				55C77F471C8D206400623D74 /* LHHRegist */,
-				5539F7E31C8EAD30007C808A /* LHHUser */,
-				55177D6F1C88130500C02910 /* AppDelegate.h */,
-				55177D701C88130500C02910 /* AppDelegate.m */,
+				55F2CF6B1D485282007F06CA /* LHHWeChat */,
+				55177D6F1C88130500C02910 /* LHHAppDelegate.h */,
+				55177D701C88130500C02910 /* LHHAppDelegate.m */,
 				55177D781C88130500C02910 /* Assets.xcassets */,
 				55177D6C1C88130500C02910 /* Supporting Files */,
 				55177D9A1C88137D00C02910 /* Resource */,
@@ -221,23 +242,18 @@
 		55177DA41C88205A00C02910 /* LHHCommon */ = {
 			isa = PBXGroup;
 			children = (
+				55CE336F1D489F64000621F2 /* LHHConstant.h */,
+				55CE33701D48A0AF000621F2 /* LHHMacros.h */,
 				55177DA51C88205A00C02910 /* LHHCommonDefines.h */,
 				55177DA61C88207C00C02910 /* LHHCommonColors.h */,
 				55F2CF5A1D4604B9007F06CA /* LHHBaseServiceSession.h */,
 				55F2CF5B1D4604B9007F06CA /* LHHBaseServiceSession.m */,
+				55CE33661D489EC7000621F2 /* LHHAdaptiveManager.h */,
+				55CE33671D489EC7000621F2 /* LHHAdaptiveManager.m */,
+				55CE33681D489EC7000621F2 /* UIDevice+UIDeviceExt.h */,
+				55CE33691D489EC7000621F2 /* UIDevice+UIDeviceExt.m */,
 			);
 			path = LHHCommon;
-			sourceTree = "<group>";
-		};
-		5539F7E31C8EAD30007C808A /* LHHUser */ = {
-			isa = PBXGroup;
-			children = (
-				5539F7E71C8EB134007C808A /* LHHUser.h */,
-				5539F7E81C8EB134007C808A /* LHHUser.m */,
-				5539F7E41C8EAD59007C808A /* LHHUserManager.h */,
-				5539F7E51C8EAD59007C808A /* LHHUserManager.m */,
-			);
-			path = LHHUser;
 			sourceTree = "<group>";
 		};
 		55C77F471C8D206400623D74 /* LHHRegist */ = {
@@ -251,6 +267,54 @@
 				55F2CF5E1D4604FA007F06CA /* LHHRegistSession.m */,
 			);
 			path = LHHRegist;
+			sourceTree = "<group>";
+		};
+		55CE33571D489B7E000621F2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				55CE33581D489B7E000621F2 /* LHHChatsViewController.h */,
+				55CE33591D489B7E000621F2 /* LHHChatsViewController.m */,
+				55CE335A1D489B7E000621F2 /* LHHContactsViewController.h */,
+				55CE335B1D489B7E000621F2 /* LHHContactsViewController.m */,
+				55CE335C1D489B7E000621F2 /* LHHDiscoverViewController.h */,
+				55CE335D1D489B7E000621F2 /* LHHDiscoverViewController.m */,
+				55CE335E1D489B7E000621F2 /* LHHMeViewController.h */,
+				55CE335F1D489B7E000621F2 /* LHHMeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		55CE33601D489B7E000621F2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		55CE33611D489B7E000621F2 /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
+		55CE33711D48A4A3000621F2 /* LHHModel */ = {
+			isa = PBXGroup;
+			children = (
+				55CE33721D48A4A3000621F2 /* User */,
+			);
+			path = LHHModel;
+			sourceTree = "<group>";
+		};
+		55CE33721D48A4A3000621F2 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				55CE33731D48A4A3000621F2 /* LHHUser.h */,
+				55CE33741D48A4A3000621F2 /* LHHUser.m */,
+				55CE33751D48A4A3000621F2 /* LHHUserManager.h */,
+				55CE33761D48A4A3000621F2 /* LHHUserManager.m */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 		55D584CA1C8968FA003138AF /* LHHBase */ = {
@@ -291,6 +355,16 @@
 				55F2CF691D484F8B007F06CA /* LHHMainViewController.m */,
 			);
 			path = LHHMain;
+			sourceTree = "<group>";
+		};
+		55F2CF6B1D485282007F06CA /* LHHWeChat */ = {
+			isa = PBXGroup;
+			children = (
+				55CE33571D489B7E000621F2 /* Controller */,
+				55CE33601D489B7E000621F2 /* View */,
+				55CE33611D489B7E000621F2 /* Widget */,
+			);
+			path = LHHWeChat;
 			sourceTree = "<group>";
 		};
 		EE6E0660D22FDD5736AFB744 /* Pods */ = {
@@ -349,6 +423,7 @@
 		55177D611C88130400C02910 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = LHH;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = seaphy;
 				TargetAttributes = {
@@ -464,19 +539,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				55F2CF5C1D4604B9007F06CA /* LHHBaseServiceSession.m in Sources */,
-				55177D711C88130500C02910 /* AppDelegate.m in Sources */,
+				55177D711C88130500C02910 /* LHHAppDelegate.m in Sources */,
 				55F2CF6A1D484F8B007F06CA /* LHHMainViewController.m in Sources */,
 				55177D9E1C88137D00C02910 /* LHHLoginTableViewCell.m in Sources */,
 				5539F7E21C8E6E61007C808A /* LHHAlertView.m in Sources */,
-				5539F7E91C8EB134007C808A /* LHHUser.m in Sources */,
+				55CE336B1D489EC7000621F2 /* UIDevice+UIDeviceExt.m in Sources */,
 				55F2CF621D4760F2007F06CA /* LHHLoginSession.m in Sources */,
 				55C77F501C8D503800623D74 /* LHHRegistTableViewCell.m in Sources */,
+				55CE33631D489B7E000621F2 /* LHHContactsViewController.m in Sources */,
+				55CE336A1D489EC7000621F2 /* LHHAdaptiveManager.m in Sources */,
 				55D584E41C898EA7003138AF /* LHHBaseViewController.m in Sources */,
+				55CE33641D489B7E000621F2 /* LHHDiscoverViewController.m in Sources */,
 				55D584E71C898EF0003138AF /* LHHActionSheet.m in Sources */,
 				55C77F4D1C8D263400623D74 /* LHHBarButtonItem.m in Sources */,
+				55CE33621D489B7E000621F2 /* LHHChatsViewController.m in Sources */,
 				55177D9F1C88137D00C02910 /* LHHLoginViewController.m in Sources */,
+				55CE33771D48A4A3000621F2 /* LHHUser.m in Sources */,
+				55CE33781D48A4A3000621F2 /* LHHUserManager.m in Sources */,
 				55C77F4A1C8D209000623D74 /* LHHRegistViewController.m in Sources */,
-				5539F7E61C8EAD59007C808A /* LHHUserManager.m in Sources */,
+				55CE33651D489B7E000621F2 /* LHHMeViewController.m in Sources */,
 				55F2CF5F1D4604FA007F06CA /* LHHRegistSession.m in Sources */,
 				55177D6E1C88130500C02910 /* main.m in Sources */,
 			);

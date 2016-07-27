@@ -15,5 +15,6 @@
 @property (nonatomic, strong) LHHAlertView *hud;
 
 - (void)dismiss;
+- (void)setWYTitle:(NSString *)title;
 
 @end

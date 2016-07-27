@@ -14,5 +14,6 @@
 //    #import <CoreLocation/CoreLocation.h>
 //    #import <AudioToolbox/AudioToolbox.h>
     #import "extobjc.h"
+    #import "LHHConstant.h"
 
 #endif
