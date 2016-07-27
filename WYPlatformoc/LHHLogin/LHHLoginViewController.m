@@ -144,7 +144,8 @@ static NSString *kLHHLoginTableViewCellIdentifier = @"LHHLoginTableViewCellIdent
             @strongify(self);
             LHHMainViewController *mvc = [[LHHMainViewController alloc] init];
             mvc.account = self.accountString;
-            [self.navigationController pushViewController:mvc animated:YES];
+            UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:mvc];
+            [self presentViewController:nav animated:YES completion:nil];
         });
         
     } exceptionBlock:^{
