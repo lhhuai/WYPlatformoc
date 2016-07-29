@@ -16,10 +16,8 @@
 		55177DA11C88137D00C02910 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55177D9B1C88137D00C02910 /* Default-568h@2x.png */; };
 		55177DA21C88137D00C02910 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 55177D9C1C88137D00C02910 /* Default.png */; };
 		55177DA31C88137D00C02910 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55177D9D1C88137D00C02910 /* Default@2x.png */; };
-		5539F7E21C8E6E61007C808A /* LHHAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5539F7E11C8E6E61007C808A /* LHHAlertView.m */; };
 		553E57DB1C99159F00AB74B6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 553E57DA1C99159F00AB74B6 /* InfoPlist.strings */; };
 		55C77F4A1C8D209000623D74 /* LHHRegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C77F491C8D209000623D74 /* LHHRegistViewController.m */; };
-		55C77F4D1C8D263400623D74 /* LHHBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C77F4C1C8D263400623D74 /* LHHBarButtonItem.m */; };
 		55C77F501C8D503800623D74 /* LHHRegistTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C77F4F1C8D503800623D74 /* LHHRegistTableViewCell.m */; };
 		55CE33621D489B7E000621F2 /* LHHChatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CE33591D489B7E000621F2 /* LHHChatsViewController.m */; };
 		55CE33631D489B7E000621F2 /* LHHContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CE335B1D489B7E000621F2 /* LHHContactsViewController.m */; };
@@ -29,14 +27,18 @@
 		55CE336B1D489EC7000621F2 /* UIDevice+UIDeviceExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CE33691D489EC7000621F2 /* UIDevice+UIDeviceExt.m */; };
 		55CE33771D48A4A3000621F2 /* LHHUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CE33741D48A4A3000621F2 /* LHHUser.m */; };
 		55CE33781D48A4A3000621F2 /* LHHUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CE33761D48A4A3000621F2 /* LHHUserManager.m */; };
+		55CE33841D48BACD000621F2 /* LHHBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CE337B1D48BACD000621F2 /* LHHBaseViewController.m */; };
+		55CE33851D48BACD000621F2 /* LHHActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CE337E1D48BACD000621F2 /* LHHActionSheet.m */; };
+		55CE33861D48BACD000621F2 /* LHHAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CE33801D48BACD000621F2 /* LHHAlertView.m */; };
+		55CE33871D48BACD000621F2 /* LHHBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CE33821D48BACD000621F2 /* LHHBarButtonItem.m */; };
+		55CE338A1D48BB1F000621F2 /* LHHTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CE33891D48BB1F000621F2 /* LHHTabBarItem.m */; };
+		55CE338D1D48C009000621F2 /* LHHTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CE338C1D48C009000621F2 /* LHHTabBarViewController.m */; };
 		55D584DA1C8975AE003138AF /* blank_44.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D584D41C8975AE003138AF /* blank_44.png */; };
 		55D584DB1C8975AE003138AF /* blank_44@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D584D51C8975AE003138AF /* blank_44@2x.png */; };
 		55D584DC1C8975AE003138AF /* blank_44@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D584D61C8975AE003138AF /* blank_44@3x.png */; };
 		55D584DD1C8975AE003138AF /* blank_Translucent_44.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D584D71C8975AE003138AF /* blank_Translucent_44.png */; };
 		55D584DE1C8975AE003138AF /* blank_Translucent_44@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D584D81C8975AE003138AF /* blank_Translucent_44@2x.png */; };
 		55D584DF1C8975AE003138AF /* blank_Translucent_44@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D584D91C8975AE003138AF /* blank_Translucent_44@3x.png */; };
-		55D584E41C898EA7003138AF /* LHHBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D584E21C898EA7003138AF /* LHHBaseViewController.m */; };
-		55D584E71C898EF0003138AF /* LHHActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D584E61C898EF0003138AF /* LHHActionSheet.m */; };
 		55F2CF5C1D4604B9007F06CA /* LHHBaseServiceSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F2CF5B1D4604B9007F06CA /* LHHBaseServiceSession.m */; };
 		55F2CF5F1D4604FA007F06CA /* LHHRegistSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F2CF5E1D4604FA007F06CA /* LHHRegistSession.m */; };
 		55F2CF621D4760F2007F06CA /* LHHLoginSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F2CF611D4760F2007F06CA /* LHHLoginSession.m */; };
@@ -74,13 +76,9 @@
 		55177D9D1C88137D00C02910 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		55177DA51C88205A00C02910 /* LHHCommonDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHCommonDefines.h; sourceTree = "<group>"; };
 		55177DA61C88207C00C02910 /* LHHCommonColors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHHCommonColors.h; sourceTree = "<group>"; };
-		5539F7E01C8E6E61007C808A /* LHHAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHAlertView.h; sourceTree = "<group>"; };
-		5539F7E11C8E6E61007C808A /* LHHAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHAlertView.m; sourceTree = "<group>"; };
 		553E57DA1C99159F00AB74B6 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		55C77F481C8D209000623D74 /* LHHRegistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHRegistViewController.h; sourceTree = "<group>"; };
 		55C77F491C8D209000623D74 /* LHHRegistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHRegistViewController.m; sourceTree = "<group>"; };
-		55C77F4B1C8D263400623D74 /* LHHBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHBarButtonItem.h; sourceTree = "<group>"; };
-		55C77F4C1C8D263400623D74 /* LHHBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHBarButtonItem.m; sourceTree = "<group>"; };
 		55C77F4E1C8D503800623D74 /* LHHRegistTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHRegistTableViewCell.h; sourceTree = "<group>"; };
 		55C77F4F1C8D503800623D74 /* LHHRegistTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHRegistTableViewCell.m; sourceTree = "<group>"; };
 		55C77F511C8D825600623D74 /* WYPlatformocPrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYPlatformocPrefix.pch; sourceTree = "<group>"; };
@@ -102,16 +100,24 @@
 		55CE33741D48A4A3000621F2 /* LHHUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHUser.m; sourceTree = "<group>"; };
 		55CE33751D48A4A3000621F2 /* LHHUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHUserManager.h; sourceTree = "<group>"; };
 		55CE33761D48A4A3000621F2 /* LHHUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHUserManager.m; sourceTree = "<group>"; };
+		55CE337A1D48BACD000621F2 /* LHHBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHBaseViewController.h; sourceTree = "<group>"; };
+		55CE337B1D48BACD000621F2 /* LHHBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHBaseViewController.m; sourceTree = "<group>"; };
+		55CE337D1D48BACD000621F2 /* LHHActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHActionSheet.h; sourceTree = "<group>"; };
+		55CE337E1D48BACD000621F2 /* LHHActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHActionSheet.m; sourceTree = "<group>"; };
+		55CE337F1D48BACD000621F2 /* LHHAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHAlertView.h; sourceTree = "<group>"; };
+		55CE33801D48BACD000621F2 /* LHHAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHAlertView.m; sourceTree = "<group>"; };
+		55CE33811D48BACD000621F2 /* LHHBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHBarButtonItem.h; sourceTree = "<group>"; };
+		55CE33821D48BACD000621F2 /* LHHBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHBarButtonItem.m; sourceTree = "<group>"; };
+		55CE33881D48BB1F000621F2 /* LHHTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHTabBarItem.h; sourceTree = "<group>"; };
+		55CE33891D48BB1F000621F2 /* LHHTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHTabBarItem.m; sourceTree = "<group>"; };
+		55CE338B1D48C009000621F2 /* LHHTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHTabBarViewController.h; sourceTree = "<group>"; };
+		55CE338C1D48C009000621F2 /* LHHTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHTabBarViewController.m; sourceTree = "<group>"; };
 		55D584D41C8975AE003138AF /* blank_44.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blank_44.png; sourceTree = "<group>"; };
 		55D584D51C8975AE003138AF /* blank_44@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blank_44@2x.png"; sourceTree = "<group>"; };
 		55D584D61C8975AE003138AF /* blank_44@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blank_44@3x.png"; sourceTree = "<group>"; };
 		55D584D71C8975AE003138AF /* blank_Translucent_44.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blank_Translucent_44.png; sourceTree = "<group>"; };
 		55D584D81C8975AE003138AF /* blank_Translucent_44@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blank_Translucent_44@2x.png"; sourceTree = "<group>"; };
 		55D584D91C8975AE003138AF /* blank_Translucent_44@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blank_Translucent_44@3x.png"; sourceTree = "<group>"; };
-		55D584E11C898EA7003138AF /* LHHBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHBaseViewController.h; sourceTree = "<group>"; };
-		55D584E21C898EA7003138AF /* LHHBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHBaseViewController.m; sourceTree = "<group>"; };
-		55D584E51C898EF0003138AF /* LHHActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHActionSheet.h; sourceTree = "<group>"; };
-		55D584E61C898EF0003138AF /* LHHActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHActionSheet.m; sourceTree = "<group>"; };
 		55F2CF5A1D4604B9007F06CA /* LHHBaseServiceSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHBaseServiceSession.h; sourceTree = "<group>"; };
 		55F2CF5B1D4604B9007F06CA /* LHHBaseServiceSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHBaseServiceSession.m; sourceTree = "<group>"; };
 		55F2CF5D1D4604FA007F06CA /* LHHRegistSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHRegistSession.h; sourceTree = "<group>"; };
@@ -317,35 +323,47 @@
 			path = User;
 			sourceTree = "<group>";
 		};
+		55CE33791D48BACD000621F2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				55CE337A1D48BACD000621F2 /* LHHBaseViewController.h */,
+				55CE337B1D48BACD000621F2 /* LHHBaseViewController.m */,
+				55CE338B1D48C009000621F2 /* LHHTabBarViewController.h */,
+				55CE338C1D48C009000621F2 /* LHHTabBarViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		55CE337C1D48BACD000621F2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				55CE337D1D48BACD000621F2 /* LHHActionSheet.h */,
+				55CE337E1D48BACD000621F2 /* LHHActionSheet.m */,
+				55CE337F1D48BACD000621F2 /* LHHAlertView.h */,
+				55CE33801D48BACD000621F2 /* LHHAlertView.m */,
+				55CE33811D48BACD000621F2 /* LHHBarButtonItem.h */,
+				55CE33821D48BACD000621F2 /* LHHBarButtonItem.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		55CE33831D48BACD000621F2 /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				55CE33881D48BB1F000621F2 /* LHHTabBarItem.h */,
+				55CE33891D48BB1F000621F2 /* LHHTabBarItem.m */,
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
 		55D584CA1C8968FA003138AF /* LHHBase */ = {
 			isa = PBXGroup;
 			children = (
-				55D584E01C898EA7003138AF /* LHHBaseControllers */,
-				55D584E31C898EA7003138AF /* LHHBaseViews */,
+				55CE33791D48BACD000621F2 /* Controller */,
+				55CE337C1D48BACD000621F2 /* View */,
+				55CE33831D48BACD000621F2 /* Widget */,
 			);
 			path = LHHBase;
-			sourceTree = "<group>";
-		};
-		55D584E01C898EA7003138AF /* LHHBaseControllers */ = {
-			isa = PBXGroup;
-			children = (
-				55D584E11C898EA7003138AF /* LHHBaseViewController.h */,
-				55D584E21C898EA7003138AF /* LHHBaseViewController.m */,
-			);
-			path = LHHBaseControllers;
-			sourceTree = "<group>";
-		};
-		55D584E31C898EA7003138AF /* LHHBaseViews */ = {
-			isa = PBXGroup;
-			children = (
-				55D584E51C898EF0003138AF /* LHHActionSheet.h */,
-				55D584E61C898EF0003138AF /* LHHActionSheet.m */,
-				55C77F4B1C8D263400623D74 /* LHHBarButtonItem.h */,
-				55C77F4C1C8D263400623D74 /* LHHBarButtonItem.m */,
-				5539F7E01C8E6E61007C808A /* LHHAlertView.h */,
-				5539F7E11C8E6E61007C808A /* LHHAlertView.m */,
-			);
-			path = LHHBaseViews;
 			sourceTree = "<group>";
 		};
 		55F2CF671D484F8B007F06CA /* LHHMain */ = {
@@ -541,23 +559,25 @@
 				55F2CF5C1D4604B9007F06CA /* LHHBaseServiceSession.m in Sources */,
 				55177D711C88130500C02910 /* LHHAppDelegate.m in Sources */,
 				55F2CF6A1D484F8B007F06CA /* LHHMainViewController.m in Sources */,
+				55CE33841D48BACD000621F2 /* LHHBaseViewController.m in Sources */,
 				55177D9E1C88137D00C02910 /* LHHLoginTableViewCell.m in Sources */,
-				5539F7E21C8E6E61007C808A /* LHHAlertView.m in Sources */,
 				55CE336B1D489EC7000621F2 /* UIDevice+UIDeviceExt.m in Sources */,
+				55CE33851D48BACD000621F2 /* LHHActionSheet.m in Sources */,
 				55F2CF621D4760F2007F06CA /* LHHLoginSession.m in Sources */,
 				55C77F501C8D503800623D74 /* LHHRegistTableViewCell.m in Sources */,
 				55CE33631D489B7E000621F2 /* LHHContactsViewController.m in Sources */,
+				55CE338A1D48BB1F000621F2 /* LHHTabBarItem.m in Sources */,
+				55CE338D1D48C009000621F2 /* LHHTabBarViewController.m in Sources */,
+				55CE33861D48BACD000621F2 /* LHHAlertView.m in Sources */,
 				55CE336A1D489EC7000621F2 /* LHHAdaptiveManager.m in Sources */,
-				55D584E41C898EA7003138AF /* LHHBaseViewController.m in Sources */,
 				55CE33641D489B7E000621F2 /* LHHDiscoverViewController.m in Sources */,
-				55D584E71C898EF0003138AF /* LHHActionSheet.m in Sources */,
-				55C77F4D1C8D263400623D74 /* LHHBarButtonItem.m in Sources */,
 				55CE33621D489B7E000621F2 /* LHHChatsViewController.m in Sources */,
 				55177D9F1C88137D00C02910 /* LHHLoginViewController.m in Sources */,
 				55CE33771D48A4A3000621F2 /* LHHUser.m in Sources */,
 				55CE33781D48A4A3000621F2 /* LHHUserManager.m in Sources */,
 				55C77F4A1C8D209000623D74 /* LHHRegistViewController.m in Sources */,
 				55CE33651D489B7E000621F2 /* LHHMeViewController.m in Sources */,
+				55CE33871D48BACD000621F2 /* LHHBarButtonItem.m in Sources */,
 				55F2CF5F1D4604FA007F06CA /* LHHRegistSession.m in Sources */,
 				55177D6E1C88130500C02910 /* main.m in Sources */,
 			);

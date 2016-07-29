@@ -16,5 +16,6 @@
 
 - (void)dismiss;
 - (void)setWYTitle:(NSString *)title;
+- (void)buildNavigationBar;
 
 @end

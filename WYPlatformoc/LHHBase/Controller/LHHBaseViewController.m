@@ -8,6 +8,8 @@
 
 #import "LHHBaseViewController.h"
 #import "LHHBarButtonItem.h"
+#import "UIImage+WYAddition.h"
+#import "UIColor+WYAddition.h"
 
 @interface LHHBaseViewController ()
 
@@ -43,6 +45,16 @@
     label.textAlignment = NSTextAlignmentCenter;
     label.text = title;
     self.navigationItem.titleView = label;
+}
+
+- (void)buildNavigationBar {
+    UIImage *gradientImage44 = [UIImage wy_imageWithColor:[UIColor wy_colorWithRed:56 green:55 blue:60] size:CGSizeMake(1, 1) opaque:.8];
+    UIImage *gradientImage32 = [UIImage wy_imageWithColor:[UIColor wy_colorWithRed:56 green:55 blue:60] size:CGSizeMake(1, 1) opaque:.8];
+    
+    //customize the appearance of UINavigationBar
+    [self.navigationController.navigationBar setBackgroundImage:gradientImage44 forBarMetrics:UIBarMetricsDefault];
+//    [self.navigationController.navigationBar setBackgroundImage:gradientImage32 forBarMetrics:UIBarMetricsCompact];
+    [self.navigationController.navigationBar setBarStyle:UIBarStyleDefault];
 }
 
 - (void)barBack {
