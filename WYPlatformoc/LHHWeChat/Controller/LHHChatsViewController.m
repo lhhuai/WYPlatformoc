@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self setWYTitle:@"WeChat"];
+    [self setWYTitle:@"1"];
     
     CGRect tableViewFrame = CGRectMake(0, 0, SCREEN_WIDTH, VIEW_HIDETABBAR_HEIGHT);
     _tableView = [[UITableView alloc] initWithFrame:tableViewFrame style:UITableViewStylePlain];

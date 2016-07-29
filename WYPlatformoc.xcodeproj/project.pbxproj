@@ -39,6 +39,8 @@
 		55D584DD1C8975AE003138AF /* blank_Translucent_44.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D584D71C8975AE003138AF /* blank_Translucent_44.png */; };
 		55D584DE1C8975AE003138AF /* blank_Translucent_44@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D584D81C8975AE003138AF /* blank_Translucent_44@2x.png */; };
 		55D584DF1C8975AE003138AF /* blank_Translucent_44@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55D584D91C8975AE003138AF /* blank_Translucent_44@3x.png */; };
+		55EBBFA41D4AFBE20014342C /* LHHLaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55EBBFA21D4AFBE20014342C /* LHHLaunchViewController.m */; };
+		55EBBFA51D4AFBE20014342C /* LHHLaunchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55EBBFA31D4AFBE20014342C /* LHHLaunchViewController.xib */; };
 		55F2CF5C1D4604B9007F06CA /* LHHBaseServiceSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F2CF5B1D4604B9007F06CA /* LHHBaseServiceSession.m */; };
 		55F2CF5F1D4604FA007F06CA /* LHHRegistSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F2CF5E1D4604FA007F06CA /* LHHRegistSession.m */; };
 		55F2CF621D4760F2007F06CA /* LHHLoginSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F2CF611D4760F2007F06CA /* LHHLoginSession.m */; };
@@ -118,6 +120,9 @@
 		55D584D71C8975AE003138AF /* blank_Translucent_44.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blank_Translucent_44.png; sourceTree = "<group>"; };
 		55D584D81C8975AE003138AF /* blank_Translucent_44@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blank_Translucent_44@2x.png"; sourceTree = "<group>"; };
 		55D584D91C8975AE003138AF /* blank_Translucent_44@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blank_Translucent_44@3x.png"; sourceTree = "<group>"; };
+		55EBBFA11D4AFBE20014342C /* LHHLaunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHLaunchViewController.h; sourceTree = "<group>"; };
+		55EBBFA21D4AFBE20014342C /* LHHLaunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHLaunchViewController.m; sourceTree = "<group>"; };
+		55EBBFA31D4AFBE20014342C /* LHHLaunchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LHHLaunchViewController.xib; sourceTree = "<group>"; };
 		55F2CF5A1D4604B9007F06CA /* LHHBaseServiceSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHBaseServiceSession.h; sourceTree = "<group>"; };
 		55F2CF5B1D4604B9007F06CA /* LHHBaseServiceSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHBaseServiceSession.m; sourceTree = "<group>"; };
 		55F2CF5D1D4604FA007F06CA /* LHHRegistSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHRegistSession.h; sourceTree = "<group>"; };
@@ -330,6 +335,9 @@
 				55CE337B1D48BACD000621F2 /* LHHBaseViewController.m */,
 				55CE338B1D48C009000621F2 /* LHHTabBarViewController.h */,
 				55CE338C1D48C009000621F2 /* LHHTabBarViewController.m */,
+				55EBBFA11D4AFBE20014342C /* LHHLaunchViewController.h */,
+				55EBBFA21D4AFBE20014342C /* LHHLaunchViewController.m */,
+				55EBBFA31D4AFBE20014342C /* LHHLaunchViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -482,6 +490,7 @@
 			files = (
 				55177DA31C88137D00C02910 /* Default@2x.png in Resources */,
 				553E57DB1C99159F00AB74B6 /* InfoPlist.strings in Resources */,
+				55EBBFA51D4AFBE20014342C /* LHHLaunchViewController.xib in Resources */,
 				55D584DF1C8975AE003138AF /* blank_Translucent_44@3x.png in Resources */,
 				55D584DD1C8975AE003138AF /* blank_Translucent_44.png in Resources */,
 				55177DA11C88137D00C02910 /* Default-568h@2x.png in Resources */,
@@ -556,6 +565,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55EBBFA41D4AFBE20014342C /* LHHLaunchViewController.m in Sources */,
 				55F2CF5C1D4604B9007F06CA /* LHHBaseServiceSession.m in Sources */,
 				55177D711C88130500C02910 /* LHHAppDelegate.m in Sources */,
 				55F2CF6A1D484F8B007F06CA /* LHHMainViewController.m in Sources */,
@@ -689,7 +699,10 @@
 			baseConfigurationReference = ACFC21F61AB6D3DC5EFC60DE /* Pods-WYPlatformoc.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = WYPlatformoc/WYPlatformocPrefix.pch;
 				INFOPLIST_FILE = WYPlatformoc/Info.plist;
@@ -697,6 +710,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.seaphy.WYPlatformoc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -705,7 +719,10 @@
 			baseConfigurationReference = C4F3EBF552AA94C3D54ACDB7 /* Pods-WYPlatformoc.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = WYPlatformoc/WYPlatformocPrefix.pch;
 				INFOPLIST_FILE = WYPlatformoc/Info.plist;
@@ -713,6 +730,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.seaphy.WYPlatformoc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

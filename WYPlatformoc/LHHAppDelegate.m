@@ -38,6 +38,8 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
+    [LHHBaseViewController customizeBars];
+    
     return YES;
 }
 
@@ -76,21 +78,21 @@
     LHHMeViewController *meViewController = [[LHHMeViewController alloc] init];
     UINavigationController *meNaviController = [[UINavigationController alloc] initWithRootViewController:meViewController];
     
-    LHHTabBarItem *itemForChats = [[LHHTabBarItem alloc] initWithTitle:@"Chats"
-                                                         selectedImage:[UIImage imageNamed:@"tabbar_item_home_hl"]
-                                                       unselectedImage:[UIImage imageNamed:@"tabbar_item_home"]];
+    LHHTabBarItem *itemForChats = [[LHHTabBarItem alloc] initWithTitle:@"1"
+                                                         selectedImage:[UIImage imageNamed:@"tabbar_item_chats_hl"]
+                                                       unselectedImage:[UIImage imageNamed:@"tabbar_item_chats"]];
     
-    LHHTabBarItem *itemForContacts = [[LHHTabBarItem alloc] initWithTitle:@"Contacts"
-                                                         selectedImage:[UIImage imageNamed:@"tabbar_item_classify_hl"]
-                                                       unselectedImage:[UIImage imageNamed:@"tabbar_item_classify"]];
+    LHHTabBarItem *itemForContacts = [[LHHTabBarItem alloc] initWithTitle:@"2"
+                                                         selectedImage:[UIImage imageNamed:@"tabbar_item_contacts_hl"]
+                                                       unselectedImage:[UIImage imageNamed:@"tabbar_item_contacts"]];
     
-    LHHTabBarItem *itemForDiscover = [[LHHTabBarItem alloc] initWithTitle:@"Discover"
-                                                         selectedImage:[UIImage imageNamed:@"tabbar_item_shoppingcart_hl"]
-                                                       unselectedImage:[UIImage imageNamed:@"tabbar_item_shoppingcart"]];
+    LHHTabBarItem *itemForDiscover = [[LHHTabBarItem alloc] initWithTitle:@"3"
+                                                         selectedImage:[UIImage imageNamed:@"tabbar_item_discover_hl"]
+                                                       unselectedImage:[UIImage imageNamed:@"tabbar_item_discover"]];
     
-    LHHTabBarItem *itemForMe = [[LHHTabBarItem alloc] initWithTitle:@"Me"
-                                                         selectedImage:[UIImage imageNamed:@"tabbar_item_promotions_hl"]
-                                                       unselectedImage:[UIImage imageNamed:@"tabbar_item_promotions"]];
+    LHHTabBarItem *itemForMe = [[LHHTabBarItem alloc] initWithTitle:@"4"
+                                                         selectedImage:[UIImage imageNamed:@"tabbar_item_me_hl"]
+                                                       unselectedImage:[UIImage imageNamed:@"tabbar_item_me"]];
     
     LHHTabBarViewController *tabBarViewController = [[LHHTabBarViewController alloc] init];
     tabBarViewController.tabBarItems = @[itemForChats, itemForContacts, itemForDiscover, itemForMe];

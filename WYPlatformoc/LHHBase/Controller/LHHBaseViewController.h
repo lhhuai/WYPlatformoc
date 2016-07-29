@@ -18,4 +18,6 @@
 - (void)setWYTitle:(NSString *)title;
 - (void)buildNavigationBar;
 
++ (void)customizeBars;
+
 @end
