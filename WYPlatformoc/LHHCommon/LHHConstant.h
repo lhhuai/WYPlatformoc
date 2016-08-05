@@ -14,5 +14,6 @@
 #import "LHHCommonColors.h"
 #import "LHHAdaptiveManager.h"
 #import "UIDevice+UIDeviceExt.h"
+#import "UIColor+WYAddition.h"
 
 #endif /* LHHConstant_h */

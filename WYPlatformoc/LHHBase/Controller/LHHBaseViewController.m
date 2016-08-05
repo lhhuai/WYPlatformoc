@@ -7,9 +7,11 @@
 //
 
 #import "LHHBaseViewController.h"
+#import "LHHLoginViewController.h"
 #import "LHHBarButtonItem.h"
 #import "UIImage+WYAddition.h"
 #import "UIColor+WYAddition.h"
+#import "LHHUserPreferences.h"
 
 @interface LHHBaseViewController ()
 
@@ -57,6 +59,17 @@
 //    [self.navigationController.navigationBar setBarStyle:UIBarStyleDefault];
     
 //    [self.navigationController.navigationBar setBarTintColor:[UIColor wy_colorWithRed:56 green:55 blue:60]];
+}
+
+- (void)checkLogin:(void(^)(void))block {
+    if ([LHHUserPreferences sharedInstance].isLogin) {
+        block();
+    } else {
+        LHHLoginViewController *loginVC = [[LHHLoginViewController alloc] init];
+        loginVC.completeBlock = block;
+        UINavigationController *loginNav = [[UINavigationController alloc] initWithRootViewController:loginVC];
+        [self presentViewController:loginNav animated:YES completion:nil];
+    }
 }
 
 + (void)customizeBars {

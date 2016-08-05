@@ -73,6 +73,9 @@
 }
 
 - (void)openDatabase {
+    /*
+     * databasePath = /Users/seaphy/Library/Developer/CoreSimulator/Devices/D0FAC237-3925-4011-9F47-733B3F292E84/data/Containers/Data/Application/209F48AB-61C1-4D20-8FAC-6802AFB40E05/Documents/user.sqlite
+     */
     NSString *docsPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     NSString *databasePath = [docsPath stringByAppendingPathComponent:@"user.sqlite"];
     self.databaseQueue = [FMDatabaseQueue databaseQueueWithPath:databasePath];

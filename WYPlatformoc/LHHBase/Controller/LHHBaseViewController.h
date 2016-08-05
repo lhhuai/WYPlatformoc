@@ -17,6 +17,7 @@
 - (void)dismiss;
 - (void)setWYTitle:(NSString *)title;
 - (void)buildNavigationBar;
+- (void)checkLogin:(void(^)(void))block;
 
 + (void)customizeBars;
 

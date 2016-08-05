@@ -15,8 +15,10 @@
 #import "LHHContactsViewController.h"
 #import "LHHDiscoverViewController.h"
 #import "LHHMeViewController.h"
-
 #import "LHHTabBarViewController.h"
+
+#import "LHHReachability.h"
+#import "LHHUserPreferences.h"
 
 @interface LHHAppDelegate () <UITabBarControllerDelegate>
 
@@ -30,11 +32,12 @@
     //    LHHMainViewController *mainViewController = [[LHHMainViewController alloc] init];
 //    LHHLoginViewController *loginViewController = [[LHHLoginViewController alloc] init];
 //    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:loginViewController];
-    UITabBarController *tabBarController = [self setupViewControllers];
+//    UITabBarController *tabBarController = [self setupWeChatViewControllers];
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-    self.window.rootViewController = tabBarController;
+//    self.window.rootViewController = tabBarController;
+    [self initRootViewController];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
@@ -46,6 +49,7 @@
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+    [[LHHReachability sharedInstance] stopMonifier];
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
@@ -59,13 +63,40 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    [[LHHReachability sharedInstance] startMonifier];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-- (UITabBarController *)setupViewControllers {
+- (void)initRootViewController {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gotoWechatViewController) name:kLHHGotoWechatViewController object:nil];
+    if ([LHHUserPreferences sharedInstance].isLogin) {
+        [self gotoWechatViewController];
+    } else {
+        [self gotoLoginViewController];
+    }
+}
+
+- (void)gotoLoginViewController {
+    LHHLoginViewController *loginViewController = [[LHHLoginViewController alloc] init];
+    loginViewController.gotoLoginType = LHHGotoLoginTypeWeChat;
+//    @weakify(self);
+//    loginViewController.completeBlock = ^ {
+//        @strongify(self);
+//        [self gotoWechatViewController];
+//    };
+    UINavigationController *loginNav = [[UINavigationController alloc] initWithRootViewController:loginViewController];
+    self.window.rootViewController = loginNav;
+}
+
+- (void)gotoWechatViewController {
+    UITabBarController *tabBarController = [self setupWeChatViewControllers];
+    self.window.rootViewController = tabBarController;
+}
+
+- (UITabBarController *)setupWeChatViewControllers {
     LHHChatsViewController *chatsViewController = [[LHHChatsViewController alloc] init];
     UINavigationController *chatsNaviController = [[UINavigationController alloc] initWithRootViewController:chatsViewController];
     

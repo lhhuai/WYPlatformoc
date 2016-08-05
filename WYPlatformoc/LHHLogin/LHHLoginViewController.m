@@ -15,6 +15,7 @@
 #import "LHHRegistViewController.h"
 #import "LHHLoginSession.h"
 #import "MBProgressHUD.h"
+#import "LHHUserPreferences.h"
 
 static NSString *kLHHLoginTableViewCellIdentifier = @"LHHLoginTableViewCellIdentifier";
 
@@ -28,7 +29,7 @@ static NSString *kLHHLoginTableViewCellIdentifier = @"LHHLoginTableViewCellIdent
 
 @property (nonatomic, strong) LHHLoginSession *loginSession;
 
-@property (nonatomic, strong) MBProgressHUD *hud;
+@property (nonatomic, strong) MBProgressHUD *mbhud;
 
 @end
 
@@ -38,6 +39,7 @@ static NSString *kLHHLoginTableViewCellIdentifier = @"LHHLoginTableViewCellIdent
     self = [super init];
     if (self) {
         self.loginSession = [[LHHLoginSession alloc] init];
+        self.gotoLoginType = LHHGotoLoginTypeOther;
     }
     return self;
 }
@@ -120,12 +122,12 @@ static NSString *kLHHLoginTableViewCellIdentifier = @"LHHLoginTableViewCellIdent
 
 - (void)onLogin {
     self.loginButton.enabled = false;
-    self.hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
-    self.hud.labelText = @"Please wait...";
-    self.hud.minSize = CGSizeMake(110.f, 110.f);
-    self.hud.labelFont = [UIFont systemFontOfSize:11];
-    self.hud.opacity = 0.5;
-    self.hud.frame = CGRectMake(self.hud.frame.origin.x, self.hud.frame.origin.y, self.hud.frame.size.width, self.hud.frame.size.width);
+    self.mbhud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+    self.mbhud.labelText = @"Please wait...";
+    self.mbhud.minSize = CGSizeMake(110.f, 110.f);
+    self.mbhud.labelFont = [UIFont systemFontOfSize:11];
+    self.mbhud.opacity = 0.5;
+    self.mbhud.frame = CGRectMake(self.mbhud.frame.origin.x, self.mbhud.frame.origin.y, self.mbhud.frame.size.width, self.mbhud.frame.size.width);
     
     LHHUser *user = [[LHHUser alloc] init];
     user.account = self.accountString;
@@ -136,16 +138,26 @@ static NSString *kLHHLoginTableViewCellIdentifier = @"LHHLoginTableViewCellIdent
         @strongify(self);
         UIImage *image = [[UIImage imageNamed:@"Checkmark"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
         UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
-        self.hud.customView = imageView;
-        self.hud.mode = MBProgressHUDModeCustomView;
-        self.hud.labelText = @"success.";
-        [self.hud hide:YES afterDelay:2];
+        self.mbhud.customView = imageView;
+        self.mbhud.mode = MBProgressHUDModeCustomView;
+        self.mbhud.labelText = @"success.";
+        [self.mbhud hide:YES afterDelay:2];
+        [[LHHUserPreferences sharedInstance] archiveUser:user];
+        [[LHHUserPreferences sharedInstance] saveIsLogin:YES];
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             @strongify(self);
-            LHHMainViewController *mvc = [[LHHMainViewController alloc] init];
-            mvc.account = self.accountString;
-            UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:mvc];
-            [self presentViewController:nav animated:YES completion:nil];
+            switch (self.gotoLoginType) {
+                case LHHGotoLoginTypeWeChat:
+                {
+                    [[NSNotificationCenter defaultCenter] postNotificationName:kLHHGotoWechatViewController object:nil];
+                    break;
+                }
+                case LHHGotoLoginTypeOther:
+                {
+                    [self back];
+                    break;
+                }
+            }
         });
         
     } exceptionBlock:^{
@@ -153,12 +165,22 @@ static NSString *kLHHLoginTableViewCellIdentifier = @"LHHLoginTableViewCellIdent
         self.loginButton.enabled = true;
         UIImage *image = [[UIImage imageNamed:@"hud_error"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
         UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
-        self.hud.customView = imageView;
-        self.hud.mode = MBProgressHUDModeCustomView;
-        self.hud.labelText = @"account or password error.";
-        [self.hud hide:YES afterDelay:2];
+        self.mbhud.customView = imageView;
+        self.mbhud.mode = MBProgressHUDModeCustomView;
+        self.mbhud.labelText = @"account or password error.";
+        [self.mbhud hide:YES afterDelay:2];
     }];
     
+}
+
+/// 登录后返回
+- (void)back {
+    [self dismissViewControllerAnimated:YES completion:^{
+        //如果 dissmiss 前 登录成功，则执行 self.completeBlock, 取消登录则不执行 complete
+        if (self.completeBlock && [LHHUserPreferences sharedInstance].isLogin) {
+            self.completeBlock();
+        }
+    }];
 }
 
 - (void)didTouchUpInsideMoreLabel {
