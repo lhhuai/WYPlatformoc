@@ -16,6 +16,13 @@
 
 @implementation LHHChatsViewController
 
+- (id)init {
+    if (self = [super init]) {
+        self.hidesBottomBarWhenPushed = NO;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.

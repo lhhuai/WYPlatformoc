@@ -12,6 +12,7 @@
 @interface LHHUserPreferences : NSObject
 
 @property (nonatomic, assign) BOOL isLogin;
+@property (nonatomic, strong) LHHUser *user;
 
 + (LHHUserPreferences *)sharedInstance;
 - (void)archiveUser:(LHHUser *)user;

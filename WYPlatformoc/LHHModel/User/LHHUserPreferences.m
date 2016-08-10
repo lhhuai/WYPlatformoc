@@ -26,6 +26,7 @@
     self = [super init];
     if (self) {
         self.isLogin = [self getIsLogin];
+        self.user = [self unarchiveUser];
     }
     return self;
 }

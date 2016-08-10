@@ -32,6 +32,6 @@
 #define WY_FONT(fontSize)            ([UIFont     systemFontOfSize:fontSize * [LHHAdaptiveManager fontScale]])
 #define WY_BOLD_FONT(fontSize)       ([UIFont boldSystemFontOfSize:fontSize * [LHHAdaptiveManager fontScale]])
 
-
+#define WY_FONT_CONTENT              WY_FONT(14)
 
 #endif /* LHHMacros_h */

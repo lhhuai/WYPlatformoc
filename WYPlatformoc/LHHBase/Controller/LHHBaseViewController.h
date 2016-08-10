@@ -12,7 +12,7 @@
 
 @interface LHHBaseViewController : UIViewController <LHHBarButtonItemDelegate>
 
-@property (nonatomic, strong) LHHAlertView *hud;
+//@property (nonatomic, strong) LHHAlertView *hud;
 
 - (void)dismiss;
 - (void)setWYTitle:(NSString *)title;

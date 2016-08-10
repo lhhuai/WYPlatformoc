@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#define HeightForMeCommonCell          WeChat_CommonCell_Height
+
 @interface LHHMeCommonCell : UITableViewCell
 
 - (void)updateCellWithImageName:(NSString *)imageName titleName:(NSString *)titleName;

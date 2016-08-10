@@ -16,4 +16,6 @@
 #import "UIDevice+UIDeviceExt.h"
 #import "UIColor+WYAddition.h"
 
+#import "LHHWeChatConstant.h"
+
 #endif /* LHHConstant_h */
