@@ -14,7 +14,7 @@
 #define kTitleName             @"TitleName"
 #define kActionName            @"ActionName"
 
-#define heightForCellRow       WY_SIZE(30)
+#define heightForCellRow       WY_SIZE(32)
 #define marginLeft             WY_SIZE(10)
 #define marginRight            WY_SIZE(10)
 
@@ -47,16 +47,16 @@
     // Do any additional setup after loading the view.
     [self setWYTitle:@"4"];
     
-    self.dataArray = @[@[@{kSectionBlankHeight:@WY_SIZE(8)},
+    self.dataArray = @[@[@{kSectionBlankHeight:@WY_SIZE(10)},
                          @{kImageName:@"wechat_me_setting", kTitleName:@"My Posts", kActionName:@""},
                          @{kImageName:@"wechat_me_setting", kTitleName:@"Favorites", kActionName:@""},
                          @{kImageName:@"wechat_me_setting", kTitleName:@"Wallet", kActionName:@""},
                          @{kImageName:@"wechat_me_setting", kTitleName:@"Cards & Offers", kActionName:@""}],
                        
-                       @[@{kSectionBlankHeight:@WY_SIZE(10)},
+                       @[@{kSectionBlankHeight:@WY_SIZE(14)},
                          @{kImageName:@"wechat_me_setting", kTitleName:@"Sticker Gallery", kActionName:@""}],
   
-                       @[@{kSectionBlankHeight:@WY_SIZE(10)},
+                       @[@{kSectionBlankHeight:@WY_SIZE(14)},
                          @{kImageName:@"wechat_me_setting", kTitleName:@"Settings", kActionName:@""}]
                        ];
 }
@@ -138,6 +138,10 @@
         return [heightNumber intValue];
     }
     return heightForCellRow;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"section=%ld, row=%ld", indexPath.section, indexPath.row);
 }
 
 @end

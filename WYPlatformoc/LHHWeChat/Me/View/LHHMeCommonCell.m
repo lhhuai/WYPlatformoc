@@ -32,7 +32,7 @@
 
 - (void)setupCell {
     self.backgroundColor = [UIColor whiteColor];
-    CGFloat cellHeight = WY_SIZE(30);
+    CGFloat cellHeight = WY_SIZE(32);
     
     self.mcTitleLeftIV = [[UIImageView alloc] initWithFrame:CGRectMake(marginLeft, (cellHeight - WY_IMAGE_SIZE(18)) * .5, WY_IMAGE_SIZE(18), WY_IMAGE_SIZE(18))];
     self.mcTitleLeftIV.backgroundColor = [UIColor clearColor];

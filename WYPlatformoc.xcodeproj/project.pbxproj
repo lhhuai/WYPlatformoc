@@ -19,10 +19,6 @@
 		553E57DB1C99159F00AB74B6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 553E57DA1C99159F00AB74B6 /* InfoPlist.strings */; };
 		55C77F4A1C8D209000623D74 /* LHHRegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C77F491C8D209000623D74 /* LHHRegistViewController.m */; };
 		55C77F501C8D503800623D74 /* LHHRegistTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C77F4F1C8D503800623D74 /* LHHRegistTableViewCell.m */; };
-		55CE33621D489B7E000621F2 /* LHHChatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CE33591D489B7E000621F2 /* LHHChatsViewController.m */; };
-		55CE33631D489B7E000621F2 /* LHHContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CE335B1D489B7E000621F2 /* LHHContactsViewController.m */; };
-		55CE33641D489B7E000621F2 /* LHHDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CE335D1D489B7E000621F2 /* LHHDiscoverViewController.m */; };
-		55CE33651D489B7E000621F2 /* LHHMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CE335F1D489B7E000621F2 /* LHHMeViewController.m */; };
 		55CE336A1D489EC7000621F2 /* LHHAdaptiveManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CE33671D489EC7000621F2 /* LHHAdaptiveManager.m */; };
 		55CE336B1D489EC7000621F2 /* UIDevice+UIDeviceExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CE33691D489EC7000621F2 /* UIDevice+UIDeviceExt.m */; };
 		55CE33771D48A4A3000621F2 /* LHHUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CE33741D48A4A3000621F2 /* LHHUser.m */; };
@@ -47,8 +43,12 @@
 		55F2CF5F1D4604FA007F06CA /* LHHRegistSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F2CF5E1D4604FA007F06CA /* LHHRegistSession.m */; };
 		55F2CF621D4760F2007F06CA /* LHHLoginSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F2CF611D4760F2007F06CA /* LHHLoginSession.m */; };
 		55F2CF6A1D484F8B007F06CA /* LHHMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F2CF691D484F8B007F06CA /* LHHMainViewController.m */; };
-		55FA80861D5363E5001F99ED /* LHHMeCommonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55FA80851D5363E5001F99ED /* LHHMeCommonCell.m */; };
-		55FA80891D536408001F99ED /* LHHMeHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55FA80881D536408001F99ED /* LHHMeHeaderCell.m */; };
+		55F5159B1D5AC7700098CA7A /* LHHChatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F515821D5AC7700098CA7A /* LHHChatsViewController.m */; };
+		55F5159C1D5AC7700098CA7A /* LHHContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F515881D5AC7700098CA7A /* LHHContactsViewController.m */; };
+		55F5159D1D5AC7700098CA7A /* LHHDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F5158E1D5AC7700098CA7A /* LHHDiscoverViewController.m */; };
+		55F5159E1D5AC7700098CA7A /* LHHMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F515941D5AC7700098CA7A /* LHHMeViewController.m */; };
+		55F5159F1D5AC7700098CA7A /* LHHMeCommonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F515971D5AC7700098CA7A /* LHHMeCommonCell.m */; };
+		55F515A01D5AC7700098CA7A /* LHHMeHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F515991D5AC7700098CA7A /* LHHMeHeaderCell.m */; };
 		E7902E35B1A42A6FA3EFB74E /* Pods_WYPlatformoc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17D64C58974721ABB540B803 /* Pods_WYPlatformoc.framework */; };
 /* End PBXBuildFile section */
 
@@ -88,14 +88,6 @@
 		55C77F4E1C8D503800623D74 /* LHHRegistTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHRegistTableViewCell.h; sourceTree = "<group>"; };
 		55C77F4F1C8D503800623D74 /* LHHRegistTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHRegistTableViewCell.m; sourceTree = "<group>"; };
 		55C77F511C8D825600623D74 /* WYPlatformocPrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYPlatformocPrefix.pch; sourceTree = "<group>"; };
-		55CE33581D489B7E000621F2 /* LHHChatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHChatsViewController.h; sourceTree = "<group>"; };
-		55CE33591D489B7E000621F2 /* LHHChatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHChatsViewController.m; sourceTree = "<group>"; };
-		55CE335A1D489B7E000621F2 /* LHHContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHContactsViewController.h; sourceTree = "<group>"; };
-		55CE335B1D489B7E000621F2 /* LHHContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHContactsViewController.m; sourceTree = "<group>"; };
-		55CE335C1D489B7E000621F2 /* LHHDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHDiscoverViewController.h; sourceTree = "<group>"; };
-		55CE335D1D489B7E000621F2 /* LHHDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHDiscoverViewController.m; sourceTree = "<group>"; };
-		55CE335E1D489B7E000621F2 /* LHHMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHMeViewController.h; sourceTree = "<group>"; };
-		55CE335F1D489B7E000621F2 /* LHHMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHMeViewController.m; sourceTree = "<group>"; };
 		55CE33661D489EC7000621F2 /* LHHAdaptiveManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHAdaptiveManager.h; sourceTree = "<group>"; };
 		55CE33671D489EC7000621F2 /* LHHAdaptiveManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHAdaptiveManager.m; sourceTree = "<group>"; };
 		55CE33681D489EC7000621F2 /* UIDevice+UIDeviceExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+UIDeviceExt.h"; sourceTree = "<group>"; };
@@ -139,10 +131,18 @@
 		55F2CF611D4760F2007F06CA /* LHHLoginSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHLoginSession.m; sourceTree = "<group>"; };
 		55F2CF681D484F8B007F06CA /* LHHMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHMainViewController.h; sourceTree = "<group>"; };
 		55F2CF691D484F8B007F06CA /* LHHMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHMainViewController.m; sourceTree = "<group>"; };
-		55FA80841D5363E5001F99ED /* LHHMeCommonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHMeCommonCell.h; sourceTree = "<group>"; };
-		55FA80851D5363E5001F99ED /* LHHMeCommonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHMeCommonCell.m; sourceTree = "<group>"; };
-		55FA80871D536408001F99ED /* LHHMeHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHMeHeaderCell.h; sourceTree = "<group>"; };
-		55FA80881D536408001F99ED /* LHHMeHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHMeHeaderCell.m; sourceTree = "<group>"; };
+		55F515811D5AC7700098CA7A /* LHHChatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHChatsViewController.h; sourceTree = "<group>"; };
+		55F515821D5AC7700098CA7A /* LHHChatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHChatsViewController.m; sourceTree = "<group>"; };
+		55F515871D5AC7700098CA7A /* LHHContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHContactsViewController.h; sourceTree = "<group>"; };
+		55F515881D5AC7700098CA7A /* LHHContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHContactsViewController.m; sourceTree = "<group>"; };
+		55F5158D1D5AC7700098CA7A /* LHHDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHDiscoverViewController.h; sourceTree = "<group>"; };
+		55F5158E1D5AC7700098CA7A /* LHHDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHDiscoverViewController.m; sourceTree = "<group>"; };
+		55F515931D5AC7700098CA7A /* LHHMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHMeViewController.h; sourceTree = "<group>"; };
+		55F515941D5AC7700098CA7A /* LHHMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHMeViewController.m; sourceTree = "<group>"; };
+		55F515961D5AC7700098CA7A /* LHHMeCommonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHMeCommonCell.h; sourceTree = "<group>"; };
+		55F515971D5AC7700098CA7A /* LHHMeCommonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHMeCommonCell.m; sourceTree = "<group>"; };
+		55F515981D5AC7700098CA7A /* LHHMeHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHMeHeaderCell.h; sourceTree = "<group>"; };
+		55F515991D5AC7700098CA7A /* LHHMeHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHMeHeaderCell.m; sourceTree = "<group>"; };
 		ACFC21F61AB6D3DC5EFC60DE /* Pods-WYPlatformoc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WYPlatformoc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WYPlatformoc/Pods-WYPlatformoc.debug.xcconfig"; sourceTree = "<group>"; };
 		C4F3EBF552AA94C3D54ACDB7 /* Pods-WYPlatformoc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WYPlatformoc.release.xcconfig"; path = "Pods/Target Support Files/Pods-WYPlatformoc/Pods-WYPlatformoc.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -294,39 +294,6 @@
 			path = LHHRegist;
 			sourceTree = "<group>";
 		};
-		55CE33571D489B7E000621F2 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				55CE33581D489B7E000621F2 /* LHHChatsViewController.h */,
-				55CE33591D489B7E000621F2 /* LHHChatsViewController.m */,
-				55CE335A1D489B7E000621F2 /* LHHContactsViewController.h */,
-				55CE335B1D489B7E000621F2 /* LHHContactsViewController.m */,
-				55CE335C1D489B7E000621F2 /* LHHDiscoverViewController.h */,
-				55CE335D1D489B7E000621F2 /* LHHDiscoverViewController.m */,
-				55CE335E1D489B7E000621F2 /* LHHMeViewController.h */,
-				55CE335F1D489B7E000621F2 /* LHHMeViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		55CE33601D489B7E000621F2 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				55FA80871D536408001F99ED /* LHHMeHeaderCell.h */,
-				55FA80881D536408001F99ED /* LHHMeHeaderCell.m */,
-				55FA80841D5363E5001F99ED /* LHHMeCommonCell.h */,
-				55FA80851D5363E5001F99ED /* LHHMeCommonCell.m */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		55CE33611D489B7E000621F2 /* Widget */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Widget;
-			sourceTree = "<group>";
-		};
 		55CE33711D48A4A3000621F2 /* LHHModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -406,11 +373,148 @@
 		55F2CF6B1D485282007F06CA /* LHHWeChat */ = {
 			isa = PBXGroup;
 			children = (
-				55CE33571D489B7E000621F2 /* Controller */,
-				55CE33601D489B7E000621F2 /* View */,
-				55CE33611D489B7E000621F2 /* Widget */,
+				55F5157F1D5AC7700098CA7A /* Chats */,
+				55F515851D5AC7700098CA7A /* Contacts */,
+				55F5158B1D5AC7700098CA7A /* Discover */,
+				55F515911D5AC7700098CA7A /* Me */,
 			);
 			path = LHHWeChat;
+			sourceTree = "<group>";
+		};
+		55F5157F1D5AC7700098CA7A /* Chats */ = {
+			isa = PBXGroup;
+			children = (
+				55F515801D5AC7700098CA7A /* Controller */,
+				55F515831D5AC7700098CA7A /* View */,
+				55F515841D5AC7700098CA7A /* Widget */,
+			);
+			path = Chats;
+			sourceTree = "<group>";
+		};
+		55F515801D5AC7700098CA7A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				55F515811D5AC7700098CA7A /* LHHChatsViewController.h */,
+				55F515821D5AC7700098CA7A /* LHHChatsViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		55F515831D5AC7700098CA7A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		55F515841D5AC7700098CA7A /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
+		55F515851D5AC7700098CA7A /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				55F515861D5AC7700098CA7A /* Controller */,
+				55F515891D5AC7700098CA7A /* View */,
+				55F5158A1D5AC7700098CA7A /* Widget */,
+			);
+			path = Contacts;
+			sourceTree = "<group>";
+		};
+		55F515861D5AC7700098CA7A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				55F515871D5AC7700098CA7A /* LHHContactsViewController.h */,
+				55F515881D5AC7700098CA7A /* LHHContactsViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		55F515891D5AC7700098CA7A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		55F5158A1D5AC7700098CA7A /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
+		55F5158B1D5AC7700098CA7A /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				55F5158C1D5AC7700098CA7A /* Controller */,
+				55F5158F1D5AC7700098CA7A /* View */,
+				55F515901D5AC7700098CA7A /* Widget */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		55F5158C1D5AC7700098CA7A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				55F5158D1D5AC7700098CA7A /* LHHDiscoverViewController.h */,
+				55F5158E1D5AC7700098CA7A /* LHHDiscoverViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		55F5158F1D5AC7700098CA7A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		55F515901D5AC7700098CA7A /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
+		55F515911D5AC7700098CA7A /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				55F515921D5AC7700098CA7A /* Controller */,
+				55F515951D5AC7700098CA7A /* View */,
+				55F5159A1D5AC7700098CA7A /* Widget */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		55F515921D5AC7700098CA7A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				55F515931D5AC7700098CA7A /* LHHMeViewController.h */,
+				55F515941D5AC7700098CA7A /* LHHMeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		55F515951D5AC7700098CA7A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				55F515981D5AC7700098CA7A /* LHHMeHeaderCell.h */,
+				55F515991D5AC7700098CA7A /* LHHMeHeaderCell.m */,
+				55F515961D5AC7700098CA7A /* LHHMeCommonCell.h */,
+				55F515971D5AC7700098CA7A /* LHHMeCommonCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		55F5159A1D5AC7700098CA7A /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Widget;
 			sourceTree = "<group>";
 		};
 		EE6E0660D22FDD5736AFB744 /* Pods */ = {
@@ -588,30 +692,30 @@
 				55EBBFA41D4AFBE20014342C /* LHHLaunchViewController.m in Sources */,
 				55F2CF5C1D4604B9007F06CA /* LHHBaseServiceSession.m in Sources */,
 				55177D711C88130500C02910 /* LHHAppDelegate.m in Sources */,
+				55F5159E1D5AC7700098CA7A /* LHHMeViewController.m in Sources */,
 				55F2CF6A1D484F8B007F06CA /* LHHMainViewController.m in Sources */,
 				55CE33841D48BACD000621F2 /* LHHBaseViewController.m in Sources */,
 				55177D9E1C88137D00C02910 /* LHHLoginTableViewCell.m in Sources */,
 				55CE336B1D489EC7000621F2 /* UIDevice+UIDeviceExt.m in Sources */,
-				55FA80891D536408001F99ED /* LHHMeHeaderCell.m in Sources */,
+				55F5159F1D5AC7700098CA7A /* LHHMeCommonCell.m in Sources */,
 				55CE33851D48BACD000621F2 /* LHHActionSheet.m in Sources */,
 				55F2CF621D4760F2007F06CA /* LHHLoginSession.m in Sources */,
 				55C77F501C8D503800623D74 /* LHHRegistTableViewCell.m in Sources */,
-				55CE33631D489B7E000621F2 /* LHHContactsViewController.m in Sources */,
+				55F515A01D5AC7700098CA7A /* LHHMeHeaderCell.m in Sources */,
 				55EBBFA81D4B5AAB0014342C /* LHHReachability.m in Sources */,
+				55F5159C1D5AC7700098CA7A /* LHHContactsViewController.m in Sources */,
 				55CE338A1D48BB1F000621F2 /* LHHTabBarItem.m in Sources */,
 				55CE338D1D48C009000621F2 /* LHHTabBarViewController.m in Sources */,
+				55F5159D1D5AC7700098CA7A /* LHHDiscoverViewController.m in Sources */,
 				55CE33861D48BACD000621F2 /* LHHAlertView.m in Sources */,
-				55FA80861D5363E5001F99ED /* LHHMeCommonCell.m in Sources */,
 				55CE336A1D489EC7000621F2 /* LHHAdaptiveManager.m in Sources */,
-				55CE33641D489B7E000621F2 /* LHHDiscoverViewController.m in Sources */,
-				55CE33621D489B7E000621F2 /* LHHChatsViewController.m in Sources */,
 				55177D9F1C88137D00C02910 /* LHHLoginViewController.m in Sources */,
 				55CE33771D48A4A3000621F2 /* LHHUser.m in Sources */,
 				55CE33781D48A4A3000621F2 /* LHHUserManager.m in Sources */,
 				55C77F4A1C8D209000623D74 /* LHHRegistViewController.m in Sources */,
-				55CE33651D489B7E000621F2 /* LHHMeViewController.m in Sources */,
 				55CE33871D48BACD000621F2 /* LHHBarButtonItem.m in Sources */,
 				55F2CF5F1D4604FA007F06CA /* LHHRegistSession.m in Sources */,
+				55F5159B1D5AC7700098CA7A /* LHHChatsViewController.m in Sources */,
 				55177D6E1C88130500C02910 /* main.m in Sources */,
 				55EBBFBA1D5211910014342C /* LHHUserPreferences.m in Sources */,
 			);
