@@ -15,4 +15,16 @@
 
 
 // 主题模块背景
-#define COLOR_MAIN_BG                                 WYRGB(239, 239, 244)
+#define COLOR_MAIN_BG                               WYRGB(239, 239, 244)
+
+// 深灰色灰       #646464
+#define COLOR_HALF_GRAY               [UIColor wy_colorFromHex:0x646464]
+
+// 中灰色       #969696
+#define COLOR_LIGHT_GRAY              [UIColor wy_colorFromHex:0x969696]
+
+// 模块分割线：轻素的浅灰色用作搭配及展示型文字的颜色  #dcdcdc
+#define COLOR_SEPARATOR_LINE          [UIColor wy_colorFromHex:0xdcdcdc]
+
+// app背景色：素灰色的背景，有效降低屏幕色彩适配风险     #f0f0f0
+#define COLOR_GRAY_BACKGROUND         [UIColor wy_colorFromHex:0xf0f0f0]

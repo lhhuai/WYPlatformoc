@@ -10,5 +10,6 @@
 
 @interface LHHMeCommonCell : UITableViewCell
 
+- (void)updateCellWithImageName:(NSString *)imageName titleName:(NSString *)titleName;
 
 @end
