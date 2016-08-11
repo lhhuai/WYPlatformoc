@@ -36,6 +36,7 @@
     if (archiveData) {
         [[NSUserDefaults standardUserDefaults] setObject:archiveData forKey:kLHHUserInfo];
         [[NSUserDefaults standardUserDefaults] synchronize];
+        self.user = user;
     }
 }
 
@@ -76,6 +77,13 @@
     } else {
         return true;
     }
+}
+
+- (void)exitLogin {
+    self.isLogin = NO;
+    self.user = [LHHUser new];
+    [self saveIsLogin:self.isLogin];
+    [self archiveUser:self.user];
 }
 
 @end

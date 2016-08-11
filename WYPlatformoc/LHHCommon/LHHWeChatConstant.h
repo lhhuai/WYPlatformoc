@@ -11,7 +11,7 @@
 
 #define WeChat_CommonCell_Height                        WY_SIZE(44)
 
-#define WeChat_Me_MarginLeft                            WY_SIZE(10)
-#define WeChat_Me_MarginRight                           WY_SIZE(10)
+#define WeChat_Me_MarginLeft                            WY_SIZE(15)
+#define WeChat_Me_MarginRight                           WY_SIZE(15)
 
 #endif /* LHHWeChatConstant_h */

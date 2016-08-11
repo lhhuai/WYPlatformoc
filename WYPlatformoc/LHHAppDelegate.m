@@ -72,6 +72,7 @@
 
 - (void)initRootViewController {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gotoWechatViewController) name:kLHHGotoWechatViewController object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gotoLoginViewController) name:kLHHGotoLoginViewController object:nil];
     if ([LHHUserPreferences sharedInstance].isLogin) {
         [self gotoWechatViewController];
     } else {
@@ -89,6 +90,10 @@
 //    };
     UINavigationController *loginNav = [[UINavigationController alloc] initWithRootViewController:loginViewController];
     self.window.rootViewController = loginNav;
+    
+    self.tabIndex = -1;
+    self.tabBarController = nil;
+    self.currentNav = nil;
 }
 
 - (void)gotoWechatViewController {
@@ -129,8 +134,8 @@
     tabBarViewController.tabBarItems = @[itemForChats, itemForContacts, itemForDiscover, itemForMe];
     tabBarViewController.viewControllers = @[chatsNaviController, contactsNaviController, discoverNaviController, meNaviController];
     tabBarViewController.delegate = self;
-    _tabIndex = 0;
-    _tabBarController = tabBarViewController;
+    self.tabIndex = 0;
+    self.tabBarController = tabBarViewController;
     self.currentNav = chatsNaviController;
     return tabBarViewController;
 }

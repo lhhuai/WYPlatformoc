@@ -18,5 +18,6 @@
 - (void)archiveUser:(LHHUser *)user;
 - (BOOL)checkAccount:(NSString *)account password:(NSString *)password;
 - (void)saveIsLogin:(BOOL)isLogin;
+- (void)exitLogin;
 
 @end

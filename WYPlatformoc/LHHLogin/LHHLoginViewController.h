@@ -9,9 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "LHHBaseViewController.h"
 
-#define kLHHLoginViewController                          @"LHHLoginViewController"
-#define kLHHGotoWechatViewController                     @"LHHGotoWechatViewController"
-
 typedef void (^LHHLoginCallBackBlock)();
 
 typedef NS_ENUM(NSInteger, LHHGotoLoginType) {

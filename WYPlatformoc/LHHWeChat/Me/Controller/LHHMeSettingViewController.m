@@ -8,6 +8,9 @@
 
 #import "LHHMeSettingViewController.h"
 #import "LHHMeSettingCell.h"
+#import "LHHWeChatButtonCell.h"
+#import "LHHActionSheet.h"
+#import "LHHUserPreferences.h"
 
 #define kSectionBlankHeight              @"SectionBlankHeight"
 #define kCellType                        @"CellType"
@@ -87,6 +90,25 @@
     //    [vc performSelector:selector];
 }
 
+- (void)clickLogOut {
+    LHHActionSheet *action = [[LHHActionSheet alloc] initWithCancelStr:@"Cancel" otherButtonTitles:@[@"Log Out"] attachTitle:@"Logout will not delete any data. You can still log in with this account."];
+    
+    [action changeTitleColor:[UIColor redColor] andIndex:1];
+    
+    [action buttonIndex:^(NSInteger buttonindex) {
+        switch (buttonindex) {
+            case 1:
+            {
+                [[LHHUserPreferences sharedInstance] exitLogin];
+                [[NSNotificationCenter defaultCenter] postNotificationName:kLHHGotoLoginViewController object:nil];
+                break;
+            }
+            default:
+                break;
+        }
+    }];
+}
+
 #pragma - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return self.dataArray.count;
@@ -98,51 +120,49 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    if (indexPath.row == 0) {
+    if (indexPath.row == 0) {
         return [self setupSpaceCell:tableView];
-//    }
-//    
-//    NSArray *rows = [self.dataArray objectAtIndex:indexPath.section];
-//    NSDictionary *dic = [rows objectAtIndex:indexPath.row];
-//    
-//    if ([[dic objectForKey:kCellType] isEqualToString:@"Header"]) {
-//        LHHMeHeaderCell *headerCell = [tableView dequeueReusableCellWithIdentifier:@"kLHHMeHeaderCellIdentifier"];
-//        if (!headerCell) {
-//            headerCell = [[LHHMeHeaderCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"kLHHMeHeaderCellIdentifier"];
-//            headerCell.selectionStyle = UITableViewCellSelectionStyleNone;
-//        }
-//        LHHWeChatUser *user = [[LHHWeChatUser alloc] init];
-//        user.profilePhoto = [dic objectForKey:kImageName];
-//        user.name = [LHHUserPreferences sharedInstance].user.account;
-//        user.weChatID = @"seaphyliu";
-//        [headerCell updateCell:user];
-//        return headerCell;
-//    } else {
-//        LHHMeCommonCell *commonCell = [tableView dequeueReusableCellWithIdentifier:@"kLHHMeCommonCellIdentifier"];
-//        if (!commonCell) {
-//            commonCell = [[LHHMeCommonCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"kLHHMeCommonCellIdentifier"];
-//            commonCell.selectionStyle = UITableViewCellSelectionStyleNone;
-//        }
-//        
-//        if (indexPath.row == 1) {
-//            UILabel *topLine = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, WY_SIZE(.5))];
-//            topLine.backgroundColor = COLOR_SEPARATOR_LINE;
-//            [commonCell addSubview:topLine];
-//        }
-//        [commonCell updateCellWithImageName:[dic objectForKey:kImageName] titleName:[dic objectForKey:kTitleName]];
-//        
-//        if (indexPath.row+1 == rows.count) {
-//            UILabel *bottomLine = [[UILabel alloc] initWithFrame:CGRectMake(0, HeightForMeCommonCell - WY_SIZE(.5), SCREEN_WIDTH, WY_SIZE(.5))];
-//            bottomLine.backgroundColor = COLOR_SEPARATOR_LINE;
-//            [commonCell addSubview:bottomLine];
-//        } else {
-//            UILabel *bottomLine = [[UILabel alloc] initWithFrame:CGRectMake(WeChat_Me_MarginLeft, HeightForMeCommonCell - WY_SIZE(.5), SCREEN_WIDTH - WeChat_Me_MarginLeft, WY_SIZE(.5))];
-//            bottomLine.backgroundColor = COLOR_SEPARATOR_LINE;
-//            [commonCell addSubview:bottomLine];
-//        }
-//        
-//        return commonCell;
-//    }
+    }
+
+    NSArray *rows = [self.dataArray objectAtIndex:indexPath.section];
+    NSDictionary *dic = [rows objectAtIndex:indexPath.row];
+    
+    if ([[dic objectForKey:kCellType] isEqualToString:@"Button"]) {
+        LHHWeChatButtonCell *buttonCell = [tableView dequeueReusableCellWithIdentifier:@"kLHHWeChatButtonCellIdentifier"];
+        if (!buttonCell) {
+            buttonCell = [[LHHWeChatButtonCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"kLHHWeChatButtonCellIdentifier"];
+//            buttonCell.selectionStyle = UITableViewCellSelectionStyleNone;
+        }
+        [buttonCell updateCell:[dic objectForKey:kTitleName]];
+        return buttonCell;
+    } else {
+        LHHMeSettingCell *settingCell = [tableView dequeueReusableCellWithIdentifier:@"kLHHMeSettingCellIdentifier"];
+        if (!settingCell) {
+            settingCell = [[LHHMeSettingCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"kLHHMeSettingCellIdentifier"];
+            settingCell.selectionStyle = UITableViewCellSelectionStyleNone;
+        }
+        
+        if (indexPath.row == 1) {
+            UILabel *topLine = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, WY_SIZE(.5))];
+            topLine.backgroundColor = COLOR_SEPARATOR_LINE;
+            [settingCell addSubview:topLine];
+        }
+        LHHMeSettingCellModel *model = [[LHHMeSettingCellModel alloc] init];
+        model.title = [dic objectForKey:kTitleName];
+        [settingCell updateCell:model];
+        
+        if (indexPath.row+1 == rows.count) {
+            UILabel *bottomLine = [[UILabel alloc] initWithFrame:CGRectMake(0, HeightForMeSettingCell - WY_SIZE(.5), SCREEN_WIDTH, WY_SIZE(.5))];
+            bottomLine.backgroundColor = COLOR_SEPARATOR_LINE;
+            [settingCell addSubview:bottomLine];
+        } else {
+            UILabel *bottomLine = [[UILabel alloc] initWithFrame:CGRectMake(MarginLeftForMeSettingCell, HeightForMeSettingCell - WY_SIZE(.5), SCREEN_WIDTH - MarginLeftForMeSettingCell, WY_SIZE(.5))];
+            bottomLine.backgroundColor = COLOR_SEPARATOR_LINE;
+            [settingCell addSubview:bottomLine];
+        }
+        
+        return settingCell;
+    }
 }
 
 #pragma - UITableViewDelegate
@@ -159,6 +179,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"section=%ld, row=%ld", indexPath.section, indexPath.row);
     
+    NSArray *rows = [self.dataArray objectAtIndex:indexPath.section];
+    NSDictionary *dic = [rows objectAtIndex:indexPath.row];
+    
+    if (indexPath.row != 0 && [[dic objectForKey:kCellType] isEqualToString:@"Button"]) {
+        [self clickLogOut];
+    }
 }
 
 @end
