@@ -175,9 +175,7 @@
     return HeightForMeSettingCell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"section=%ld, row=%ld", indexPath.section, indexPath.row);
-    
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {    
     NSArray *rows = [self.dataArray objectAtIndex:indexPath.section];
     NSDictionary *dic = [rows objectAtIndex:indexPath.row];
     

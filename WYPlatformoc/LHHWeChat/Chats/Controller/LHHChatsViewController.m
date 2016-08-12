@@ -29,11 +29,14 @@
     [self setWYTitle:@"1"];
     
     CGRect tableViewFrame = CGRectMake(0, 0, SCREEN_WIDTH, VIEW_HIDETABBAR_HEIGHT);
-    _tableView = [[UITableView alloc] initWithFrame:tableViewFrame style:UITableViewStylePlain];
-    _tableView.delegate = self;
-    _tableView.dataSource = self;
+    self.tableView = [[UITableView alloc] initWithFrame:tableViewFrame style:UITableViewStylePlain];
+//    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+//    self.tableView.separatorColor = [UIColor clearColor];
+    self.tableView.backgroundColor = [UIColor clearColor];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
     
-    [self.view addSubview:_tableView];
+    [self.view addSubview:self.tableView];
     
     [self buildNavigationBar];
 }
@@ -60,11 +63,16 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"kLHHIdentifier"];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"kLHHIdentifier"];
-        cell.backgroundColor = [UIColor grayColor];
+        cell.backgroundColor = [UIColor clearColor];
     }
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld.%@", (long)indexPath.row, @"content"];
+    cell.textLabel.text = [NSString stringWithFormat:@"%ld.%@", (long)(indexPath.row + 1), @"content"];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    //    NSLog(@"section=%ld, row=%ld", indexPath.section, indexPath.row);
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end

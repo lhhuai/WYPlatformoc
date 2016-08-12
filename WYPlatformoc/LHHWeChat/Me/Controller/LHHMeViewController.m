@@ -95,23 +95,6 @@
     return cell;
 }
 
-- (void)remoteNotificationDictionary:(NSString *)className {
-    // 根据字典字段反射出我们想要的类，并初始化控制器
-    Class class = NSClassFromString(className);
-    UIViewController *vc = [[class alloc] init];
-    //    // 获取参数列表，使用枚举的方式，对控制器进行KVC赋值
-    //    NSDictionary *parameter = dict[@"propertys"];
-    //    [parameter enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
-    //        if ([[parameter allKeys] containsObject:key]) {
-    //            [vc setValue:obj forKey:key];
-    //        }
-    //    }];
-    [self.navigationController pushViewController:vc animated:YES];
-    //    // 从字典中获取方法名，并调用对应的方法
-    //    SEL selector = NSSelectorFromString(dict[@"method"]);
-    //    [vc performSelector:selector];
-}
-
 #pragma - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return self.dataArray.count;
@@ -184,11 +167,10 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    NSLog(@"section=%ld, row=%ld", indexPath.section, indexPath.row);
     NSArray *rows = [self.dataArray objectAtIndex:indexPath.section];
     NSDictionary *dic = [rows objectAtIndex:indexPath.row];
     if ([NSClassFromString([dic objectForKey:kClassName]) isSubclassOfClass:[UIViewController class]]) {
-        [self remoteNotificationDictionary:[dic objectForKey:kClassName]];
+        [self pushViewControllerWith:[dic objectForKey:kClassName] leftTitle:@"Me"];
     }
     
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];

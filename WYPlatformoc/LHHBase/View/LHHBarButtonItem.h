@@ -17,6 +17,7 @@
 
 @interface LHHBarButtonItem : UIView
 
-+ (UIBarButtonItem *)backBarButtonItemWith:(id<LHHBarButtonItemDelegate>)delegate title:(NSString *)title;
++ (UIBarButtonItem *)backBarButtonItemWithTarget:(id)target action:(SEL)action;
++ (UIBarButtonItem *)backBarButtonItemWithTitle:(NSString *)title target:(id)target action:(SEL)action;
 
 @end

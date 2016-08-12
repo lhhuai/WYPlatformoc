@@ -11,22 +11,35 @@
 
 @implementation LHHBarButtonItem
 
-+ (UIBarButtonItem *)backBarButtonItemWith:(id<LHHBarButtonItemDelegate>)delegate title:(NSString *)title {
-    UILabel *leftLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 50, 18)];
-    leftLabel.font = [UIFont systemFontOfSize:13];
-    if (title) {
-        leftLabel.text = title;
-    } else {
-        leftLabel.text = @"Back";
++ (UIBarButtonItem *)backBarButtonItemWithTarget:(id)target action:(SEL)action {
+    return [LHHBarButtonItem backBarButtonItemWithTitle:nil target:target action:action];
+}
+
++ (UIBarButtonItem *)backBarButtonItemWithTitle:(NSString *)title target:(id)target action:(SEL)action {
+    if (!title) {
+        title = @"Back";
     }
-    leftLabel.textColor = RGBCOLOR(0, 183, 0);
-    leftLabel.backgroundColor = [UIColor clearColor];
+    UIFont *fpFont = WY_FONT_TITLE;
+    CGSize fpSize = WY_TEXTSIZE(title, fpFont);
     
-    UIButton *customView = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 50, 18)];
-    [customView addSubview:leftLabel];
-    if ([delegate respondsToSelector:@selector(barBack)]) {
-        [customView addTarget:delegate action:@selector(barBack) forControlEvents:UIControlEventTouchUpInside];
+    UIControl *customView = [[UIControl alloc] initWithFrame:CGRectMake(0, 0, WY_IMAGE_SIZE(19) + WY_SIZE(4) + fpSize.width, WY_IMAGE_SIZE(19))];
+    // back图标
+    UIImageView *backIconView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, WY_IMAGE_SIZE(19), WY_IMAGE_SIZE(19))];
+    backIconView.image = [UIImage imageNamed:@"navibar_back"];
+    [customView addSubview:backIconView];
+    // title
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(backIconView.frame) + WY_SIZE(4), 0, fpSize.width, WY_IMAGE_SIZE(19))];
+    label.font = fpFont;
+    label.textAlignment = NSTextAlignmentLeft;
+    label.text = title;
+    label.textColor = COLOR_WHITE;
+    label.backgroundColor = [UIColor clearColor];
+    [customView addSubview:label];
+    
+    if (action == nil) {
+        action = @selector(barBack);
     }
+    [customView addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
     return [[UIBarButtonItem alloc] initWithCustomView:customView];
 }
 

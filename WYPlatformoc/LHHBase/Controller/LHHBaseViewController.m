@@ -14,7 +14,9 @@
 #import "LHHUserPreferences.h"
 #import "LHHBaseViewController+Navigation.h"
 
-@interface LHHBaseViewController ()
+@interface LHHBaseViewController () <UINavigationControllerDelegate, UIGestureRecognizerDelegate>
+
+@property(nullable, nonatomic, weak) id <UIGestureRecognizerDelegate> gestureRecognizerDelegate;
 
 @end
 
@@ -30,10 +32,39 @@
 - (void)loadView {
     [super loadView];
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    if ([[self.navigationController viewControllers] count] >= 2 && [self.navigationController topViewController] == self) {
+        [self navigationLeftBack:self.leftTitle];
+    }
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+        // ios7自定义返回按钮后，右滑返回功能失效解决方法
+        // 只有在二级页面生效
+        if ([self.navigationController.viewControllers count] > 1) {
+            self.navigationController.interactivePopGestureRecognizer.delegate = nil;
+        } else {
+            if  (self.gestureRecognizerDelegate != nil) {
+                self.navigationController.interactivePopGestureRecognizer.delegate = self.gestureRecognizerDelegate;
+            } else {
+                self.gestureRecognizerDelegate = self.navigationController.interactivePopGestureRecognizer.delegate;
+            }
+        }
+    }
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -48,6 +79,10 @@
 // 设置页面Title
 - (void)setWYTitle:(NSString *)title {
     [self setLHHTitle:title];
+}
+
+- (void)navigationLeftBack:(NSString *)title {
+    [self wy_navigationLeftBack:title];
 }
 
 - (void)buildNavigationBar {
@@ -89,6 +124,10 @@
 
 - (void)barBack {
     [self dismiss];
+}
+
+- (void)pushViewControllerWith:(NSString *)className leftTitle:(NSString *)leftTitle {
+    [self wy_pushViewControllerWith:className leftTitle:leftTitle];
 }
 
 // controller从下往上出现
