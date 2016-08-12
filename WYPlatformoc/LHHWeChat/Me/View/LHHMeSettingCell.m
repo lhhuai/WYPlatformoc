@@ -32,7 +32,7 @@
     self.titleLbl = [[UILabel alloc] initWithFrame:CGRectMake(MarginLeftForMeSettingCell, 0, WY_SIZE(200), HeightForMeSettingCell)];
     self.titleLbl.backgroundColor = [UIColor clearColor];
     self.titleLbl.textColor = [UIColor wy_colorFromHex:0x000000];
-    self.titleLbl.font = WY_FONT_CONTENT;
+    self.titleLbl.font = WY_FONT_TITLE;
     [self.contentView addSubview:self.titleLbl];
     
     self.rightArrowIV = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"wechat_arrow_left"]];

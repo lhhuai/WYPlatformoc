@@ -39,16 +39,16 @@
     self.profilePhotoIV = [[UIImageView alloc] initWithFrame:CGRectMake(WeChat_Me_MarginLeft, (HeightForMeHeaderCell - WY_IMAGE_SIZE(60)) * .5, WY_IMAGE_SIZE(60), WY_IMAGE_SIZE(60))];
     [self.contentView addSubview:self.profilePhotoIV];
     
-    self.nameLbl = [[UILabel alloc] initWithFrame:CGRectMake(self.profilePhotoIV.right + WY_SIZE(10), HeightForMeHeaderCell*.5 - WY_SIZE(16), WY_SIZE(150), WY_SIZE(16))];
+    self.nameLbl = [[UILabel alloc] initWithFrame:CGRectMake(self.profilePhotoIV.right + WY_SIZE(10), HeightForMeHeaderCell*.5 - WY_SIZE(24), WY_SIZE(150), WY_SIZE(24))];
     self.nameLbl.backgroundColor = [UIColor clearColor];
     self.nameLbl.textColor = COLOR_TITLE;
-    self.nameLbl.font = WY_FONT_CONTENT;
+    self.nameLbl.font = WY_FONT_SECOND_TITLE;
     [self.contentView addSubview:self.nameLbl];
     
-    self.weChatIDLbl = [[UILabel alloc] initWithFrame:CGRectMake(self.profilePhotoIV.right + WY_SIZE(10), HeightForMeHeaderCell*.5, WY_SIZE(150), WY_SIZE(16))];
+    self.weChatIDLbl = [[UILabel alloc] initWithFrame:CGRectMake(self.profilePhotoIV.right + WY_SIZE(10), HeightForMeHeaderCell*.5, WY_SIZE(150), WY_SIZE(24))];
     self.weChatIDLbl.backgroundColor = [UIColor clearColor];
     self.weChatIDLbl.textColor = COLOR_TITLE;
-    self.weChatIDLbl.font = WY_FONT_CONTENT;
+    self.weChatIDLbl.font = WY_FONT_MORE;
     [self.contentView addSubview:self.weChatIDLbl];
     
     self.myQRCodeIV = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"wechat_me_qrcode"]];

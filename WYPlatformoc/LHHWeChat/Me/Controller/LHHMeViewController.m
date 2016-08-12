@@ -11,11 +11,12 @@
 #import "LHHMeCommonCell.h"
 #import "LHHUserPreferences.h"
 
-#define kSectionBlankHeight              @"SectionBlankHeight"
-#define kCellType                        @"CellType"
-#define kImageName                       @"ImageName"
-#define kTitleName                       @"TitleName"
-#define kClassName                       @"ClassName"
+#define kSectionBlankHeight                   @"SectionBlankHeight"
+#define kCellType                             @"CellType"
+#define kImageName                            @"ImageName"
+#define kTitleName                            @"TitleName"
+#define kClassName                            @"ClassName"
+#define kCellSelectionStyle                   @"CellSelectionStyle"
 
 @interface LHHMeViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -53,20 +54,20 @@
     // Do any additional setup after loading the view.
     [self setWYTitle:@"4"];
     
-    self.dataArray = @[@[@{kSectionBlankHeight:@WY_SIZE(15)},
-                         @{kImageName:@"wechat_me_setting", kTitleName:@"Header", kClassName:@"", kCellType:@"Header"}],
+    self.dataArray = @[@[@{kSectionBlankHeight:@WY_SIZE(15), kCellSelectionStyle:@"None"},
+                         @{kImageName:@"wechat_me_setting", kTitleName:@"Header", kClassName:@"", kCellType:@"Header", kCellSelectionStyle:@"Default"}],
                        
-                       @[@{kSectionBlankHeight:@WY_SIZE(22)},
-                         @{kImageName:@"wechat_me_setting", kTitleName:@"My Posts", kClassName:@"", kCellType:@"Common"},
-                         @{kImageName:@"wechat_me_setting", kTitleName:@"Favorites", kClassName:@"", kCellType:@"Common"},
-                         @{kImageName:@"wechat_me_setting", kTitleName:@"Wallet", kClassName:@"", kCellType:@"Common"},
-                         @{kImageName:@"wechat_me_setting", kTitleName:@"Cards & Offers", kClassName:@"", kCellType:@"Common"}],
+                       @[@{kSectionBlankHeight:@WY_SIZE(22), kCellSelectionStyle:@"None"},
+                         @{kImageName:@"wechat_me_setting", kTitleName:@"My Posts", kClassName:@"", kCellType:@"Common", kCellSelectionStyle:@"Default"},
+                         @{kImageName:@"wechat_me_setting", kTitleName:@"Favorites", kClassName:@"", kCellType:@"Common", kCellSelectionStyle:@"Default"},
+                         @{kImageName:@"wechat_me_setting", kTitleName:@"Wallet", kClassName:@"", kCellType:@"Common", kCellSelectionStyle:@"Default"},
+                         @{kImageName:@"wechat_me_setting", kTitleName:@"Cards & Offers", kClassName:@"", kCellType:@"Common", kCellSelectionStyle:@"Default"}],
                        
-                       @[@{kSectionBlankHeight:@WY_SIZE(22)},
-                         @{kImageName:@"wechat_me_setting", kTitleName:@"Sticker Gallery", kClassName:@"", kCellType:@"Common"}],
+                       @[@{kSectionBlankHeight:@WY_SIZE(22), kCellSelectionStyle:@"None"},
+                         @{kImageName:@"wechat_me_setting", kTitleName:@"Sticker Gallery", kClassName:@"", kCellType:@"Common", kCellSelectionStyle:@"Default"}],
   
-                       @[@{kSectionBlankHeight:@WY_SIZE(22)},
-                         @{kImageName:@"wechat_me_setting", kTitleName:@"Settings", kClassName:@"LHHMeSettingViewController", kCellType:@"Common"}]
+                       @[@{kSectionBlankHeight:@WY_SIZE(22), kCellSelectionStyle:@"None"},
+                         @{kImageName:@"wechat_me_setting", kTitleName:@"Settings", kClassName:@"LHHMeSettingViewController", kCellType:@"Common", kCellSelectionStyle:@"Default"}]
                        ];
 }
 
@@ -133,19 +134,17 @@
         LHHMeHeaderCell *headerCell = [tableView dequeueReusableCellWithIdentifier:@"kLHHMeHeaderCellIdentifier"];
         if (!headerCell) {
             headerCell = [[LHHMeHeaderCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"kLHHMeHeaderCellIdentifier"];
-            headerCell.selectionStyle = UITableViewCellSelectionStyleNone;
         }
         LHHWeChatUser *user = [[LHHWeChatUser alloc] init];
         user.profilePhoto = [dic objectForKey:kImageName];
         user.name = [LHHUserPreferences sharedInstance].user.account;
-        user.weChatID = @"seaphyliu";
+        user.weChatID = [NSString stringWithFormat:@"%@Id", [LHHUserPreferences sharedInstance].user.account];
         [headerCell updateCell:user];
         return headerCell;
     } else {
         LHHMeCommonCell *commonCell = [tableView dequeueReusableCellWithIdentifier:@"kLHHMeCommonCellIdentifier"];
         if (!commonCell) {
             commonCell = [[LHHMeCommonCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"kLHHMeCommonCellIdentifier"];
-            commonCell.selectionStyle = UITableViewCellSelectionStyleNone;
         }
         
         if (indexPath.row == 1) {
@@ -191,6 +190,8 @@
     if ([NSClassFromString([dic objectForKey:kClassName]) isSubclassOfClass:[UIViewController class]]) {
         [self remoteNotificationDictionary:[dic objectForKey:kClassName]];
     }
+    
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end

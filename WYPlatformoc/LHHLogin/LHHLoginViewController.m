@@ -19,7 +19,7 @@
 
 static NSString *kLHHLoginTableViewCellIdentifier = @"LHHLoginTableViewCellIdentifier";
 
-@interface LHHLoginViewController () <UITableViewDelegate, UITableViewDataSource, LHHLoginTableViewCellDelegate>
+@interface LHHLoginViewController () <UITableViewDelegate, UITableViewDataSource, LHHLoginTableViewCellDelegate, UINavigationControllerDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) UIButton *loginButton;
@@ -47,27 +47,27 @@ static NSString *kLHHLoginTableViewCellIdentifier = @"LHHLoginTableViewCellIdent
 - (void)loadView {
     [super loadView];
     
-    [self.navigationController.navigationBar setBarTintColor:[UIColor whiteColor]];
-//    UIImage *bgImage = [UIImage imageNamed:@"blank_Translucent_44"];
-//    [self.navigationController.navigationBar setBackgroundImage:bgImage forBarMetrics:UIBarMetricsDefault];
-    [self.navigationController.navigationBar setTranslucent:YES];
-//    self.navigationController.navigationBar.alpha = 0.5;
-    NSArray *list = self.navigationController.navigationBar.subviews;
-    for (id obj in list) {
-        if ([obj isKindOfClass:[UIImageView class]]) {
-            UIImageView *imageView = (UIImageView *)obj;
-            NSArray *list2 = imageView.subviews;
-            for (id obj2 in list2) {
-                if ([obj2 isKindOfClass:[UIImageView class]]) {
-                    UIImageView *imageView2 = (UIImageView *)obj2;
-                    imageView2.hidden = YES;
-                }
-            }
-        }
-    }
+//    [self.navigationController.navigationBar setBarTintColor:[UIColor whiteColor]];
+////    UIImage *bgImage = [UIImage imageNamed:@"blank_Translucent_44"];
+////    [self.navigationController.navigationBar setBackgroundImage:bgImage forBarMetrics:UIBarMetricsDefault];
+//    [self.navigationController.navigationBar setTranslucent:YES];
+////    self.navigationController.navigationBar.alpha = 0.5;
+//    NSArray *list = self.navigationController.navigationBar.subviews;
+//    for (id obj in list) {
+//        if ([obj isKindOfClass:[UIImageView class]]) {
+//            UIImageView *imageView = (UIImageView *)obj;
+//            NSArray *list2 = imageView.subviews;
+//            for (id obj2 in list2) {
+//                if ([obj2 isKindOfClass:[UIImageView class]]) {
+//                    UIImageView *imageView2 = (UIImageView *)obj2;
+//                    imageView2.hidden = YES;
+//                }
+//            }
+//        }
+//    }
     
     // table view
-    CGRect tableViewFrame = CGRectMake(0, 0, SCREEN_WIDTH, VIEW_HIDETABBAR_HEIGHT);
+    CGRect tableViewFrame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
     self.tableView = [[UITableView alloc] initWithFrame:tableViewFrame style:UITableViewStylePlain];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -77,29 +77,32 @@ static NSString *kLHHLoginTableViewCellIdentifier = @"LHHLoginTableViewCellIdent
     [self.view addSubview:self.tableView];
     
     // table header view
-    UIView *tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 80)];
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(40, 15, SCREEN_WIDTH - 80, 20)];
+    UIView *tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, WY_SIZE(150))];
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, WY_SIZE(150 - 50), SCREEN_WIDTH, WY_SIZE(25))];
     titleLabel.text = @"Log In";
+    titleLabel.textColor = COLOR_TITLE;
+    titleLabel.font = WY_FONT_SIZE_LARGE;
     titleLabel.textAlignment = NSTextAlignmentCenter;
     [tableHeaderView addSubview:titleLabel];
     self.tableView.tableHeaderView = tableHeaderView;
     
+    
     // table footer view
-    UIView *tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, VIEW_HIDETABBAR_HEIGHT - 160)];
+    UIView *tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, WY_SIZE(150))];
     // log in
-    self.loginButton = [[UIButton alloc] initWithFrame:CGRectMake(15, 20, SCREEN_WIDTH - 30, 30)];
+    self.loginButton = [[UIButton alloc] initWithFrame:CGRectMake(WY_SIZE(21), WY_SIZE(20), SCREEN_WIDTH - WY_SIZE(21)*2, WY_SIZE(47))];
     [self.loginButton setTitle:@"Log In" forState:UIControlStateNormal];
-    self.loginButton.titleLabel.font = [UIFont systemFontOfSize:14];
+    self.loginButton.titleLabel.font = WY_FONT_TITLE;
     [self.loginButton addTarget:self action:@selector(onLogin) forControlEvents:UIControlEventTouchUpInside];
-    self.loginButton.layer.cornerRadius = 3;
+    self.loginButton.layer.cornerRadius = WY_SIZE(3);
     self.loginButton.layer.masksToBounds = YES;
     [self loginButtonIsEnabled:NO];
     [tableFooterView addSubview:self.loginButton];
     // forgot password
     NSString *fpString = @"Forgot password?";
-    UIFont *fpFont = [UIFont systemFontOfSize:11];
+    UIFont *fpFont = WY_FONT_SECOND_TITLE;
     CGSize fpSize = WY_TEXTSIZE(fpString, fpFont);
-    UILabel *forgotPasswordLabel = [[UILabel alloc] initWithFrame:CGRectMake((SCREEN_WIDTH - fpSize.width) / 2, CGRectGetMaxY(self.loginButton.frame) + 15, fpSize.width, fpSize.height)];
+    UILabel *forgotPasswordLabel = [[UILabel alloc] initWithFrame:CGRectMake((SCREEN_WIDTH - fpSize.width) / 2, CGRectGetMaxY(self.loginButton.frame) + WY_SIZE(23), fpSize.width, fpSize.height)];
     forgotPasswordLabel.text = fpString;
     forgotPasswordLabel.textColor = RGBCOLOR(94, 115, 156);
     forgotPasswordLabel.font = fpFont;
@@ -107,9 +110,9 @@ static NSString *kLHHLoginTableViewCellIdentifier = @"LHHLoginTableViewCellIdent
     self.tableView.tableFooterView = tableFooterView;
     
     NSString *moreString = @"More";
-    UIFont *moreFont = [UIFont systemFontOfSize:11];
+    UIFont *moreFont = WY_FONT_SECOND_TITLE;
     CGSize moreSize = WY_TEXTSIZE(moreString, moreFont);
-    UILabel *moreLabel = [[UILabel alloc] initWithFrame:CGRectMake((SCREEN_WIDTH - moreSize.width * 2) / 2, VIEW_HIDETABBAR_HEIGHT - 30, moreSize.width * 2, 15)];
+    UILabel *moreLabel = [[UILabel alloc] initWithFrame:CGRectMake((SCREEN_WIDTH - moreSize.width * 2) / 2, SCREEN_HEIGHT - WY_SIZE(25+15), moreSize.width * 2, WY_SIZE(15))];
     moreLabel.text = moreString;
     moreLabel.textColor = RGBCOLOR(94, 115, 156);
     moreLabel.font = moreFont;
@@ -196,7 +199,7 @@ static NSString *kLHHLoginTableViewCellIdentifier = @"LHHLoginTableViewCellIdent
             case 1:
             {
                 LHHRegistViewController *registVC = [[LHHRegistViewController alloc] init];
-                [self.navigationController pushViewController:registVC animated:YES];
+                [self pushViewController:registVC];
                 break;
             }
             default:
@@ -207,6 +210,16 @@ static NSString *kLHHLoginTableViewCellIdentifier = @"LHHLoginTableViewCellIdent
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
     
 }
 
@@ -233,7 +246,7 @@ static NSString *kLHHLoginTableViewCellIdentifier = @"LHHLoginTableViewCellIdent
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 40;
+    return HeightForLoginTableViewCell;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

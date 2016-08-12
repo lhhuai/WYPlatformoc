@@ -38,7 +38,7 @@
     self.mcTitleLbl = [[UILabel alloc] initWithFrame:CGRectMake(self.mcTitleLeftIV.right + WeChat_Me_MarginLeft, 0, WY_SIZE(200), cellHeight)];
     self.mcTitleLbl.backgroundColor = [UIColor clearColor];
     self.mcTitleLbl.textColor = [UIColor wy_colorFromHex:0x000000];
-    self.mcTitleLbl.font = WY_FONT_CONTENT;
+    self.mcTitleLbl.font = WY_FONT_TITLE;
     [self.contentView addSubview:self.mcTitleLbl];
     
     self.mcTitleRightIV = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"wechat_arrow_left"]];

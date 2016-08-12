@@ -15,6 +15,8 @@ typedef NS_ENUM(NSInteger, LHHLoginCellType) {
 
 @protocol LHHLoginTableViewCellDelegate;
 
+#define HeightForLoginTableViewCell                   WY_SIZE(44)
+
 @interface LHHLoginTableViewCell : UITableViewCell
 
 @property (nonatomic, strong) UILabel *label;

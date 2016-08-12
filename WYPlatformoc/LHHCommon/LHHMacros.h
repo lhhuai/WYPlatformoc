@@ -32,6 +32,25 @@
 #define WY_FONT(fontSize)            ([UIFont     systemFontOfSize:fontSize * [LHHAdaptiveManager fontScale]])
 #define WY_BOLD_FONT(fontSize)       ([UIFont boldSystemFontOfSize:fontSize * [LHHAdaptiveManager fontScale]])
 
-#define WY_FONT_CONTENT              WY_FONT(17)
+// 9号字体
+#define WY_FONT_MOST_SMALL_TITLE                    WY_FONT(9)
+// 10号字体
+#define WY_FONT_SMALL_TITLE                         WY_FONT(10)
+// 11号字体
+#define WY_FONT_SEVERAL                             WY_FONT(11)
+// 12号字体
+#define WY_FONT_CONTENT                             WY_FONT(12)
+// 13号字体
+#define WY_FONT_MIDDLE                              WY_FONT(13)
+// 14号字体
+#define WY_FONT_MORE                                WY_FONT(14)
+// 15号字体
+#define WY_FONT_SECOND_TITLE                        WY_FONT(15)
+// 16号字体
+#define WY_FONT_16                                  WY_FONT(16)
+// 18号字体
+#define WY_FONT_TITLE                               WY_FONT(18)
+// 20号字体
+#define WY_FONT_SIZE_LARGE                          WY_FONT(20)
 
 #endif /* LHHMacros_h */

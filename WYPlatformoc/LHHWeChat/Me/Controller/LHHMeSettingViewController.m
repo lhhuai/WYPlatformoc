@@ -12,10 +12,11 @@
 #import "LHHActionSheet.h"
 #import "LHHUserPreferences.h"
 
-#define kSectionBlankHeight              @"SectionBlankHeight"
-#define kCellType                        @"CellType"
-#define kTitleName                       @"TitleName"
-#define kClassName                       @"ClassName"
+#define kSectionBlankHeight                   @"SectionBlankHeight"
+#define kCellType                             @"CellType"
+#define kTitleName                            @"TitleName"
+#define kClassName                            @"ClassName"
+#define kCellSelectionStyle                   @"CellSelectionStyle"
 
 @interface LHHMeSettingViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -45,20 +46,20 @@
     [super viewDidLoad];
     [self setWYTitle:@"Settings"];
     
-    self.dataArray = @[@[@{kSectionBlankHeight:@WY_SIZE(15)},
-                         @{kTitleName:@"My Account", kClassName:@"", kCellType:@"Protected"}],
+    self.dataArray = @[@[@{kSectionBlankHeight:@WY_SIZE(15), kCellSelectionStyle:@"None"},
+                         @{kTitleName:@"My Account", kClassName:@"", kCellType:@"Protected", kCellSelectionStyle:@"Default"}],
                        
-                       @[@{kSectionBlankHeight:@WY_SIZE(22)},
-                         @{kTitleName:@"Notifications", kClassName:@"", kCellType:@"Common"},
-                         @{kTitleName:@"Privacy", kClassName:@"", kCellType:@"Common"},
-                         @{kTitleName:@"General", kClassName:@"", kCellType:@"Common"}],
+                       @[@{kSectionBlankHeight:@WY_SIZE(22), kCellSelectionStyle:@"None"},
+                         @{kTitleName:@"Notifications", kClassName:@"", kCellType:@"Common", kCellSelectionStyle:@"Default"},
+                         @{kTitleName:@"Privacy", kClassName:@"", kCellType:@"Common", kCellSelectionStyle:@"Default"},
+                         @{kTitleName:@"General", kClassName:@"", kCellType:@"Common", kCellSelectionStyle:@"Default"}],
                        
-                       @[@{kSectionBlankHeight:@WY_SIZE(22)},
-                         @{kTitleName:@"Help & Feedback", kClassName:@"", kCellType:@"Common"},
-                         @{kTitleName:@"About", kClassName:@"", kCellType:@"Common"}],
+                       @[@{kSectionBlankHeight:@WY_SIZE(22), kCellSelectionStyle:@"None"},
+                         @{kTitleName:@"Help & Feedback", kClassName:@"", kCellType:@"Common", kCellSelectionStyle:@"Default"},
+                         @{kTitleName:@"About", kClassName:@"", kCellType:@"Common", kCellSelectionStyle:@"Default"}],
                        
-                       @[@{kSectionBlankHeight:@WY_SIZE(22)},
-                         @{kTitleName:@"Log Out", kClassName:@"", kCellType:@"Button"}]
+                       @[@{kSectionBlankHeight:@WY_SIZE(22), kCellSelectionStyle:@"None"},
+                         @{kTitleName:@"Log Out", kClassName:@"", kCellType:@"Button", kCellSelectionStyle:@"Default"}]
                        ];
 }
 
@@ -131,7 +132,6 @@
         LHHWeChatButtonCell *buttonCell = [tableView dequeueReusableCellWithIdentifier:@"kLHHWeChatButtonCellIdentifier"];
         if (!buttonCell) {
             buttonCell = [[LHHWeChatButtonCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"kLHHWeChatButtonCellIdentifier"];
-//            buttonCell.selectionStyle = UITableViewCellSelectionStyleNone;
         }
         [buttonCell updateCell:[dic objectForKey:kTitleName]];
         return buttonCell;
@@ -139,7 +139,6 @@
         LHHMeSettingCell *settingCell = [tableView dequeueReusableCellWithIdentifier:@"kLHHMeSettingCellIdentifier"];
         if (!settingCell) {
             settingCell = [[LHHMeSettingCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"kLHHMeSettingCellIdentifier"];
-            settingCell.selectionStyle = UITableViewCellSelectionStyleNone;
         }
         
         if (indexPath.row == 1) {
@@ -185,6 +184,8 @@
     if (indexPath.row != 0 && [[dic objectForKey:kCellType] isEqualToString:@"Button"]) {
         [self clickLogOut];
     }
+    
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end

@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#define HeightForRegistTableViewCell                      WY_SIZE(44)
+
 @interface LHHRegistTableViewCell : UITableViewCell
 
 @property (nonatomic, strong) UILabel *label;

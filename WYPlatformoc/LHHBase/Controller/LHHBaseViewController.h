@@ -19,6 +19,12 @@
 - (void)buildNavigationBar;
 - (void)checkLogin:(void(^)(void))block;
 
++ (void)customizeLoginBars;
 + (void)customizeBars;
+
+// controller从下往上出现
+- (void)pushViewController:(UIViewController *)viewController;
+// controller从上往下消失
+- (void)popViewController;
 
 @end

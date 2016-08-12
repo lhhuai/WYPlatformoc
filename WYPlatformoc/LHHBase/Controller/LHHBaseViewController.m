@@ -12,6 +12,7 @@
 #import "UIImage+WYAddition.h"
 #import "UIColor+WYAddition.h"
 #import "LHHUserPreferences.h"
+#import "LHHBaseViewController+Navigation.h"
 
 @interface LHHBaseViewController ()
 
@@ -46,14 +47,7 @@
 
 // 设置页面Title
 - (void)setWYTitle:(NSString *)title {
-    UILabel *label = [[UILabel alloc] init];
-    label.frame = CGRectMake(0, 0, WY_SIZE(180), PHONE_NAVIGATIONBAR_HEIGHT);
-    label.backgroundColor = [UIColor clearColor];
-    label.font = WY_FONT(17);
-    label.textColor = [UIColor whiteColor];
-    label.textAlignment = NSTextAlignmentCenter;
-    label.text = title;
-    self.navigationItem.titleView = label;
+    [self setLHHTitle:title];
 }
 
 - (void)buildNavigationBar {
@@ -79,6 +73,13 @@
     }
 }
 
++ (void)customizeLoginBars {
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault animated:YES];
+//    [[UINavigationBar appearance] setHidden:YES];
+//    [[UINavigationBar appearance] setTranslucent:YES];
+//    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+}
+
 + (void)customizeBars {
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
     [[UINavigationBar appearance] setBarTintColor:[UIColor wy_colorWithRed:56 green:55 blue:60]];
@@ -88,6 +89,15 @@
 
 - (void)barBack {
     [self dismiss];
+}
+
+// controller从下往上出现
+- (void)pushViewController:(UIViewController *)viewController {
+    [self wy_pushViewController:viewController];
+}
+// controller从上往下消失
+- (void)popViewController {
+    [self wy_popViewController];
 }
 
 - (void)dealloc {

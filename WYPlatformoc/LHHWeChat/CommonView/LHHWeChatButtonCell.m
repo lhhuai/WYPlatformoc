@@ -28,7 +28,7 @@
     self.titleLbl = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, HeightForWeChatButtonCell)];
     self.titleLbl.backgroundColor = [UIColor clearColor];
     self.titleLbl.textColor = [UIColor wy_colorFromHex:0x000000];
-    self.titleLbl.font = WY_FONT_CONTENT;
+    self.titleLbl.font = WY_FONT_TITLE;
     self.titleLbl.textAlignment = NSTextAlignmentCenter;
     [self.contentView addSubview:self.titleLbl];
 }

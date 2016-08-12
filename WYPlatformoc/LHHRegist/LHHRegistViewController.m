@@ -45,9 +45,9 @@
 
 - (void)loadView {
     [super loadView];
-    self.navigationItem.leftBarButtonItem = [LHHBarButtonItem backBarButtonItemWith:self title:@"Cancel"];
+//    self.navigationItem.leftBarButtonItem = [LHHBarButtonItem backBarButtonItemWith:self title:@"Cancel"];
     
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, VIEW_HIDETABBAR_HEIGHT) style:UITableViewStylePlain];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStylePlain];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.backgroundColor = [UIColor whiteColor];
@@ -56,30 +56,39 @@
     [self.view addSubview:self.tableView];
     
     // table header view
-    UIView *tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 80)];
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(40, 15, SCREEN_WIDTH - 80, 20)];
+    UIView *tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, WY_SIZE(150))];
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, WY_SIZE(150 - 50), SCREEN_WIDTH, WY_SIZE(25))];
     titleLabel.text = @"Sign Up";
+    titleLabel.textColor = COLOR_TITLE;
+    titleLabel.font = WY_FONT_SIZE_LARGE;
     titleLabel.textAlignment = NSTextAlignmentCenter;
     [tableHeaderView addSubview:titleLabel];
     self.tableView.tableHeaderView = tableHeaderView;
     
     // table footer view
-    UIView *tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, VIEW_HIDETABBAR_HEIGHT - 200)];
+    UIView *tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, WY_SIZE(150))];
     // log in
-    self.signUpBtn = [[UIButton alloc] initWithFrame:CGRectMake(15, 20, SCREEN_WIDTH - 30, 30)];
+    self.signUpBtn = [[UIButton alloc] initWithFrame:CGRectMake(WY_SIZE(21), WY_SIZE(20), SCREEN_WIDTH - WY_SIZE(21)*2, WY_SIZE(47))];
     [self.signUpBtn setTitle:@"Submit" forState:UIControlStateNormal];
-    self.signUpBtn.titleLabel.font = [UIFont systemFontOfSize:14];
+    self.signUpBtn.titleLabel.font = WY_FONT_16;
     [self.signUpBtn addTarget:self action:@selector(onSignUp) forControlEvents:UIControlEventTouchUpInside];
-    self.signUpBtn.layer.cornerRadius = 3;
+    self.signUpBtn.layer.cornerRadius = WY_SIZE(3);
     self.signUpBtn.layer.masksToBounds = YES;
     [self signUpButtonIsEnabled:NO];
     [tableFooterView addSubview:self.signUpBtn];
     self.tableView.tableFooterView = tableFooterView;
     
-    NSString *moreString = @"Click \"Sign Up\" means you agree to Terms and Privacy";
-    UIFont *moreFont = [UIFont systemFontOfSize:11];
+    UIButton *cancelButton = [[UIButton alloc] initWithFrame:CGRectMake(0, WY_SIZE(34), WY_SIZE(70), WY_SIZE(24))];
+    [cancelButton setTitle:@"Cancel" forState:UIControlStateNormal];
+    [cancelButton setTitleColor:RGBCOLOR(0, 183, 0) forState:UIControlStateNormal];
+    cancelButton.titleLabel.font = WY_FONT_16;
+    [cancelButton addTarget:self action:@selector(barBack) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:cancelButton];
+    
+    NSString *moreString = @"Tapping \"Sign Up\" means you agree to Terms and Privacy";
+    UIFont *moreFont = WY_FONT_CONTENT;
     CGSize moreSize = WY_TEXTSIZE(moreString, moreFont);
-    UILabel *moreLabel = [[UILabel alloc] initWithFrame:CGRectMake((SCREEN_WIDTH - moreSize.width * 2) / 2, VIEW_HIDETABBAR_HEIGHT - 30, moreSize.width * 2, 15)];
+    UILabel *moreLabel = [[UILabel alloc] initWithFrame:CGRectMake((SCREEN_WIDTH - moreSize.width * 2) / 2, SCREEN_HEIGHT - WY_SIZE(25+15), moreSize.width * 2, WY_SIZE(15))];
     moreLabel.text = moreString;
     moreLabel.textColor = RGBCOLOR(89, 91, 95);
     moreLabel.font = moreFont;
@@ -140,9 +149,18 @@
     
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)barBack {
+    [self popViewController];
 }
 
 #pragma mark - UITextFieldDelegate

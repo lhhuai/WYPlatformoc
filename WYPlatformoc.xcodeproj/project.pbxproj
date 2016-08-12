@@ -54,6 +54,7 @@
 		55F515B01D5B32CF0098CA7A /* LHHDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F515AF1D5B32CF0098CA7A /* LHHDiscoverViewController.m */; };
 		55F515B31D5B437E0098CA7A /* LHHMeSettingCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F515B21D5B437E0098CA7A /* LHHMeSettingCellModel.m */; };
 		55F515B71D5B4DAC0098CA7A /* LHHWeChatButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F515B61D5B4DAC0098CA7A /* LHHWeChatButtonCell.m */; };
+		55F515BA1D5C24FA0098CA7A /* LHHBaseViewController+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F515B91D5C24FA0098CA7A /* LHHBaseViewController+Navigation.m */; };
 		E7902E35B1A42A6FA3EFB74E /* Pods_WYPlatformoc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17D64C58974721ABB540B803 /* Pods_WYPlatformoc.framework */; };
 /* End PBXBuildFile section */
 
@@ -159,6 +160,8 @@
 		55F515B21D5B437E0098CA7A /* LHHMeSettingCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHMeSettingCellModel.m; sourceTree = "<group>"; };
 		55F515B51D5B4DAC0098CA7A /* LHHWeChatButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHWeChatButtonCell.h; sourceTree = "<group>"; };
 		55F515B61D5B4DAC0098CA7A /* LHHWeChatButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHWeChatButtonCell.m; sourceTree = "<group>"; };
+		55F515B81D5C24FA0098CA7A /* LHHBaseViewController+Navigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LHHBaseViewController+Navigation.h"; sourceTree = "<group>"; };
+		55F515B91D5C24FA0098CA7A /* LHHBaseViewController+Navigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LHHBaseViewController+Navigation.m"; sourceTree = "<group>"; };
 		ACFC21F61AB6D3DC5EFC60DE /* Pods-WYPlatformoc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WYPlatformoc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WYPlatformoc/Pods-WYPlatformoc.debug.xcconfig"; sourceTree = "<group>"; };
 		C4F3EBF552AA94C3D54ACDB7 /* Pods-WYPlatformoc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WYPlatformoc.release.xcconfig"; path = "Pods/Target Support Files/Pods-WYPlatformoc/Pods-WYPlatformoc.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -337,6 +340,8 @@
 			children = (
 				55CE337A1D48BACD000621F2 /* LHHBaseViewController.h */,
 				55CE337B1D48BACD000621F2 /* LHHBaseViewController.m */,
+				55F515B81D5C24FA0098CA7A /* LHHBaseViewController+Navigation.h */,
+				55F515B91D5C24FA0098CA7A /* LHHBaseViewController+Navigation.m */,
 				55CE338B1D48C009000621F2 /* LHHTabBarViewController.h */,
 				55CE338C1D48C009000621F2 /* LHHTabBarViewController.m */,
 				55EBBFA11D4AFBE20014342C /* LHHLaunchViewController.h */,
@@ -734,6 +739,7 @@
 				55177D9E1C88137D00C02910 /* LHHLoginTableViewCell.m in Sources */,
 				55F515B71D5B4DAC0098CA7A /* LHHWeChatButtonCell.m in Sources */,
 				55CE336B1D489EC7000621F2 /* UIDevice+UIDeviceExt.m in Sources */,
+				55F515BA1D5C24FA0098CA7A /* LHHBaseViewController+Navigation.m in Sources */,
 				55F5159F1D5AC7700098CA7A /* LHHMeCommonCell.m in Sources */,
 				55CE33851D48BACD000621F2 /* LHHActionSheet.m in Sources */,
 				55F2CF621D4760F2007F06CA /* LHHLoginSession.m in Sources */,

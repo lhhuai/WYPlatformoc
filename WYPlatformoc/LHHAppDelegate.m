@@ -41,8 +41,6 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    [LHHBaseViewController customizeBars];
-    
     return YES;
 }
 
@@ -81,6 +79,8 @@
 }
 
 - (void)gotoLoginViewController {
+    [LHHBaseViewController customizeLoginBars];
+    
     LHHLoginViewController *loginViewController = [[LHHLoginViewController alloc] init];
     loginViewController.gotoLoginType = LHHGotoLoginTypeWeChat;
 //    @weakify(self);
@@ -97,6 +97,8 @@
 }
 
 - (void)gotoWechatViewController {
+    [LHHBaseViewController customizeBars];
+    
     UITabBarController *tabBarController = [self setupWeChatViewControllers];
     self.window.rootViewController = tabBarController;
 }

@@ -9,6 +9,7 @@
 #import "LHHLoginTableViewCell.h"
 #import "LHHCommonDefines.h"
 #import "LHHCommonColors.h"
+#import "UIView+WYLayout.h"
 
 @interface LHHLoginTableViewCell()<UITextFieldDelegate>
 
@@ -27,19 +28,19 @@
 }
 
 - (void)setupView {
-    self.label = [[UILabel alloc] initWithFrame:CGRectMake(15, 10, 80, 20)];
+    self.label = [[UILabel alloc] initWithFrame:CGRectMake(WY_SIZE(21), 0, WY_SIZE(90), HeightForLoginTableViewCell)];
     self.label.textAlignment = NSTextAlignmentLeft;
-    self.label.font = [UIFont systemFontOfSize:13];
+    self.label.font = WY_FONT_16;
     [self addSubview:self.label];
     
-    self.textField = [[UITextField alloc] initWithFrame:CGRectMake(95, 10, SCREEN_WIDTH - 95 - 10, 20)];
-    self.textField.font = [UIFont systemFontOfSize:13];
+    self.textField = [[UITextField alloc] initWithFrame:CGRectMake(self.label.right + WY_SIZE(5), 0, SCREEN_WIDTH - self.label.right - WY_SIZE(21), HeightForLoginTableViewCell)];
+    self.textField.font = WY_FONT_16;
     self.textField.delegate = self;
     self.textField.clearButtonMode = UITextFieldViewModeWhileEditing;
     [self addSubview:self.textField];
     
-    self.separatorLine = [[UILabel alloc]initWithFrame:CGRectMake(14, 36, self.bounds.size.width - 14, 0.5)];
-    self.separatorLine.backgroundColor = RGBCOLOR(239, 239, 239);
+    self.separatorLine = [[UILabel alloc]initWithFrame:CGRectMake(WY_SIZE(21), HeightForLoginTableViewCell - WY_SIZE(.5), SCREEN_WIDTH - WY_SIZE(21), WY_SIZE(.5))];
+    self.separatorLine.backgroundColor = COLOR_SEPARATOR_LINE;
     [self addSubview:self.separatorLine];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldTextDidChanged:) name:UITextFieldTextDidChangeNotification object:self.textField];
