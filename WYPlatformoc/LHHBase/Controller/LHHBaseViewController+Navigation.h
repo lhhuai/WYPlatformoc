@@ -10,7 +10,8 @@
 
 @interface LHHBaseViewController (Navigation)
 
-- (void)setLHHTitle:(NSString *)title;
+- (void)wy_setWaiting:(BOOL)waiting title:(NSString *)title;
+- (void)wy_setTitle:(NSString *)title;
 - (void)wy_navigationLeftBack;
 - (void)wy_navigationLeftBack:(NSString *)title;
 

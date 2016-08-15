@@ -17,6 +17,8 @@
 		55177DA21C88137D00C02910 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 55177D9C1C88137D00C02910 /* Default.png */; };
 		55177DA31C88137D00C02910 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55177D9D1C88137D00C02910 /* Default@2x.png */; };
 		553E57DB1C99159F00AB74B6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 553E57DA1C99159F00AB74B6 /* InfoPlist.strings */; };
+		5587B5901D6165DD003252C6 /* LHHMeLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5587B58F1D6165DD003252C6 /* LHHMeLoadingViewController.m */; };
+		5587B5931D616B2B003252C6 /* LHHChatsSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 5587B5921D616B2B003252C6 /* LHHChatsSession.m */; };
 		55C77F4A1C8D209000623D74 /* LHHRegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C77F491C8D209000623D74 /* LHHRegistViewController.m */; };
 		55C77F501C8D503800623D74 /* LHHRegistTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C77F4F1C8D503800623D74 /* LHHRegistTableViewCell.m */; };
 		55CE336A1D489EC7000621F2 /* LHHAdaptiveManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CE33671D489EC7000621F2 /* LHHAdaptiveManager.m */; };
@@ -89,6 +91,10 @@
 		55177DA51C88205A00C02910 /* LHHCommonDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHCommonDefines.h; sourceTree = "<group>"; };
 		55177DA61C88207C00C02910 /* LHHCommonColors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHHCommonColors.h; sourceTree = "<group>"; };
 		553E57DA1C99159F00AB74B6 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		5587B58E1D6165DD003252C6 /* LHHMeLoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHMeLoadingViewController.h; sourceTree = "<group>"; };
+		5587B58F1D6165DD003252C6 /* LHHMeLoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHMeLoadingViewController.m; sourceTree = "<group>"; };
+		5587B5911D616B2B003252C6 /* LHHChatsSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHChatsSession.h; sourceTree = "<group>"; };
+		5587B5921D616B2B003252C6 /* LHHChatsSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHChatsSession.m; sourceTree = "<group>"; };
 		55C77F481C8D209000623D74 /* LHHRegistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHRegistViewController.h; sourceTree = "<group>"; };
 		55C77F491C8D209000623D74 /* LHHRegistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHRegistViewController.m; sourceTree = "<group>"; };
 		55C77F4E1C8D503800623D74 /* LHHRegistTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHRegistTableViewCell.h; sourceTree = "<group>"; };
@@ -419,6 +425,8 @@
 			children = (
 				55F515811D5AC7700098CA7A /* LHHChatsViewController.h */,
 				55F515821D5AC7700098CA7A /* LHHChatsViewController.m */,
+				5587B5911D616B2B003252C6 /* LHHChatsSession.h */,
+				5587B5921D616B2B003252C6 /* LHHChatsSession.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -520,6 +528,8 @@
 				55F515941D5AC7700098CA7A /* LHHMeViewController.m */,
 				55F515A61D5B01F10098CA7A /* LHHMeSettingViewController.h */,
 				55F515A71D5B01F10098CA7A /* LHHMeSettingViewController.m */,
+				5587B58E1D6165DD003252C6 /* LHHMeLoadingViewController.h */,
+				5587B58F1D6165DD003252C6 /* LHHMeLoadingViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -739,6 +749,7 @@
 				55177D9E1C88137D00C02910 /* LHHLoginTableViewCell.m in Sources */,
 				55F515B71D5B4DAC0098CA7A /* LHHWeChatButtonCell.m in Sources */,
 				55CE336B1D489EC7000621F2 /* UIDevice+UIDeviceExt.m in Sources */,
+				5587B5901D6165DD003252C6 /* LHHMeLoadingViewController.m in Sources */,
 				55F515BA1D5C24FA0098CA7A /* LHHBaseViewController+Navigation.m in Sources */,
 				55F5159F1D5AC7700098CA7A /* LHHMeCommonCell.m in Sources */,
 				55CE33851D48BACD000621F2 /* LHHActionSheet.m in Sources */,
@@ -764,6 +775,7 @@
 				55F5159B1D5AC7700098CA7A /* LHHChatsViewController.m in Sources */,
 				55177D6E1C88130500C02910 /* main.m in Sources */,
 				55EBBFBA1D5211910014342C /* LHHUserPreferences.m in Sources */,
+				5587B5931D616B2B003252C6 /* LHHChatsSession.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

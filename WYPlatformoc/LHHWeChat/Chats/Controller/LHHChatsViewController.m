@@ -7,10 +7,14 @@
 //
 
 #import "LHHChatsViewController.h"
+#import "LHHChatsSession.h"
 
 @interface LHHChatsViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) NSMutableArray *dataArray;
+
+@property (nonatomic, strong) LHHChatsSession *chatsSession;
 
 @end
 
@@ -38,11 +42,12 @@
     
     [self.view addSubview:self.tableView];
     
-    [self buildNavigationBar];
+    self.dataArray = [[NSMutableArray alloc] init];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    [self getChats];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -54,18 +59,44 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - action
+- (void)getChats {
+    @weakify(self);
+    [self checkNetWorkSuccessBlock:^{
+        @strongify(self);
+        if (!self.chatsSession) {
+            self.chatsSession = [[LHHChatsSession alloc] init];
+        }
+        [self setWaiting:YES title:@"Loading..."];
+        
+        [self.chatsSession getChatsWithCondition:nil completeBlock:^(NSArray *chatsData) {
+            @strongify(self);
+            [self setWaiting:NO title:@"1"];
+            self.dataArray = [chatsData mutableCopy];
+            [self.tableView reloadData];
+        } exceptionBlock:^{
+            
+        }];
+    } errorBlock:^{
+        
+    }];
+}
+
 #pragma - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return self.dataArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSDictionary *chatsDic = [self.dataArray objectAtIndex:indexPath.row];
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"kLHHIdentifier"];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"kLHHIdentifier"];
         cell.backgroundColor = [UIColor clearColor];
     }
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld.%@", (long)(indexPath.row + 1), @"content"];
+    
+    cell.textLabel.text = [NSString stringWithFormat:@"%ld.%@", (long)(indexPath.row + 1), [chatsDic objectForKey:kChatsName]];
     
     return cell;
 }

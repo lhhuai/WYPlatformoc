@@ -16,9 +16,11 @@
 @property (nonatomic, strong) NSString *leftTitle;
 
 - (void)dismiss;
+- (void)setWaiting:(BOOL)waiting title:(NSString *)title;
 - (void)setWYTitle:(NSString *)title;
 - (void)buildNavigationBar;
 - (void)checkLogin:(void(^)(void))block;
+- (void)checkNetWorkSuccessBlock:(void(^)())success errorBlock:(void(^)())error;
 
 + (void)customizeLoginBars;
 + (void)customizeBars;

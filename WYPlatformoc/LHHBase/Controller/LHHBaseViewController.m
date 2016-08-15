@@ -78,7 +78,11 @@
 
 // 设置页面Title
 - (void)setWYTitle:(NSString *)title {
-    [self setLHHTitle:title];
+    [self wy_setTitle:title];
+}
+
+- (void)setWaiting:(BOOL)waiting title:(NSString *)title {
+    [self wy_setWaiting:waiting title:title];
 }
 
 - (void)navigationLeftBack:(NSString *)title {
@@ -106,6 +110,15 @@
         UINavigationController *loginNav = [[UINavigationController alloc] initWithRootViewController:loginVC];
         [self presentViewController:loginNav animated:YES completion:nil];
     }
+}
+
+- (void)checkNetWorkSuccessBlock:(void(^)())success errorBlock:(void(^)())error {
+    [self setWaiting:YES title:@"Connecting..."];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        if (success) {
+            success();
+        }
+    });
 }
 
 + (void)customizeLoginBars {
