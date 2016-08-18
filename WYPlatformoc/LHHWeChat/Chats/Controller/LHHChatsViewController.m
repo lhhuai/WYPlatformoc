@@ -7,12 +7,18 @@
 //
 
 #import "LHHChatsViewController.h"
-#import "LHHChatsSession.h"
+#import "LHHChatsSearchViewController.h"
+#import "LHHSearchController.h"
 
-@interface LHHChatsViewController () <UITableViewDataSource, UITableViewDelegate>
+#import "LHHChatsSession.h"
+#import "LHHChatsContentCell.h"
+
+@interface LHHChatsViewController () <UITableViewDataSource, UITableViewDelegate, UISearchResultsUpdating, UISearchBarDelegate, UISearchControllerDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *dataArray;
+@property (nonatomic, strong) NSMutableArray *searchResults;
+@property (nonatomic, strong) LHHSearchController *searchController;
 
 @property (nonatomic, strong) LHHChatsSession *chatsSession;
 
@@ -34,15 +40,44 @@
     
     CGRect tableViewFrame = CGRectMake(0, 0, SCREEN_WIDTH, VIEW_HIDETABBAR_HEIGHT);
     self.tableView = [[UITableView alloc] initWithFrame:tableViewFrame style:UITableViewStylePlain];
-//    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-//    self.tableView.separatorColor = [UIColor clearColor];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.separatorColor = [UIColor clearColor];
     self.tableView.backgroundColor = [UIColor clearColor];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
     [self.view addSubview:self.tableView];
     
+    UINavigationController *searchResultsController = [[UINavigationController alloc] initWithRootViewController:[LHHChatsSearchViewController new]];
+    self.searchController = [[LHHSearchController alloc] initWithSearchResultsController:searchResultsController];
+    self.searchController.searchResultsUpdater = self;
+    self.searchController.delegate = self;
+    self.searchController.hidesBottomBarWhenPushed = YES;
+//    self.searchController.view.backgroundColor = COLOR_MAIN_BG;
+//    self.searchController.view.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+//    self.searchController.dimsBackgroundDuringPresentation = NO;
+//    self.searchController.obscuresBackgroundDuringPresentation = NO;
+//    self.searchController.hidesNavigationBarDuringPresentation = NO;
+    self.searchController.searchBar.frame = CGRectMake(self.searchController.searchBar.frame.origin.x,
+                                                       self.searchController.searchBar.frame.origin.y,
+                                                       self.searchController.searchBar.frame.size.width, PHONE_NAVIGATIONBAR_HEIGHT);
+    // 关掉自动大写锁定
+    self.searchController.searchBar.autocapitalizationType = UITextAutocapitalizationTypeNone;
+    self.searchController.searchBar.barTintColor = COLOR_MAIN_BG; // 设置后上下有黑线
+    self.searchController.searchBar.tintColor = COLOR_WY_GREEN;
+    self.searchController.searchBar.placeholder = @"Search";
+    [self.searchController.searchBar setValue:@"Cancel" forKey:@"_cancelButtonText"];
+    self.searchController.searchBar.delegate = self;
+    // 去除黑线
+    UIImageView *barImageView = [[[self.searchController.searchBar.subviews firstObject] subviews] firstObject];
+    barImageView.layer.borderColor = COLOR_MAIN_BG.CGColor;
+    barImageView.layer.borderWidth = WY_SIZE(1);
+    
+    self.tableView.tableHeaderView = self.searchController.searchBar;
+    
     self.dataArray = [[NSMutableArray alloc] init];
+    
+    self.definesPresentationContext = NO;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -90,13 +125,13 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSDictionary *chatsDic = [self.dataArray objectAtIndex:indexPath.row];
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"kLHHIdentifier"];
+    LHHChatsContentCell *cell = [tableView dequeueReusableCellWithIdentifier:@"kLHHChatsContentCellIdentifier"];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"kLHHIdentifier"];
-        cell.backgroundColor = [UIColor clearColor];
+        cell = [[LHHChatsContentCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"kLHHChatsContentCellIdentifier"];
     }
-    
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld.%@", (long)(indexPath.row + 1), [chatsDic objectForKey:kChatsName]];
+    LHHChats *chats = [[LHHChats alloc] init];
+    chats.chatsName = [chatsDic objectForKey:kChatsName];
+    [cell updateCell:chats isLast:(self.dataArray.count == indexPath.row + 1)];
     
     return cell;
 }
@@ -104,6 +139,56 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     //    NSLog(@"section=%ld, row=%ld", indexPath.section, indexPath.row);
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+}
+
+#pragma - UITableViewDelegate
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return HeightForChatsContentCell;
+}
+
+#pragma mark - UISearchResultsUpdating
+- (void)updateSearchResultsForSearchController:(UISearchController *)searchController {
+    NSString *searchString = self.searchController.searchBar.text;
+
+    [self.searchController hideBgView:![searchString isEqualToString:@""]];
+    
+    self.searchResults = [self.dataArray mutableCopy];
+    if (self.searchController.searchResultsController) {
+        UINavigationController *navController = (UINavigationController *)self.searchController.searchResultsController;
+        LHHChatsSearchViewController *searchVC =  (LHHChatsSearchViewController *)navController.topViewController;
+        searchVC.searchResults = self.searchResults;
+        [searchVC reloadTable];
+    }
+}
+
+#pragma mark - UISearchControllerDelegate
+- (void)willPresentSearchController:(UISearchController *)searchController {
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault animated:YES];
+    self.tabBarController.tabBar.hidden = YES;
+}
+
+- (void)willDismissSearchController:(UISearchController *)searchController {
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
+    self.tabBarController.tabBar.hidden = NO;
+}
+
+#pragma mark - UISearchBarDelegate
+- (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar {
+    
+    return YES;
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    
+}
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
+    
+}
+
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
+    
 }
 
 @end

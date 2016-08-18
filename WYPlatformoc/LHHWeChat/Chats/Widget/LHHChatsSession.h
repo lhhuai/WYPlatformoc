@@ -7,6 +7,7 @@
 //
 
 #import "LHHBaseServiceSession.h"
+#import "LHHPager.h"
 
 #define kChatsType                       @"ChatsType"
 #define kChatsName                       @"ChatsName"
@@ -16,5 +17,6 @@
 @interface LHHChatsSession : LHHBaseServiceSession
 
 - (void)getChatsWithCondition:(NSString *)condition completeBlock:(void(^)(NSArray *chatsData))complete exceptionBlock:(void(^)())exception;
+- (void)getAirlinesWithCondition:(NSString *)condition pager:(LHHPager *)pager completeBlock:(void(^)(NSArray *airlines))complete exceptionBlock:(void(^)())exception;
 
 @end

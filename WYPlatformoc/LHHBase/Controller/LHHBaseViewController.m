@@ -114,14 +114,14 @@
 
 - (void)checkNetWorkSuccessBlock:(void(^)())success errorBlock:(void(^)())error {
     [self setWaiting:YES title:@"Connecting..."];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         if (success) {
             success();
         }
     });
 }
 
-+ (void)customizeLoginBars {
++ (void)customizeDefaultBars {
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault animated:YES];
 //    [[UINavigationBar appearance] setHidden:YES];
 //    [[UINavigationBar appearance] setTranslucent:YES];
@@ -133,6 +133,13 @@
     [[UINavigationBar appearance] setBarTintColor:[UIColor wy_colorWithRed:56 green:55 blue:60]];
     [[UINavigationBar appearance] setTranslucent:YES];
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+}
+
++ (void)customizeSearchBars {
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault animated:YES];
+    [[UINavigationBar appearance] setBarTintColor:COLOR_MAIN_BG];
+    [[UINavigationBar appearance] setTranslucent:YES];
+    [[UINavigationBar appearance] setTintColor:COLOR_MAIN_BG];
 }
 
 - (void)barBack {

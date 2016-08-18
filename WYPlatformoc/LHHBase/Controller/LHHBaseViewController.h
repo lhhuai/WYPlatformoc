@@ -22,8 +22,9 @@
 - (void)checkLogin:(void(^)(void))block;
 - (void)checkNetWorkSuccessBlock:(void(^)())success errorBlock:(void(^)())error;
 
-+ (void)customizeLoginBars;
++ (void)customizeDefaultBars;
 + (void)customizeBars;
++ (void)customizeSearchBars;
 
 - (void)navigationLeftBack:(NSString *)title;
 - (void)pushViewControllerWith:(NSString *)className leftTitle:(NSString *)leftTitle;

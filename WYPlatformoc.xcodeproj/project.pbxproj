@@ -18,7 +18,14 @@
 		55177DA31C88137D00C02910 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55177D9D1C88137D00C02910 /* Default@2x.png */; };
 		553E57DB1C99159F00AB74B6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 553E57DA1C99159F00AB74B6 /* InfoPlist.strings */; };
 		5587B5901D6165DD003252C6 /* LHHMeLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5587B58F1D6165DD003252C6 /* LHHMeLoadingViewController.m */; };
-		5587B5931D616B2B003252C6 /* LHHChatsSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 5587B5921D616B2B003252C6 /* LHHChatsSession.m */; };
+		5587B59C1D61B78A003252C6 /* LHHChats.m in Sources */ = {isa = PBXBuildFile; fileRef = 5587B59B1D61B78A003252C6 /* LHHChats.m */; };
+		5587B5A11D61C11D003252C6 /* LHHChatsContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5587B59E1D61C11D003252C6 /* LHHChatsContentCell.m */; };
+		5587B5A21D61C11D003252C6 /* LHHChatsHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5587B5A01D61C11D003252C6 /* LHHChatsHeaderCell.m */; };
+		5587B5A51D61C126003252C6 /* LHHChatsSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 5587B5A41D61C126003252C6 /* LHHChatsSession.m */; };
+		5587B5A81D61C14B003252C6 /* LHHChatsSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5587B5A71D61C14B003252C6 /* LHHChatsSearchViewController.m */; };
+		5587B5AD1D62B6B0003252C6 /* airlineData.json in Resources */ = {isa = PBXBuildFile; fileRef = 5587B5AC1D62B6B0003252C6 /* airlineData.json */; };
+		5587B5B01D62C122003252C6 /* LHHPager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5587B5AF1D62C122003252C6 /* LHHPager.m */; };
+		55C4AB441D63FE110048FD2F /* LHHSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C4AB431D63FE110048FD2F /* LHHSearchController.m */; };
 		55C77F4A1C8D209000623D74 /* LHHRegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C77F491C8D209000623D74 /* LHHRegistViewController.m */; };
 		55C77F501C8D503800623D74 /* LHHRegistTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C77F4F1C8D503800623D74 /* LHHRegistTableViewCell.m */; };
 		55CE336A1D489EC7000621F2 /* LHHAdaptiveManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CE33671D489EC7000621F2 /* LHHAdaptiveManager.m */; };
@@ -93,8 +100,21 @@
 		553E57DA1C99159F00AB74B6 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		5587B58E1D6165DD003252C6 /* LHHMeLoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHMeLoadingViewController.h; sourceTree = "<group>"; };
 		5587B58F1D6165DD003252C6 /* LHHMeLoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHMeLoadingViewController.m; sourceTree = "<group>"; };
-		5587B5911D616B2B003252C6 /* LHHChatsSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHChatsSession.h; sourceTree = "<group>"; };
-		5587B5921D616B2B003252C6 /* LHHChatsSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHChatsSession.m; sourceTree = "<group>"; };
+		5587B59A1D61B78A003252C6 /* LHHChats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHChats.h; sourceTree = "<group>"; };
+		5587B59B1D61B78A003252C6 /* LHHChats.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHChats.m; sourceTree = "<group>"; };
+		5587B59D1D61C11D003252C6 /* LHHChatsContentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHChatsContentCell.h; sourceTree = "<group>"; };
+		5587B59E1D61C11D003252C6 /* LHHChatsContentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHChatsContentCell.m; sourceTree = "<group>"; };
+		5587B59F1D61C11D003252C6 /* LHHChatsHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHChatsHeaderCell.h; sourceTree = "<group>"; };
+		5587B5A01D61C11D003252C6 /* LHHChatsHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHChatsHeaderCell.m; sourceTree = "<group>"; };
+		5587B5A31D61C126003252C6 /* LHHChatsSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHChatsSession.h; sourceTree = "<group>"; };
+		5587B5A41D61C126003252C6 /* LHHChatsSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHChatsSession.m; sourceTree = "<group>"; };
+		5587B5A61D61C14B003252C6 /* LHHChatsSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHChatsSearchViewController.h; sourceTree = "<group>"; };
+		5587B5A71D61C14B003252C6 /* LHHChatsSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHChatsSearchViewController.m; sourceTree = "<group>"; };
+		5587B5AC1D62B6B0003252C6 /* airlineData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = airlineData.json; sourceTree = "<group>"; };
+		5587B5AE1D62C122003252C6 /* LHHPager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHPager.h; sourceTree = "<group>"; };
+		5587B5AF1D62C122003252C6 /* LHHPager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHPager.m; sourceTree = "<group>"; };
+		55C4AB421D63FE110048FD2F /* LHHSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHSearchController.h; sourceTree = "<group>"; };
+		55C4AB431D63FE110048FD2F /* LHHSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHSearchController.m; sourceTree = "<group>"; };
 		55C77F481C8D209000623D74 /* LHHRegistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHRegistViewController.h; sourceTree = "<group>"; };
 		55C77F491C8D209000623D74 /* LHHRegistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHRegistViewController.m; sourceTree = "<group>"; };
 		55C77F4E1C8D503800623D74 /* LHHRegistTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHRegistTableViewCell.h; sourceTree = "<group>"; };
@@ -274,6 +294,7 @@
 		55177D9A1C88137D00C02910 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				5587B5AB1D62B6B0003252C6 /* Json */,
 				55D584D41C8975AE003138AF /* blank_44.png */,
 				55D584D51C8975AE003138AF /* blank_44@2x.png */,
 				55D584D61C8975AE003138AF /* blank_44@3x.png */,
@@ -307,6 +328,14 @@
 			path = LHHCommon;
 			sourceTree = "<group>";
 		};
+		5587B5AB1D62B6B0003252C6 /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				5587B5AC1D62B6B0003252C6 /* airlineData.json */,
+			);
+			path = Json;
+			sourceTree = "<group>";
+		};
 		55C77F471C8D206400623D74 /* LHHRegist */ = {
 			isa = PBXGroup;
 			children = (
@@ -324,6 +353,8 @@
 			isa = PBXGroup;
 			children = (
 				55CE33721D48A4A3000621F2 /* User */,
+				5587B5AE1D62C122003252C6 /* LHHPager.h */,
+				5587B5AF1D62C122003252C6 /* LHHPager.m */,
 			);
 			path = LHHModel;
 			sourceTree = "<group>";
@@ -425,8 +456,10 @@
 			children = (
 				55F515811D5AC7700098CA7A /* LHHChatsViewController.h */,
 				55F515821D5AC7700098CA7A /* LHHChatsViewController.m */,
-				5587B5911D616B2B003252C6 /* LHHChatsSession.h */,
-				5587B5921D616B2B003252C6 /* LHHChatsSession.m */,
+				55C4AB421D63FE110048FD2F /* LHHSearchController.h */,
+				55C4AB431D63FE110048FD2F /* LHHSearchController.m */,
+				5587B5A61D61C14B003252C6 /* LHHChatsSearchViewController.h */,
+				5587B5A71D61C14B003252C6 /* LHHChatsSearchViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -434,6 +467,10 @@
 		55F515831D5AC7700098CA7A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5587B59F1D61C11D003252C6 /* LHHChatsHeaderCell.h */,
+				5587B5A01D61C11D003252C6 /* LHHChatsHeaderCell.m */,
+				5587B59D1D61C11D003252C6 /* LHHChatsContentCell.h */,
+				5587B59E1D61C11D003252C6 /* LHHChatsContentCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -441,6 +478,10 @@
 		55F515841D5AC7700098CA7A /* Widget */ = {
 			isa = PBXGroup;
 			children = (
+				5587B5A31D61C126003252C6 /* LHHChatsSession.h */,
+				5587B5A41D61C126003252C6 /* LHHChatsSession.m */,
+				5587B59A1D61B78A003252C6 /* LHHChats.h */,
+				5587B59B1D61B78A003252C6 /* LHHChats.m */,
 			);
 			path = Widget;
 			sourceTree = "<group>";
@@ -667,6 +708,7 @@
 				55EBBFA51D4AFBE20014342C /* LHHLaunchViewController.xib in Resources */,
 				55D584DF1C8975AE003138AF /* blank_Translucent_44@3x.png in Resources */,
 				55D584DD1C8975AE003138AF /* blank_Translucent_44.png in Resources */,
+				5587B5AD1D62B6B0003252C6 /* airlineData.json in Resources */,
 				55177DA11C88137D00C02910 /* Default-568h@2x.png in Resources */,
 				55D584DB1C8975AE003138AF /* blank_44@2x.png in Resources */,
 				55D584DE1C8975AE003138AF /* blank_Translucent_44@2x.png in Resources */,
@@ -739,6 +781,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55C4AB441D63FE110048FD2F /* LHHSearchController.m in Sources */,
 				55EBBFA41D4AFBE20014342C /* LHHLaunchViewController.m in Sources */,
 				55F2CF5C1D4604B9007F06CA /* LHHBaseServiceSession.m in Sources */,
 				55177D711C88130500C02910 /* LHHAppDelegate.m in Sources */,
@@ -754,7 +797,10 @@
 				55F5159F1D5AC7700098CA7A /* LHHMeCommonCell.m in Sources */,
 				55CE33851D48BACD000621F2 /* LHHActionSheet.m in Sources */,
 				55F2CF621D4760F2007F06CA /* LHHLoginSession.m in Sources */,
+				5587B5A51D61C126003252C6 /* LHHChatsSession.m in Sources */,
+				5587B5A81D61C14B003252C6 /* LHHChatsSearchViewController.m in Sources */,
 				55C77F501C8D503800623D74 /* LHHRegistTableViewCell.m in Sources */,
+				5587B5A21D61C11D003252C6 /* LHHChatsHeaderCell.m in Sources */,
 				55F515A01D5AC7700098CA7A /* LHHMeHeaderCell.m in Sources */,
 				55EBBFA81D4B5AAB0014342C /* LHHReachability.m in Sources */,
 				55F5159C1D5AC7700098CA7A /* LHHContactsViewController.m in Sources */,
@@ -764,18 +810,20 @@
 				55F515B31D5B437E0098CA7A /* LHHMeSettingCellModel.m in Sources */,
 				55CE33861D48BACD000621F2 /* LHHAlertView.m in Sources */,
 				55CE336A1D489EC7000621F2 /* LHHAdaptiveManager.m in Sources */,
+				5587B5B01D62C122003252C6 /* LHHPager.m in Sources */,
 				55177D9F1C88137D00C02910 /* LHHLoginViewController.m in Sources */,
 				55CE33771D48A4A3000621F2 /* LHHUser.m in Sources */,
 				55CE33781D48A4A3000621F2 /* LHHUserManager.m in Sources */,
 				55C77F4A1C8D209000623D74 /* LHHRegistViewController.m in Sources */,
 				55F515AB1D5B20890098CA7A /* LHHMeSettingCell.m in Sources */,
+				5587B5A11D61C11D003252C6 /* LHHChatsContentCell.m in Sources */,
 				55CE33871D48BACD000621F2 /* LHHBarButtonItem.m in Sources */,
 				55F515A51D5AE0820098CA7A /* LHHWeChatUser.m in Sources */,
 				55F2CF5F1D4604FA007F06CA /* LHHRegistSession.m in Sources */,
 				55F5159B1D5AC7700098CA7A /* LHHChatsViewController.m in Sources */,
+				5587B59C1D61B78A003252C6 /* LHHChats.m in Sources */,
 				55177D6E1C88130500C02910 /* main.m in Sources */,
 				55EBBFBA1D5211910014342C /* LHHUserPreferences.m in Sources */,
-				5587B5931D616B2B003252C6 /* LHHChatsSession.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

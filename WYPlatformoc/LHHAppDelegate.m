@@ -79,7 +79,7 @@
 }
 
 - (void)gotoLoginViewController {
-    [LHHBaseViewController customizeLoginBars];
+    [LHHBaseViewController customizeDefaultBars];
     
     LHHLoginViewController *loginViewController = [[LHHLoginViewController alloc] init];
     loginViewController.gotoLoginType = LHHGotoLoginTypeWeChat;

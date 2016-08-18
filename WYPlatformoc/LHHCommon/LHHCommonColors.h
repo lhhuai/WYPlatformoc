@@ -20,6 +20,8 @@
 // 主题模块背景  #ffffff
 #define COLOR_WHITE                   [UIColor wy_colorFromHex:0xffffff]
 
+// 主色调      #69af00
+#define COLOR_WY_GREEN                [UIColor wy_colorFromHex:0x69AF00]
 // 辅色
 // 价格数字及可点击按钮（付款）.橙色给人安全感     #fa6400
 #define COLOR_IMPORTMENT_INFO         [UIColor wy_colorFromHex:0xfa6400]
