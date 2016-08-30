@@ -224,6 +224,7 @@
         cell.textField.enablesReturnKeyAutomatically = YES;
         cell.textField.secureTextEntry = NO;
         cell.textField.placeholder = @"Enter account";
+        cell.textField.autocapitalizationType = UITextAutocapitalizationTypeNone;
     }
     if (indexPath.row == 1) {
         cell.label.text = @"Password";

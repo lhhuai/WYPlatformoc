@@ -9,6 +9,7 @@
 #import "LHHChatsViewController.h"
 #import "LHHChatsSearchViewController.h"
 #import "LHHSearchController.h"
+#import "LHHChatsSearchResultsViewController.h"
 
 #import "LHHChatsSession.h"
 #import "LHHChatsContentCell.h"
@@ -48,11 +49,11 @@
     
     [self.view addSubview:self.tableView];
     
-    UINavigationController *searchResultsController = [[UINavigationController alloc] initWithRootViewController:[LHHChatsSearchViewController new]];
+    UINavigationController *searchResultsController = [[UINavigationController alloc] initWithRootViewController:[[LHHChatsSearchViewController alloc] init]];
     self.searchController = [[LHHSearchController alloc] initWithSearchResultsController:searchResultsController];
     self.searchController.searchResultsUpdater = self;
     self.searchController.delegate = self;
-    self.searchController.hidesBottomBarWhenPushed = YES;
+//    self.searchController.hidesBottomBarWhenPushed = YES;
 //    self.searchController.view.backgroundColor = COLOR_MAIN_BG;
 //    self.searchController.view.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
 //    self.searchController.dimsBackgroundDuringPresentation = NO;
@@ -140,6 +141,8 @@
     //    NSLog(@"section=%ld, row=%ld", indexPath.section, indexPath.row);
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+    LHHChatsSearchResultsViewController *resultVC = [[LHHChatsSearchResultsViewController alloc] init];
+    [self.navigationController pushViewController:resultVC animated:YES];
 }
 
 #pragma - UITableViewDelegate

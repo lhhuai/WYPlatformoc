@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		550583FA1D7432A600D62126 /* LHHSpaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 550583F91D7432A600D62126 /* LHHSpaceCell.m */; };
+		550584021D7523DB00D62126 /* LHHWyListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 550583FF1D7523DB00D62126 /* LHHWyListViewController.m */; };
+		5505840C1D75244B00D62126 /* LHHVoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5505840B1D75244B00D62126 /* LHHVoteViewController.m */; };
+		5514E5811D659F62000CBFE3 /* LHHChatsSearchResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5514E5801D659F62000CBFE3 /* LHHChatsSearchResultsViewController.m */; };
 		55177D6E1C88130500C02910 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55177D6D1C88130500C02910 /* main.m */; };
 		55177D711C88130500C02910 /* LHHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55177D701C88130500C02910 /* LHHAppDelegate.m */; };
 		55177D791C88130500C02910 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55177D781C88130500C02910 /* Assets.xcassets */; };
@@ -79,6 +83,14 @@
 
 /* Begin PBXFileReference section */
 		17D64C58974721ABB540B803 /* Pods_WYPlatformoc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WYPlatformoc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		550583F81D7432A600D62126 /* LHHSpaceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHSpaceCell.h; sourceTree = "<group>"; };
+		550583F91D7432A600D62126 /* LHHSpaceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHSpaceCell.m; sourceTree = "<group>"; };
+		550583FE1D7523DB00D62126 /* LHHWyListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHWyListViewController.h; sourceTree = "<group>"; };
+		550583FF1D7523DB00D62126 /* LHHWyListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHWyListViewController.m; sourceTree = "<group>"; };
+		5505840A1D75244B00D62126 /* LHHVoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHVoteViewController.h; sourceTree = "<group>"; };
+		5505840B1D75244B00D62126 /* LHHVoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHVoteViewController.m; sourceTree = "<group>"; };
+		5514E57F1D659F62000CBFE3 /* LHHChatsSearchResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHChatsSearchResultsViewController.h; sourceTree = "<group>"; };
+		5514E5801D659F62000CBFE3 /* LHHChatsSearchResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHChatsSearchResultsViewController.m; sourceTree = "<group>"; };
 		55177D691C88130400C02910 /* WYPlatformoc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WYPlatformoc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55177D6D1C88130500C02910 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		55177D6F1C88130500C02910 /* LHHAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHHAppDelegate.h; sourceTree = "<group>"; };
@@ -217,6 +229,113 @@
 				17D64C58974721ABB540B803 /* Pods_WYPlatformoc.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		550583F11D74311F00D62126 /* WyList */ = {
+			isa = PBXGroup;
+			children = (
+				550583FC1D7523DB00D62126 /* WY */,
+				550583FB1D7523DB00D62126 /* Vote */,
+				550584061D75242E00D62126 /* null */,
+			);
+			path = WyList;
+			sourceTree = "<group>";
+		};
+		550583FB1D7523DB00D62126 /* Vote */ = {
+			isa = PBXGroup;
+			children = (
+				550584031D75240E00D62126 /* Controller */,
+				550584041D75240E00D62126 /* View */,
+				550584051D75240E00D62126 /* Widget */,
+			);
+			path = Vote;
+			sourceTree = "<group>";
+		};
+		550583FC1D7523DB00D62126 /* WY */ = {
+			isa = PBXGroup;
+			children = (
+				550583FD1D7523DB00D62126 /* Controller */,
+				550584001D7523DB00D62126 /* View */,
+				550584011D7523DB00D62126 /* Widget */,
+			);
+			path = WY;
+			sourceTree = "<group>";
+		};
+		550583FD1D7523DB00D62126 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				550583FE1D7523DB00D62126 /* LHHWyListViewController.h */,
+				550583FF1D7523DB00D62126 /* LHHWyListViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		550584001D7523DB00D62126 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		550584011D7523DB00D62126 /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
+		550584031D75240E00D62126 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5505840A1D75244B00D62126 /* LHHVoteViewController.h */,
+				5505840B1D75244B00D62126 /* LHHVoteViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		550584041D75240E00D62126 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		550584051D75240E00D62126 /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
+		550584061D75242E00D62126 /* null */ = {
+			isa = PBXGroup;
+			children = (
+				550584071D75242E00D62126 /* Controller */,
+				550584081D75242E00D62126 /* View */,
+				550584091D75242E00D62126 /* Widget */,
+			);
+			path = null;
+			sourceTree = "<group>";
+		};
+		550584071D75242E00D62126 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		550584081D75242E00D62126 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		550584091D75242E00D62126 /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Widget;
 			sourceTree = "<group>";
 		};
 		55177D601C88130400C02910 = {
@@ -437,6 +556,7 @@
 				55F515851D5AC7700098CA7A /* Contacts */,
 				55F5158B1D5AC7700098CA7A /* Discover */,
 				55F515911D5AC7700098CA7A /* Me */,
+				550583F11D74311F00D62126 /* WyList */,
 			);
 			path = LHHWeChat;
 			sourceTree = "<group>";
@@ -460,6 +580,8 @@
 				55C4AB431D63FE110048FD2F /* LHHSearchController.m */,
 				5587B5A61D61C14B003252C6 /* LHHChatsSearchViewController.h */,
 				5587B5A71D61C14B003252C6 /* LHHChatsSearchViewController.m */,
+				5514E57F1D659F62000CBFE3 /* LHHChatsSearchResultsViewController.h */,
+				5514E5801D659F62000CBFE3 /* LHHChatsSearchResultsViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -604,6 +726,8 @@
 			children = (
 				55F515B51D5B4DAC0098CA7A /* LHHWeChatButtonCell.h */,
 				55F515B61D5B4DAC0098CA7A /* LHHWeChatButtonCell.m */,
+				550583F81D7432A600D62126 /* LHHSpaceCell.h */,
+				550583F91D7432A600D62126 /* LHHSpaceCell.m */,
 			);
 			path = CommonView;
 			sourceTree = "<group>";
@@ -788,6 +912,7 @@
 				55F5159E1D5AC7700098CA7A /* LHHMeViewController.m in Sources */,
 				55F2CF6A1D484F8B007F06CA /* LHHMainViewController.m in Sources */,
 				55CE33841D48BACD000621F2 /* LHHBaseViewController.m in Sources */,
+				550584021D7523DB00D62126 /* LHHWyListViewController.m in Sources */,
 				55F515A81D5B01F10098CA7A /* LHHMeSettingViewController.m in Sources */,
 				55177D9E1C88137D00C02910 /* LHHLoginTableViewCell.m in Sources */,
 				55F515B71D5B4DAC0098CA7A /* LHHWeChatButtonCell.m in Sources */,
@@ -805,6 +930,7 @@
 				55EBBFA81D4B5AAB0014342C /* LHHReachability.m in Sources */,
 				55F5159C1D5AC7700098CA7A /* LHHContactsViewController.m in Sources */,
 				55F515B01D5B32CF0098CA7A /* LHHDiscoverViewController.m in Sources */,
+				550583FA1D7432A600D62126 /* LHHSpaceCell.m in Sources */,
 				55CE338A1D48BB1F000621F2 /* LHHTabBarItem.m in Sources */,
 				55CE338D1D48C009000621F2 /* LHHTabBarViewController.m in Sources */,
 				55F515B31D5B437E0098CA7A /* LHHMeSettingCellModel.m in Sources */,
@@ -819,9 +945,11 @@
 				5587B5A11D61C11D003252C6 /* LHHChatsContentCell.m in Sources */,
 				55CE33871D48BACD000621F2 /* LHHBarButtonItem.m in Sources */,
 				55F515A51D5AE0820098CA7A /* LHHWeChatUser.m in Sources */,
+				5514E5811D659F62000CBFE3 /* LHHChatsSearchResultsViewController.m in Sources */,
 				55F2CF5F1D4604FA007F06CA /* LHHRegistSession.m in Sources */,
 				55F5159B1D5AC7700098CA7A /* LHHChatsViewController.m in Sources */,
 				5587B59C1D61B78A003252C6 /* LHHChats.m in Sources */,
+				5505840C1D75244B00D62126 /* LHHVoteViewController.m in Sources */,
 				55177D6E1C88130500C02910 /* main.m in Sources */,
 				55EBBFBA1D5211910014342C /* LHHUserPreferences.m in Sources */,
 			);

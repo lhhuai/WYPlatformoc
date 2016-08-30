@@ -70,7 +70,7 @@
                          @{kImageName:@"wechat_me_setting", kTitleName:@"Settings", kClassName:@"LHHMeSettingViewController", kCellType:@"Common", kCellSelectionStyle:@"Default"}],
                        
                        @[@{kSectionBlankHeight:@WY_SIZE(22), kCellSelectionStyle:@"None"},
-                         @{kImageName:@"wechat_me_setting", kTitleName:@"Loading", kClassName:@"LHHMeLoadingViewController", kCellType:@"Common", kCellSelectionStyle:@"Default"}]
+                         @{kImageName:@"wechat_me_setting", kTitleName:@"WyList", kClassName:@"LHHWyListViewController", kCellType:@"Common", kCellSelectionStyle:@"Default"}]
                        ];
 }
 

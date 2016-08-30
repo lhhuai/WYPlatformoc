@@ -263,6 +263,7 @@ static NSString *kLHHLoginTableViewCellIdentifier = @"LHHLoginTableViewCellIdent
         cell.textField.returnKeyType = UIReturnKeyNext;
         cell.textField.enablesReturnKeyAutomatically = YES;
         cell.textField.secureTextEntry = NO;
+        cell.textField.autocapitalizationType = UITextAutocapitalizationTypeNone;
         cell.textField.placeholder = @"Enter account";
     }
     if (indexPath.row == 1) {

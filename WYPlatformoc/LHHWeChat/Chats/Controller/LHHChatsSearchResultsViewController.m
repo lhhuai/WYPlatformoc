@@ -1,25 +1,25 @@
 //
-//  LHHSearchController.m
+//  LHHChatsSearchResultsViewController.m
 //  WYPlatformoc
 //
-//  Created by seaphy on 16/8/17.
+//  Created by seaphy on 16/8/18.
 //  Copyright © 2016年 seaphy. All rights reserved.
 //
 
-#import "LHHSearchController.h"
 #import "LHHChatsSearchResultsViewController.h"
 
-@interface LHHSearchController ()
+@interface LHHChatsSearchResultsViewController ()
 
 @property (nonatomic, strong) UIView *bgView;
 
 @end
 
-@implementation LHHSearchController
+@implementation LHHChatsSearchResultsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self setWYTitle:@"result"];
     
     self.bgView = [[UIView alloc] initWithFrame:CGRectMake(0, PHONE_STATUSBAR_HEIGHT + PHONE_NAVIGATIONBAR_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT)];
     self.bgView.backgroundColor = COLOR_MAIN_BG;
@@ -31,10 +31,8 @@
     btn.backgroundColor = COLOR_WHITE;
     btn.layer.borderColor = COLOR_WY_GREEN.CGColor;
     btn.layer.borderWidth = WY_SIZE(1);
-    [btn addTarget:self action:@selector(clickBtn) forControlEvents:UIControlEventTouchUpInside];
+//    [btn addTarget:self action:@selector(clickBtn) forControlEvents:UIControlEventTouchUpInside];
     [self.bgView addSubview:btn];
-//
-//    self.definesPresentationContext = NO;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,13 +40,14 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)clickBtn {
-    LHHChatsSearchResultsViewController *resultVC = [[LHHChatsSearchResultsViewController alloc] init];
-    [self.navigationController pushViewController:resultVC animated:YES];
-}
+/*
+#pragma mark - Navigation
 
-- (void)hideBgView:(BOOL)hidden {
-    self.bgView.hidden = hidden;
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
 }
+*/
 
 @end

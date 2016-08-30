@@ -7,6 +7,7 @@
 //
 
 #import "LHHChatsSearchViewController.h"
+#import "LHHChatsSearchResultsViewController.h"
 #import "UIImage+WYAddition.h"
 #import "LHHChatsContentCell.h"
 
@@ -70,6 +71,11 @@
     [cell updateCell:chats isLast:(self.searchResults.count == indexPath.row + 1)];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    LHHChatsSearchResultsViewController *resultVC = [[LHHChatsSearchResultsViewController alloc] init];
+    [self.navigationController pushViewController:resultVC animated:YES];
 }
 
 @end
