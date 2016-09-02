@@ -35,6 +35,7 @@
 		5587B5A81D61C14B003252C6 /* LHHChatsSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5587B5A71D61C14B003252C6 /* LHHChatsSearchViewController.m */; };
 		5587B5AD1D62B6B0003252C6 /* airlineData.json in Resources */ = {isa = PBXBuildFile; fileRef = 5587B5AC1D62B6B0003252C6 /* airlineData.json */; };
 		5587B5B01D62C122003252C6 /* LHHPager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5587B5AF1D62C122003252C6 /* LHHPager.m */; };
+		55C1E4921D797D21001057DD /* vote_1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55C1E4911D797D21001057DD /* vote_1.plist */; };
 		55C4AB441D63FE110048FD2F /* LHHSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C4AB431D63FE110048FD2F /* LHHSearchController.m */; };
 		55C77F4A1C8D209000623D74 /* LHHRegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C77F491C8D209000623D74 /* LHHRegistViewController.m */; };
 		55C77F501C8D503800623D74 /* LHHRegistTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C77F4F1C8D503800623D74 /* LHHRegistTableViewCell.m */; };
@@ -142,6 +143,7 @@
 		5587B5AC1D62B6B0003252C6 /* airlineData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = airlineData.json; sourceTree = "<group>"; };
 		5587B5AE1D62C122003252C6 /* LHHPager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHPager.h; sourceTree = "<group>"; };
 		5587B5AF1D62C122003252C6 /* LHHPager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHPager.m; sourceTree = "<group>"; };
+		55C1E4911D797D21001057DD /* vote_1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = vote_1.plist; sourceTree = "<group>"; };
 		55C4AB421D63FE110048FD2F /* LHHSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHSearchController.h; sourceTree = "<group>"; };
 		55C4AB431D63FE110048FD2F /* LHHSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHSearchController.m; sourceTree = "<group>"; };
 		55C77F481C8D209000623D74 /* LHHRegistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHRegistViewController.h; sourceTree = "<group>"; };
@@ -366,6 +368,7 @@
 			isa = PBXGroup;
 			children = (
 				5505840E1D75289E00D62126 /* vote.plist */,
+				55C1E4911D797D21001057DD /* vote_1.plist */,
 			);
 			path = Plist;
 			sourceTree = "<group>";
@@ -876,6 +879,7 @@
 				55EBBFA51D4AFBE20014342C /* LHHLaunchViewController.xib in Resources */,
 				55D584DF1C8975AE003138AF /* blank_Translucent_44@3x.png in Resources */,
 				55D584DD1C8975AE003138AF /* blank_Translucent_44.png in Resources */,
+				55C1E4921D797D21001057DD /* vote_1.plist in Resources */,
 				5587B5AD1D62B6B0003252C6 /* airlineData.json in Resources */,
 				55177DA11C88137D00C02910 /* Default-568h@2x.png in Resources */,
 				55D584DB1C8975AE003138AF /* blank_44@2x.png in Resources */,
