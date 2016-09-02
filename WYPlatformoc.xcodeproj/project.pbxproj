@@ -10,6 +10,9 @@
 		550583FA1D7432A600D62126 /* LHHSpaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 550583F91D7432A600D62126 /* LHHSpaceCell.m */; };
 		550584021D7523DB00D62126 /* LHHWyListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 550583FF1D7523DB00D62126 /* LHHWyListViewController.m */; };
 		5505840C1D75244B00D62126 /* LHHVoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5505840B1D75244B00D62126 /* LHHVoteViewController.m */; };
+		5505840F1D75289E00D62126 /* vote.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5505840E1D75289E00D62126 /* vote.plist */; };
+		550584131D752BE700D62126 /* LHHVoteModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 550584121D752BE700D62126 /* LHHVoteModel.m */; };
+		5505841F1D75657300D62126 /* UILabel+LHHAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5505841E1D75657300D62126 /* UILabel+LHHAddition.m */; };
 		5514E5811D659F62000CBFE3 /* LHHChatsSearchResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5514E5801D659F62000CBFE3 /* LHHChatsSearchResultsViewController.m */; };
 		55177D6E1C88130500C02910 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55177D6D1C88130500C02910 /* main.m */; };
 		55177D711C88130500C02910 /* LHHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55177D701C88130500C02910 /* LHHAppDelegate.m */; };
@@ -20,7 +23,10 @@
 		55177DA11C88137D00C02910 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55177D9B1C88137D00C02910 /* Default-568h@2x.png */; };
 		55177DA21C88137D00C02910 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 55177D9C1C88137D00C02910 /* Default.png */; };
 		55177DA31C88137D00C02910 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55177D9D1C88137D00C02910 /* Default@2x.png */; };
+		5535B20B1D7675FA00A0AEAA /* LHHVoteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5535B20A1D7675FA00A0AEAA /* LHHVoteCell.m */; };
 		553E57DB1C99159F00AB74B6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 553E57DA1C99159F00AB74B6 /* InfoPlist.strings */; };
+		5576CF341D780CE8006E707A /* LHHVoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5576CF331D780CE8006E707A /* LHHVoteView.m */; };
+		5576CF371D782922006E707A /* LHHPercentBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5576CF361D782922006E707A /* LHHPercentBar.m */; };
 		5587B5901D6165DD003252C6 /* LHHMeLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5587B58F1D6165DD003252C6 /* LHHMeLoadingViewController.m */; };
 		5587B59C1D61B78A003252C6 /* LHHChats.m in Sources */ = {isa = PBXBuildFile; fileRef = 5587B59B1D61B78A003252C6 /* LHHChats.m */; };
 		5587B5A11D61C11D003252C6 /* LHHChatsContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5587B59E1D61C11D003252C6 /* LHHChatsContentCell.m */; };
@@ -89,6 +95,11 @@
 		550583FF1D7523DB00D62126 /* LHHWyListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHWyListViewController.m; sourceTree = "<group>"; };
 		5505840A1D75244B00D62126 /* LHHVoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHVoteViewController.h; sourceTree = "<group>"; };
 		5505840B1D75244B00D62126 /* LHHVoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHVoteViewController.m; sourceTree = "<group>"; };
+		5505840E1D75289E00D62126 /* vote.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = vote.plist; sourceTree = "<group>"; };
+		550584111D752BE700D62126 /* LHHVoteModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHVoteModel.h; sourceTree = "<group>"; };
+		550584121D752BE700D62126 /* LHHVoteModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHVoteModel.m; sourceTree = "<group>"; };
+		5505841D1D75657300D62126 /* UILabel+LHHAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+LHHAddition.h"; sourceTree = "<group>"; };
+		5505841E1D75657300D62126 /* UILabel+LHHAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+LHHAddition.m"; sourceTree = "<group>"; };
 		5514E57F1D659F62000CBFE3 /* LHHChatsSearchResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHChatsSearchResultsViewController.h; sourceTree = "<group>"; };
 		5514E5801D659F62000CBFE3 /* LHHChatsSearchResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHChatsSearchResultsViewController.m; sourceTree = "<group>"; };
 		55177D691C88130400C02910 /* WYPlatformoc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WYPlatformoc.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,7 +120,13 @@
 		55177D9D1C88137D00C02910 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		55177DA51C88205A00C02910 /* LHHCommonDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHCommonDefines.h; sourceTree = "<group>"; };
 		55177DA61C88207C00C02910 /* LHHCommonColors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHHCommonColors.h; sourceTree = "<group>"; };
+		5535B2091D7675FA00A0AEAA /* LHHVoteCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHVoteCell.h; sourceTree = "<group>"; };
+		5535B20A1D7675FA00A0AEAA /* LHHVoteCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHVoteCell.m; sourceTree = "<group>"; };
 		553E57DA1C99159F00AB74B6 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		5576CF321D780CE8006E707A /* LHHVoteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHVoteView.h; sourceTree = "<group>"; };
+		5576CF331D780CE8006E707A /* LHHVoteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHVoteView.m; sourceTree = "<group>"; };
+		5576CF351D782922006E707A /* LHHPercentBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHPercentBar.h; sourceTree = "<group>"; };
+		5576CF361D782922006E707A /* LHHPercentBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHPercentBar.m; sourceTree = "<group>"; };
 		5587B58E1D6165DD003252C6 /* LHHMeLoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHMeLoadingViewController.h; sourceTree = "<group>"; };
 		5587B58F1D6165DD003252C6 /* LHHMeLoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHMeLoadingViewController.m; sourceTree = "<group>"; };
 		5587B59A1D61B78A003252C6 /* LHHChats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHChats.h; sourceTree = "<group>"; };
@@ -246,6 +263,7 @@
 			children = (
 				550584031D75240E00D62126 /* Controller */,
 				550584041D75240E00D62126 /* View */,
+				550584101D752BAA00D62126 /* Model */,
 				550584051D75240E00D62126 /* Widget */,
 			);
 			path = Vote;
@@ -296,6 +314,12 @@
 		550584041D75240E00D62126 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5535B2091D7675FA00A0AEAA /* LHHVoteCell.h */,
+				5535B20A1D7675FA00A0AEAA /* LHHVoteCell.m */,
+				5576CF321D780CE8006E707A /* LHHVoteView.h */,
+				5576CF331D780CE8006E707A /* LHHVoteView.m */,
+				5576CF351D782922006E707A /* LHHPercentBar.h */,
+				5576CF361D782922006E707A /* LHHPercentBar.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -336,6 +360,23 @@
 			children = (
 			);
 			path = Widget;
+			sourceTree = "<group>";
+		};
+		5505840D1D75289E00D62126 /* Plist */ = {
+			isa = PBXGroup;
+			children = (
+				5505840E1D75289E00D62126 /* vote.plist */,
+			);
+			path = Plist;
+			sourceTree = "<group>";
+		};
+		550584101D752BAA00D62126 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				550584111D752BE700D62126 /* LHHVoteModel.h */,
+				550584121D752BE700D62126 /* LHHVoteModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		55177D601C88130400C02910 = {
@@ -414,6 +455,7 @@
 			isa = PBXGroup;
 			children = (
 				5587B5AB1D62B6B0003252C6 /* Json */,
+				5505840D1D75289E00D62126 /* Plist */,
 				55D584D41C8975AE003138AF /* blank_44.png */,
 				55D584D51C8975AE003138AF /* blank_44@2x.png */,
 				55D584D61C8975AE003138AF /* blank_44@3x.png */,
@@ -443,6 +485,8 @@
 				55CE33691D489EC7000621F2 /* UIDevice+UIDeviceExt.m */,
 				55EBBFA61D4B5AAB0014342C /* LHHReachability.h */,
 				55EBBFA71D4B5AAB0014342C /* LHHReachability.m */,
+				5505841D1D75657300D62126 /* UILabel+LHHAddition.h */,
+				5505841E1D75657300D62126 /* UILabel+LHHAddition.m */,
 			);
 			path = LHHCommon;
 			sourceTree = "<group>";
@@ -835,6 +879,7 @@
 				5587B5AD1D62B6B0003252C6 /* airlineData.json in Resources */,
 				55177DA11C88137D00C02910 /* Default-568h@2x.png in Resources */,
 				55D584DB1C8975AE003138AF /* blank_44@2x.png in Resources */,
+				5505840F1D75289E00D62126 /* vote.plist in Resources */,
 				55D584DE1C8975AE003138AF /* blank_Translucent_44@2x.png in Resources */,
 				55D584DA1C8975AE003138AF /* blank_44.png in Resources */,
 				55177D791C88130500C02910 /* Assets.xcassets in Resources */,
@@ -909,6 +954,7 @@
 				55EBBFA41D4AFBE20014342C /* LHHLaunchViewController.m in Sources */,
 				55F2CF5C1D4604B9007F06CA /* LHHBaseServiceSession.m in Sources */,
 				55177D711C88130500C02910 /* LHHAppDelegate.m in Sources */,
+				550584131D752BE700D62126 /* LHHVoteModel.m in Sources */,
 				55F5159E1D5AC7700098CA7A /* LHHMeViewController.m in Sources */,
 				55F2CF6A1D484F8B007F06CA /* LHHMainViewController.m in Sources */,
 				55CE33841D48BACD000621F2 /* LHHBaseViewController.m in Sources */,
@@ -916,8 +962,11 @@
 				55F515A81D5B01F10098CA7A /* LHHMeSettingViewController.m in Sources */,
 				55177D9E1C88137D00C02910 /* LHHLoginTableViewCell.m in Sources */,
 				55F515B71D5B4DAC0098CA7A /* LHHWeChatButtonCell.m in Sources */,
+				5535B20B1D7675FA00A0AEAA /* LHHVoteCell.m in Sources */,
 				55CE336B1D489EC7000621F2 /* UIDevice+UIDeviceExt.m in Sources */,
 				5587B5901D6165DD003252C6 /* LHHMeLoadingViewController.m in Sources */,
+				5576CF341D780CE8006E707A /* LHHVoteView.m in Sources */,
+				5576CF371D782922006E707A /* LHHPercentBar.m in Sources */,
 				55F515BA1D5C24FA0098CA7A /* LHHBaseViewController+Navigation.m in Sources */,
 				55F5159F1D5AC7700098CA7A /* LHHMeCommonCell.m in Sources */,
 				55CE33851D48BACD000621F2 /* LHHActionSheet.m in Sources */,
@@ -946,6 +995,7 @@
 				55CE33871D48BACD000621F2 /* LHHBarButtonItem.m in Sources */,
 				55F515A51D5AE0820098CA7A /* LHHWeChatUser.m in Sources */,
 				5514E5811D659F62000CBFE3 /* LHHChatsSearchResultsViewController.m in Sources */,
+				5505841F1D75657300D62126 /* UILabel+LHHAddition.m in Sources */,
 				55F2CF5F1D4604FA007F06CA /* LHHRegistSession.m in Sources */,
 				55F5159B1D5AC7700098CA7A /* LHHChatsViewController.m in Sources */,
 				5587B59C1D61B78A003252C6 /* LHHChats.m in Sources */,

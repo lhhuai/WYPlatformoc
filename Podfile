@@ -11,6 +11,7 @@ target 'WYPlatformoc' do
     pod 'MBProgressHUD', '~> 0.9.2'
     pod 'FMDB', '~> 2.6'
     pod 'Reachability', '~> 3.2'
+    pod 'MJExtension', '~> 3.0.10'
     
     pod 'WYLibraries', '~> 1.1.5'
 

@@ -38,6 +38,7 @@ PODS:
   - libextobjc/RuntimeExtensions (0.4.1)
   - libextobjc/UmbrellaHeader (0.4.1)
   - MBProgressHUD (0.9.2)
+  - MJExtension (3.0.10)
   - Reachability (3.2)
   - WYLibraries (1.1.5):
     - WYLibraries/WYFoundation (= 1.1.5)
@@ -50,6 +51,7 @@ DEPENDENCIES:
   - FMDB (~> 2.6)
   - libextobjc (= 0.4.1)
   - MBProgressHUD (~> 0.9.2)
+  - MJExtension (~> 3.0.10)
   - Reachability (~> 3.2)
   - WYLibraries (~> 1.1.5)
 
@@ -57,9 +59,10 @@ SPEC CHECKSUMS:
   FMDB: c1968bab3ab0aed38f66cb778ae1e7fa9a652b6e
   libextobjc: a650fc1bf489a3d3a9bc2e621efa3e1006fc5471
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  MJExtension: d86aacb740c87519d20e3cca55b6fa4be6cc7548
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   WYLibraries: 39e772ac99dbebd7025f9a70b35dfe021067607d
 
-PODFILE CHECKSUM: a922c55b0a25e73da346b50af584f5023bba9b25
+PODFILE CHECKSUM: 58a77aaeb097324c15bf79ac48c5c73f418e86bb
 
 COCOAPODS: 1.0.0
