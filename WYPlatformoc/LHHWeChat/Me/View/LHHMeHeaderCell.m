@@ -8,6 +8,7 @@
 
 #import "LHHMeHeaderCell.h"
 #import "UIView+WYLayout.h"
+#import "UIView+LHHDraggable.h"
 
 @interface LHHMeHeaderCell()
 
@@ -37,7 +38,9 @@
     [self.contentView addSubview:topLine];
     
     self.profilePhotoIV = [[UIImageView alloc] initWithFrame:CGRectMake(WeChat_Me_MarginLeft, (HeightForMeHeaderCell - WY_IMAGE_SIZE(60)) * .5, WY_IMAGE_SIZE(60), WY_IMAGE_SIZE(60))];
+    self.profilePhotoIV.userInteractionEnabled = YES;
     [self.contentView addSubview:self.profilePhotoIV];
+    [self.profilePhotoIV makeDraggable];
     
     self.nameLbl = [[UILabel alloc] initWithFrame:CGRectMake(self.profilePhotoIV.right + WY_SIZE(10), HeightForMeHeaderCell*.5 - WY_SIZE(24), WY_SIZE(150), WY_SIZE(24))];
     self.nameLbl.backgroundColor = [UIColor clearColor];
@@ -77,6 +80,11 @@
     self.nameLbl.text = user.name;
     
     self.weChatIDLbl.text = [NSString stringWithFormat:@"WeChat ID: %@", user.weChatID];
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    [self.profilePhotoIV updateSnapPoint];
 }
 
 @end

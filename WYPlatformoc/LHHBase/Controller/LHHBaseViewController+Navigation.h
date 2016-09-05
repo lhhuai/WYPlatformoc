@@ -15,7 +15,7 @@
 - (void)wy_navigationLeftBack;
 - (void)wy_navigationLeftBack:(NSString *)title;
 
-- (void)wy_pushViewControllerWith:(NSString *)className leftTitle:(NSString *)leftTitle;
+- (void)wy_pushViewControllerWith:(NSString *)className leftTitle:(NSString *)leftTitle navTitle:(NSString *)navTitle;
 // controller从下往上出现
 - (void)wy_pushViewController:(UIViewController *)viewController;
 // controller从上往下消失

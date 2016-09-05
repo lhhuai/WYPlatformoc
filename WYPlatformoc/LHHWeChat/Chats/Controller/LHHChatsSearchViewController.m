@@ -11,8 +11,6 @@
 #import "UIImage+WYAddition.h"
 #import "LHHChatsContentCell.h"
 
-#define HeightForChatsSearch                      WY_SIZE(44)
-
 @interface LHHChatsSearchViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
@@ -29,6 +27,7 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.separatorColor = [UIColor clearColor];
     self.tableView.backgroundColor = COLOR_MAIN_BG;
+    self.tableView.backgroundColor = [UIColor redColor];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
@@ -36,7 +35,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
+    [self reloadTable];
 //    [LHHBaseViewController customizeSearchBars];
 //    self.hidesBottomBarWhenPushed = YES;
 }
@@ -62,9 +61,9 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSDictionary *chatsDic = [self.searchResults objectAtIndex:indexPath.row];
     
-    LHHChatsContentCell *cell = [tableView dequeueReusableCellWithIdentifier:@"kLHHChatsContentCellIdentifier"];
+    LHHChatsContentCell *cell = [tableView dequeueReusableCellWithIdentifier:@"kLHHChatsSearchCellIdentifier"];
     if (!cell) {
-        cell = [[LHHChatsContentCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"kLHHChatsContentCellIdentifier"];
+        cell = [[LHHChatsContentCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"kLHHChatsSearchCellIdentifier"];
     }
     LHHChats *chats = [[LHHChats alloc] init];
     chats.chatsName = @"abc";
@@ -75,7 +74,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     LHHChatsSearchResultsViewController *resultVC = [[LHHChatsSearchResultsViewController alloc] init];
-    [self.navigationController pushViewController:resultVC animated:YES];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:resultVC];
+    [self presentViewController:nav animated:YES completion:NULL];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return HeightForChatsContentCell;
 }
 
 @end

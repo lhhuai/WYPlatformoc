@@ -118,7 +118,7 @@
     }];
 }
 
-#pragma - UITableViewDataSource
+#pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.dataArray.count;
 }
@@ -145,7 +145,7 @@
     [self.navigationController pushViewController:resultVC animated:YES];
 }
 
-#pragma - UITableViewDelegate
+#pragma mark - UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return HeightForChatsContentCell;
 }

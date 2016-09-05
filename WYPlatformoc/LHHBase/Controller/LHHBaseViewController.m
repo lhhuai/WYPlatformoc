@@ -31,7 +31,8 @@
 
 - (void)loadView {
     [super loadView];
-    self.view.backgroundColor = [UIColor whiteColor];
+//    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = COLOR_MAIN_BG;
     
     if ([[self.navigationController viewControllers] count] >= 2 && [self.navigationController topViewController] == self) {
         [self navigationLeftBack:self.leftTitle];
@@ -40,6 +41,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    if (self.navTitle != nil && ![self.navTitle isEqualToString:@""]) {
+        [self setWYTitle:self.navTitle];
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -146,8 +150,8 @@
     [self dismiss];
 }
 
-- (void)pushViewControllerWith:(NSString *)className leftTitle:(NSString *)leftTitle {
-    [self wy_pushViewControllerWith:className leftTitle:leftTitle];
+- (void)pushViewControllerWith:(NSString *)className leftTitle:(NSString *)leftTitle navTitle:(NSString *)navTitle {
+    [self wy_pushViewControllerWith:className leftTitle:leftTitle navTitle:navTitle];
 }
 
 // controller从下往上出现

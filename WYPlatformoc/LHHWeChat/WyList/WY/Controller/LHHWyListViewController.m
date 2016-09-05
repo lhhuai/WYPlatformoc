@@ -44,11 +44,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self setWYTitle:@"WyList"];
     
     self.dataArray = @[@[@{kSectionBlankHeight:@WY_SIZE(22), kCellSelectionStyle:@"None"},
                          @{kImageName:@"wechat_me_setting", kTitleName:@"Vote", kClassName:@"LHHVoteViewController", kCellType:@"Common", kCellSelectionStyle:@"Default"},
-                         @{kImageName:@"wechat_me_setting", kTitleName:@"no1", kClassName:@"", kCellType:@"Common", kCellSelectionStyle:@"Default"}],
+                         @{kImageName:@"wechat_me_setting", kTitleName:@"Number", kClassName:@"LHHWyNumberViewController", kCellType:@"Common", kCellSelectionStyle:@"Default"}],
                        
                        @[@{kSectionBlankHeight:@WY_SIZE(22), kCellSelectionStyle:@"None"},
                          @{kImageName:@"wechat_me_setting", kTitleName:@"no2", kClassName:@"", kCellType:@"Common", kCellSelectionStyle:@"Default"}]
@@ -118,7 +117,7 @@
     NSArray *rows = [self.dataArray objectAtIndex:indexPath.section];
     NSDictionary *dic = [rows objectAtIndex:indexPath.row];
     if ([NSClassFromString([dic objectForKey:kClassName]) isSubclassOfClass:[UIViewController class]]) {
-        [self pushViewControllerWith:[dic objectForKey:kClassName] leftTitle:@"WyList"];
+        [self pushViewControllerWith:[dic objectForKey:kClassName] leftTitle:@"WyList" navTitle:[dic objectForKey:kTitleName]];
     }
     
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];

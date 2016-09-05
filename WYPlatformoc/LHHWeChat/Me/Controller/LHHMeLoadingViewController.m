@@ -18,8 +18,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self setWYTitle:@"test"];
-    
     UIButton *startBtn = [[UIButton alloc] initWithFrame:CGRectMake(WY_SIZE(20), WY_SIZE(100), WY_SIZE(70), WY_SIZE(24))];
     [startBtn setTitle:@"start" forState:UIControlStateNormal];
     [startBtn setTitleColor:RGBCOLOR(0, 183, 0) forState:UIControlStateNormal];

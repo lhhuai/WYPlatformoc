@@ -14,6 +14,7 @@
 
 //@property (nonatomic, strong) LHHAlertView *hud;
 @property (nonatomic, strong) NSString *leftTitle;
+@property (nonatomic, strong) NSString *navTitle;
 
 - (void)dismiss;
 - (void)setWaiting:(BOOL)waiting title:(NSString *)title;
@@ -27,7 +28,7 @@
 + (void)customizeSearchBars;
 
 - (void)navigationLeftBack:(NSString *)title;
-- (void)pushViewControllerWith:(NSString *)className leftTitle:(NSString *)leftTitle;
+- (void)pushViewControllerWith:(NSString *)className leftTitle:(NSString *)leftTitle navTitle:(NSString *)navTitle;
 // controller从下往上出现
 - (void)pushViewController:(UIViewController *)viewController;
 // controller从上往下消失

@@ -79,11 +79,12 @@
 //    [self.navigationItem setRightBarButtonItem:nil];
 }
 
-- (void)wy_pushViewControllerWith:(NSString *)className leftTitle:(NSString *)leftTitle {
+- (void)wy_pushViewControllerWith:(NSString *)className leftTitle:(NSString *)leftTitle navTitle:(NSString *)navTitle {
     // 根据字典字段反射出我们想要的类，并初始化控制器
     Class class = NSClassFromString(className);
     LHHBaseViewController *vc = [[class alloc] init];
     vc.leftTitle = leftTitle;
+    vc.navTitle = navTitle;
     //    // 获取参数列表，使用枚举的方式，对控制器进行KVC赋值
     //    NSDictionary *parameter = dict[@"propertys"];
     //    [parameter enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {

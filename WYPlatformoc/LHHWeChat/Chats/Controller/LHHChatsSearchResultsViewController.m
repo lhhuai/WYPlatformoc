@@ -20,6 +20,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self setWYTitle:@"result"];
+    [self.navigationController setNavigationBarHidden:NO animated:NO];
     
     self.bgView = [[UIView alloc] initWithFrame:CGRectMake(0, PHONE_STATUSBAR_HEIGHT + PHONE_NAVIGATIONBAR_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT)];
     self.bgView.backgroundColor = COLOR_MAIN_BG;

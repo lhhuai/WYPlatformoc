@@ -44,7 +44,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setWYTitle:@"Settings"];
     
     self.dataArray = @[@[@{kSectionBlankHeight:@WY_SIZE(15), kCellSelectionStyle:@"None"},
                          @{kTitleName:@"My Account", kClassName:@"", kCellType:@"Protected", kCellSelectionStyle:@"Default"}],

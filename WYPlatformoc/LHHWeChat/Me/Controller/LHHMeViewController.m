@@ -173,7 +173,7 @@
     NSArray *rows = [self.dataArray objectAtIndex:indexPath.section];
     NSDictionary *dic = [rows objectAtIndex:indexPath.row];
     if ([NSClassFromString([dic objectForKey:kClassName]) isSubclassOfClass:[UIViewController class]]) {
-        [self pushViewControllerWith:[dic objectForKey:kClassName] leftTitle:@"Me"];
+        [self pushViewControllerWith:[dic objectForKey:kClassName] leftTitle:@"Me" navTitle:[dic objectForKey:kTitleName]];
     }
     
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
