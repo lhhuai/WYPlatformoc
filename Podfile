@@ -15,6 +15,7 @@ target 'WYPlatformoc' do
     #pod 'Masonry', '~> 1.0.0' # AutoLayout框架,链式编程思想
 #    pod 'ReactiveCocoa', '~> 4.1.0' # 综合函数式编程思想、响应式编程，此版本是兼容swift的，整合有问题
     pod 'ReactiveCocoa', '2.5'
+    pod 'AFNetworking', '~> 3.1.0'
 
     pod 'WYLibraries', '~> 1.1.5'
 
