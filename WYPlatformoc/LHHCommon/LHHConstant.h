@@ -17,5 +17,6 @@
 #import "UIColor+WYAddition.h"
 
 #import "LHHWeChatConstant.h"
+#import "LHHSql.h"
 
 #endif /* LHHConstant_h */

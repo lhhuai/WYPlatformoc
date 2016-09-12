@@ -8,10 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		550583FA1D7432A600D62126 /* LHHSpaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 550583F91D7432A600D62126 /* LHHSpaceCell.m */; };
-		550584021D7523DB00D62126 /* LHHWyListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 550583FF1D7523DB00D62126 /* LHHWyListViewController.m */; };
-		5505840C1D75244B00D62126 /* LHHVoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5505840B1D75244B00D62126 /* LHHVoteViewController.m */; };
 		5505840F1D75289E00D62126 /* vote.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5505840E1D75289E00D62126 /* vote.plist */; };
-		550584131D752BE700D62126 /* LHHVoteModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 550584121D752BE700D62126 /* LHHVoteModel.m */; };
 		5514E5811D659F62000CBFE3 /* LHHChatsSearchResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5514E5801D659F62000CBFE3 /* LHHChatsSearchResultsViewController.m */; };
 		55177D6E1C88130500C02910 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55177D6D1C88130500C02910 /* main.m */; };
 		55177D711C88130500C02910 /* LHHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55177D701C88130500C02910 /* LHHAppDelegate.m */; };
@@ -22,10 +19,7 @@
 		55177DA11C88137D00C02910 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55177D9B1C88137D00C02910 /* Default-568h@2x.png */; };
 		55177DA21C88137D00C02910 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 55177D9C1C88137D00C02910 /* Default.png */; };
 		55177DA31C88137D00C02910 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55177D9D1C88137D00C02910 /* Default@2x.png */; };
-		5535B20B1D7675FA00A0AEAA /* LHHVoteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5535B20A1D7675FA00A0AEAA /* LHHVoteCell.m */; };
 		553E57DB1C99159F00AB74B6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 553E57DA1C99159F00AB74B6 /* InfoPlist.strings */; };
-		5576CF341D780CE8006E707A /* LHHVoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5576CF331D780CE8006E707A /* LHHVoteView.m */; };
-		5576CF371D782922006E707A /* LHHPercentBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5576CF361D782922006E707A /* LHHPercentBar.m */; };
 		5587B5901D6165DD003252C6 /* LHHMeLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5587B58F1D6165DD003252C6 /* LHHMeLoadingViewController.m */; };
 		5587B59C1D61B78A003252C6 /* LHHChats.m in Sources */ = {isa = PBXBuildFile; fileRef = 5587B59B1D61B78A003252C6 /* LHHChats.m */; };
 		5587B5A11D61C11D003252C6 /* LHHChatsContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5587B59E1D61C11D003252C6 /* LHHChatsContentCell.m */; };
@@ -38,7 +32,15 @@
 		55C1E4A01D7D6758001057DD /* PPNumberButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C1E49F1D7D6758001057DD /* PPNumberButton.m */; };
 		55C1E4A51D7D6793001057DD /* UILabel+LHHAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C1E4A21D7D6793001057DD /* UILabel+LHHAddition.m */; };
 		55C1E4A61D7D6793001057DD /* UIView+LHHDraggable.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C1E4A41D7D6793001057DD /* UIView+LHHDraggable.m */; };
-		55C1E4AD1D7D6856001057DD /* LHHWyNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C1E4AC1D7D6856001057DD /* LHHWyNumberViewController.m */; };
+		55C1E4D31D865793001057DD /* LHHWyNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C1E4BB1D865793001057DD /* LHHWyNumberViewController.m */; };
+		55C1E4D41D865793001057DD /* LHHVoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C1E4C11D865793001057DD /* LHHVoteViewController.m */; };
+		55C1E4D51D865793001057DD /* LHHVoteModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C1E4C41D865793001057DD /* LHHVoteModel.m */; };
+		55C1E4D61D865793001057DD /* LHHPercentBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C1E4C71D865793001057DD /* LHHPercentBar.m */; };
+		55C1E4D71D865793001057DD /* LHHVoteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C1E4C91D865793001057DD /* LHHVoteCell.m */; };
+		55C1E4D81D865793001057DD /* LHHVoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C1E4CB1D865793001057DD /* LHHVoteView.m */; };
+		55C1E4D91D865793001057DD /* LHHWyListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C1E4D01D865793001057DD /* LHHWyListViewController.m */; };
+		55C1E4EB1D865D51001057DD /* LHHRacBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C1E4EA1D865D51001057DD /* LHHRacBaseModel.m */; };
+		55C1E4EE1D865D79001057DD /* LHHRacArticleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C1E4ED1D865D79001057DD /* LHHRacArticleModel.m */; };
 		55C4AB441D63FE110048FD2F /* LHHSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C4AB431D63FE110048FD2F /* LHHSearchController.m */; };
 		55C77F4A1C8D209000623D74 /* LHHRegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C77F491C8D209000623D74 /* LHHRegistViewController.m */; };
 		55C77F501C8D503800623D74 /* LHHRegistTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C77F4F1C8D503800623D74 /* LHHRegistTableViewCell.m */; };
@@ -78,6 +80,7 @@
 		55F515B31D5B437E0098CA7A /* LHHMeSettingCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F515B21D5B437E0098CA7A /* LHHMeSettingCellModel.m */; };
 		55F515B71D5B4DAC0098CA7A /* LHHWeChatButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F515B61D5B4DAC0098CA7A /* LHHWeChatButtonCell.m */; };
 		55F515BA1D5C24FA0098CA7A /* LHHBaseViewController+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F515B91D5C24FA0098CA7A /* LHHBaseViewController+Navigation.m */; };
+		636A501CFE0F86D782F02402 /* Pods_WYPlatformocTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B26CC04AB9C5EA849C0087F /* Pods_WYPlatformocTests.framework */; };
 		E7902E35B1A42A6FA3EFB74E /* Pods_WYPlatformoc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17D64C58974721ABB540B803 /* Pods_WYPlatformoc.framework */; };
 /* End PBXBuildFile section */
 
@@ -95,13 +98,7 @@
 		17D64C58974721ABB540B803 /* Pods_WYPlatformoc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WYPlatformoc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		550583F81D7432A600D62126 /* LHHSpaceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHSpaceCell.h; sourceTree = "<group>"; };
 		550583F91D7432A600D62126 /* LHHSpaceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHSpaceCell.m; sourceTree = "<group>"; };
-		550583FE1D7523DB00D62126 /* LHHWyListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHWyListViewController.h; sourceTree = "<group>"; };
-		550583FF1D7523DB00D62126 /* LHHWyListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHWyListViewController.m; sourceTree = "<group>"; };
-		5505840A1D75244B00D62126 /* LHHVoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHVoteViewController.h; sourceTree = "<group>"; };
-		5505840B1D75244B00D62126 /* LHHVoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHVoteViewController.m; sourceTree = "<group>"; };
 		5505840E1D75289E00D62126 /* vote.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = vote.plist; sourceTree = "<group>"; };
-		550584111D752BE700D62126 /* LHHVoteModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHVoteModel.h; sourceTree = "<group>"; };
-		550584121D752BE700D62126 /* LHHVoteModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHVoteModel.m; sourceTree = "<group>"; };
 		5514E57F1D659F62000CBFE3 /* LHHChatsSearchResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHChatsSearchResultsViewController.h; sourceTree = "<group>"; };
 		5514E5801D659F62000CBFE3 /* LHHChatsSearchResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHChatsSearchResultsViewController.m; sourceTree = "<group>"; };
 		55177D691C88130400C02910 /* WYPlatformoc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WYPlatformoc.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,13 +119,7 @@
 		55177D9D1C88137D00C02910 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		55177DA51C88205A00C02910 /* LHHCommonDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHCommonDefines.h; sourceTree = "<group>"; };
 		55177DA61C88207C00C02910 /* LHHCommonColors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LHHCommonColors.h; sourceTree = "<group>"; };
-		5535B2091D7675FA00A0AEAA /* LHHVoteCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHVoteCell.h; sourceTree = "<group>"; };
-		5535B20A1D7675FA00A0AEAA /* LHHVoteCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHVoteCell.m; sourceTree = "<group>"; };
 		553E57DA1C99159F00AB74B6 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
-		5576CF321D780CE8006E707A /* LHHVoteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHVoteView.h; sourceTree = "<group>"; };
-		5576CF331D780CE8006E707A /* LHHVoteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHVoteView.m; sourceTree = "<group>"; };
-		5576CF351D782922006E707A /* LHHPercentBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHPercentBar.h; sourceTree = "<group>"; };
-		5576CF361D782922006E707A /* LHHPercentBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHPercentBar.m; sourceTree = "<group>"; };
 		5587B58E1D6165DD003252C6 /* LHHMeLoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHMeLoadingViewController.h; sourceTree = "<group>"; };
 		5587B58F1D6165DD003252C6 /* LHHMeLoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHMeLoadingViewController.m; sourceTree = "<group>"; };
 		5587B59A1D61B78A003252C6 /* LHHChats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHChats.h; sourceTree = "<group>"; };
@@ -151,8 +142,26 @@
 		55C1E4A21D7D6793001057DD /* UILabel+LHHAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+LHHAddition.m"; sourceTree = "<group>"; };
 		55C1E4A31D7D6793001057DD /* UIView+LHHDraggable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LHHDraggable.h"; sourceTree = "<group>"; };
 		55C1E4A41D7D6793001057DD /* UIView+LHHDraggable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LHHDraggable.m"; sourceTree = "<group>"; };
-		55C1E4AB1D7D6856001057DD /* LHHWyNumberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHWyNumberViewController.h; sourceTree = "<group>"; };
-		55C1E4AC1D7D6856001057DD /* LHHWyNumberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHWyNumberViewController.m; sourceTree = "<group>"; };
+		55C1E4B21D864BBE001057DD /* LHHSql.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHSql.h; sourceTree = "<group>"; };
+		55C1E4BA1D865793001057DD /* LHHWyNumberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHWyNumberViewController.h; sourceTree = "<group>"; };
+		55C1E4BB1D865793001057DD /* LHHWyNumberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHWyNumberViewController.m; sourceTree = "<group>"; };
+		55C1E4C01D865793001057DD /* LHHVoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHVoteViewController.h; sourceTree = "<group>"; };
+		55C1E4C11D865793001057DD /* LHHVoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHVoteViewController.m; sourceTree = "<group>"; };
+		55C1E4C31D865793001057DD /* LHHVoteModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHVoteModel.h; sourceTree = "<group>"; };
+		55C1E4C41D865793001057DD /* LHHVoteModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHVoteModel.m; sourceTree = "<group>"; };
+		55C1E4C61D865793001057DD /* LHHPercentBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHPercentBar.h; sourceTree = "<group>"; };
+		55C1E4C71D865793001057DD /* LHHPercentBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHPercentBar.m; sourceTree = "<group>"; };
+		55C1E4C81D865793001057DD /* LHHVoteCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHVoteCell.h; sourceTree = "<group>"; };
+		55C1E4C91D865793001057DD /* LHHVoteCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHVoteCell.m; sourceTree = "<group>"; };
+		55C1E4CA1D865793001057DD /* LHHVoteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHVoteView.h; sourceTree = "<group>"; };
+		55C1E4CB1D865793001057DD /* LHHVoteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHVoteView.m; sourceTree = "<group>"; };
+		55C1E4CF1D865793001057DD /* LHHWyListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHWyListViewController.h; sourceTree = "<group>"; };
+		55C1E4D01D865793001057DD /* LHHWyListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHWyListViewController.m; sourceTree = "<group>"; };
+		55C1E4E81D865B2E001057DD /* LHHRacSQLInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHRacSQLInterface.h; sourceTree = "<group>"; };
+		55C1E4E91D865D51001057DD /* LHHRacBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHRacBaseModel.h; sourceTree = "<group>"; };
+		55C1E4EA1D865D51001057DD /* LHHRacBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHRacBaseModel.m; sourceTree = "<group>"; };
+		55C1E4EC1D865D79001057DD /* LHHRacArticleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHRacArticleModel.h; sourceTree = "<group>"; };
+		55C1E4ED1D865D79001057DD /* LHHRacArticleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHRacArticleModel.m; sourceTree = "<group>"; };
 		55C4AB421D63FE110048FD2F /* LHHSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHSearchController.h; sourceTree = "<group>"; };
 		55C4AB431D63FE110048FD2F /* LHHSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHSearchController.m; sourceTree = "<group>"; };
 		55C77F481C8D209000623D74 /* LHHRegistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHRegistViewController.h; sourceTree = "<group>"; };
@@ -228,8 +237,11 @@
 		55F515B61D5B4DAC0098CA7A /* LHHWeChatButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHWeChatButtonCell.m; sourceTree = "<group>"; };
 		55F515B81D5C24FA0098CA7A /* LHHBaseViewController+Navigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LHHBaseViewController+Navigation.h"; sourceTree = "<group>"; };
 		55F515B91D5C24FA0098CA7A /* LHHBaseViewController+Navigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LHHBaseViewController+Navigation.m"; sourceTree = "<group>"; };
+		5B26CC04AB9C5EA849C0087F /* Pods_WYPlatformocTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WYPlatformocTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A371F72AEE680CCC801B5DAE /* Pods-WYPlatformocTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WYPlatformocTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WYPlatformocTests/Pods-WYPlatformocTests.release.xcconfig"; sourceTree = "<group>"; };
 		ACFC21F61AB6D3DC5EFC60DE /* Pods-WYPlatformoc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WYPlatformoc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WYPlatformoc/Pods-WYPlatformoc.debug.xcconfig"; sourceTree = "<group>"; };
 		C4F3EBF552AA94C3D54ACDB7 /* Pods-WYPlatformoc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WYPlatformoc.release.xcconfig"; path = "Pods/Target Support Files/Pods-WYPlatformoc/Pods-WYPlatformoc.release.xcconfig"; sourceTree = "<group>"; };
+		CA73A6EE8F04DB0D3B5CA1FC /* Pods-WYPlatformocTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WYPlatformocTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WYPlatformocTests/Pods-WYPlatformocTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +257,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				636A501CFE0F86D782F02402 /* Pods_WYPlatformocTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,123 +268,9 @@
 			isa = PBXGroup;
 			children = (
 				17D64C58974721ABB540B803 /* Pods_WYPlatformoc.framework */,
+				5B26CC04AB9C5EA849C0087F /* Pods_WYPlatformocTests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		550583F11D74311F00D62126 /* WyList */ = {
-			isa = PBXGroup;
-			children = (
-				550583FC1D7523DB00D62126 /* WY */,
-				550583FB1D7523DB00D62126 /* Vote */,
-				55C1E4A71D7D6810001057DD /* Number */,
-				550584061D75242E00D62126 /* null */,
-			);
-			path = WyList;
-			sourceTree = "<group>";
-		};
-		550583FB1D7523DB00D62126 /* Vote */ = {
-			isa = PBXGroup;
-			children = (
-				550584031D75240E00D62126 /* Controller */,
-				550584041D75240E00D62126 /* View */,
-				550584101D752BAA00D62126 /* Model */,
-				550584051D75240E00D62126 /* Widget */,
-			);
-			path = Vote;
-			sourceTree = "<group>";
-		};
-		550583FC1D7523DB00D62126 /* WY */ = {
-			isa = PBXGroup;
-			children = (
-				550583FD1D7523DB00D62126 /* Controller */,
-				550584001D7523DB00D62126 /* View */,
-				550584011D7523DB00D62126 /* Widget */,
-			);
-			path = WY;
-			sourceTree = "<group>";
-		};
-		550583FD1D7523DB00D62126 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				550583FE1D7523DB00D62126 /* LHHWyListViewController.h */,
-				550583FF1D7523DB00D62126 /* LHHWyListViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		550584001D7523DB00D62126 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		550584011D7523DB00D62126 /* Widget */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Widget;
-			sourceTree = "<group>";
-		};
-		550584031D75240E00D62126 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				5505840A1D75244B00D62126 /* LHHVoteViewController.h */,
-				5505840B1D75244B00D62126 /* LHHVoteViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		550584041D75240E00D62126 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				5535B2091D7675FA00A0AEAA /* LHHVoteCell.h */,
-				5535B20A1D7675FA00A0AEAA /* LHHVoteCell.m */,
-				5576CF321D780CE8006E707A /* LHHVoteView.h */,
-				5576CF331D780CE8006E707A /* LHHVoteView.m */,
-				5576CF351D782922006E707A /* LHHPercentBar.h */,
-				5576CF361D782922006E707A /* LHHPercentBar.m */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		550584051D75240E00D62126 /* Widget */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Widget;
-			sourceTree = "<group>";
-		};
-		550584061D75242E00D62126 /* null */ = {
-			isa = PBXGroup;
-			children = (
-				550584071D75242E00D62126 /* Controller */,
-				550584081D75242E00D62126 /* View */,
-				550584091D75242E00D62126 /* Widget */,
-			);
-			path = null;
-			sourceTree = "<group>";
-		};
-		550584071D75242E00D62126 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		550584081D75242E00D62126 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		550584091D75242E00D62126 /* Widget */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Widget;
 			sourceTree = "<group>";
 		};
 		5505840D1D75289E00D62126 /* Plist */ = {
@@ -381,15 +280,6 @@
 				55C1E4911D797D21001057DD /* vote_1.plist */,
 			);
 			path = Plist;
-			sourceTree = "<group>";
-		};
-		550584101D752BAA00D62126 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				550584111D752BE700D62126 /* LHHVoteModel.h */,
-				550584121D752BE700D62126 /* LHHVoteModel.m */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		55177D601C88130400C02910 = {
@@ -422,6 +312,7 @@
 				55177D931C88137D00C02910 /* LHHLogin */,
 				55C77F471C8D206400623D74 /* LHHRegist */,
 				55F2CF6B1D485282007F06CA /* LHHWeChat */,
+				55C1E4B31D865793001057DD /* WyList */,
 				55177D6F1C88130500C02910 /* LHHAppDelegate.h */,
 				55177D701C88130500C02910 /* LHHAppDelegate.m */,
 				55177D781C88130500C02910 /* Assets.xcassets */,
@@ -492,6 +383,7 @@
 				55177DA51C88205A00C02910 /* LHHCommonDefines.h */,
 				55177DA61C88207C00C02910 /* LHHCommonColors.h */,
 				55F515A21D5AD1D30098CA7A /* LHHWeChatConstant.h */,
+				55C1E4B21D864BBE001057DD /* LHHSql.h */,
 				55F2CF5A1D4604B9007F06CA /* LHHBaseServiceSession.h */,
 				55F2CF5B1D4604B9007F06CA /* LHHBaseServiceSession.m */,
 				55CE33661D489EC7000621F2 /* LHHAdaptiveManager.h */,
@@ -532,37 +424,270 @@
 			path = LHHUIKit;
 			sourceTree = "<group>";
 		};
-		55C1E4A71D7D6810001057DD /* Number */ = {
+		55C1E4B31D865793001057DD /* WyList */ = {
 			isa = PBXGroup;
 			children = (
-				55C1E4A81D7D6810001057DD /* Controller */,
-				55C1E4A91D7D6810001057DD /* View */,
-				55C1E4AA1D7D6810001057DD /* Widget */,
+				55C1E4B41D865793001057DD /* null */,
+				55C1E4CD1D865793001057DD /* WY */,
+				55C1E4BE1D865793001057DD /* Vote */,
+				55C1E4B81D865793001057DD /* Number */,
+				55C1E4DA1D8659B2001057DD /* MVVM */,
 			);
-			path = Number;
+			path = WyList;
 			sourceTree = "<group>";
 		};
-		55C1E4A81D7D6810001057DD /* Controller */ = {
+		55C1E4B41D865793001057DD /* null */ = {
 			isa = PBXGroup;
 			children = (
-				55C1E4AB1D7D6856001057DD /* LHHWyNumberViewController.h */,
-				55C1E4AC1D7D6856001057DD /* LHHWyNumberViewController.m */,
+				55C1E4B51D865793001057DD /* Controller */,
+				55C1E4B61D865793001057DD /* View */,
+				55C1E4B71D865793001057DD /* Widget */,
+			);
+			path = null;
+			sourceTree = "<group>";
+		};
+		55C1E4B51D865793001057DD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		55C1E4A91D7D6810001057DD /* View */ = {
+		55C1E4B61D865793001057DD /* View */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		55C1E4AA1D7D6810001057DD /* Widget */ = {
+		55C1E4B71D865793001057DD /* Widget */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Widget;
+			sourceTree = "<group>";
+		};
+		55C1E4B81D865793001057DD /* Number */ = {
+			isa = PBXGroup;
+			children = (
+				55C1E4B91D865793001057DD /* Controller */,
+				55C1E4BC1D865793001057DD /* View */,
+				55C1E4BD1D865793001057DD /* Widget */,
+			);
+			path = Number;
+			sourceTree = "<group>";
+		};
+		55C1E4B91D865793001057DD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				55C1E4BA1D865793001057DD /* LHHWyNumberViewController.h */,
+				55C1E4BB1D865793001057DD /* LHHWyNumberViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		55C1E4BC1D865793001057DD /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		55C1E4BD1D865793001057DD /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
+		55C1E4BE1D865793001057DD /* Vote */ = {
+			isa = PBXGroup;
+			children = (
+				55C1E4BF1D865793001057DD /* Controller */,
+				55C1E4C21D865793001057DD /* Model */,
+				55C1E4C51D865793001057DD /* View */,
+				55C1E4CC1D865793001057DD /* Widget */,
+			);
+			path = Vote;
+			sourceTree = "<group>";
+		};
+		55C1E4BF1D865793001057DD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				55C1E4C01D865793001057DD /* LHHVoteViewController.h */,
+				55C1E4C11D865793001057DD /* LHHVoteViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		55C1E4C21D865793001057DD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				55C1E4C31D865793001057DD /* LHHVoteModel.h */,
+				55C1E4C41D865793001057DD /* LHHVoteModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		55C1E4C51D865793001057DD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				55C1E4C61D865793001057DD /* LHHPercentBar.h */,
+				55C1E4C71D865793001057DD /* LHHPercentBar.m */,
+				55C1E4C81D865793001057DD /* LHHVoteCell.h */,
+				55C1E4C91D865793001057DD /* LHHVoteCell.m */,
+				55C1E4CA1D865793001057DD /* LHHVoteView.h */,
+				55C1E4CB1D865793001057DD /* LHHVoteView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		55C1E4CC1D865793001057DD /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
+		55C1E4CD1D865793001057DD /* WY */ = {
+			isa = PBXGroup;
+			children = (
+				55C1E4CE1D865793001057DD /* Controller */,
+				55C1E4D11D865793001057DD /* View */,
+				55C1E4D21D865793001057DD /* Widget */,
+			);
+			path = WY;
+			sourceTree = "<group>";
+		};
+		55C1E4CE1D865793001057DD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				55C1E4CF1D865793001057DD /* LHHWyListViewController.h */,
+				55C1E4D01D865793001057DD /* LHHWyListViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		55C1E4D11D865793001057DD /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		55C1E4D21D865793001057DD /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
+		55C1E4DA1D8659B2001057DD /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				55C1E4DB1D8659B2001057DD /* Interface */,
+				55C1E4DC1D8659B2001057DD /* Model */,
+				55C1E4DF1D8659B2001057DD /* Module */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		55C1E4DB1D8659B2001057DD /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				55C1E4E81D865B2E001057DD /* LHHRacSQLInterface.h */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		55C1E4DC1D8659B2001057DD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				55C1E4DD1D8659B2001057DD /* Article */,
+				55C1E4DE1D8659B2001057DD /* Base */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		55C1E4DD1D8659B2001057DD /* Article */ = {
+			isa = PBXGroup;
+			children = (
+				55C1E4EC1D865D79001057DD /* LHHRacArticleModel.h */,
+				55C1E4ED1D865D79001057DD /* LHHRacArticleModel.m */,
+			);
+			path = Article;
+			sourceTree = "<group>";
+		};
+		55C1E4DE1D8659B2001057DD /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				55C1E4E91D865D51001057DD /* LHHRacBaseModel.h */,
+				55C1E4EA1D865D51001057DD /* LHHRacBaseModel.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		55C1E4DF1D8659B2001057DD /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				55C1E4E01D8659B2001057DD /* Base */,
+				55C1E4E31D8659B2001057DD /* HomePage */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		55C1E4E01D8659B2001057DD /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				55C1E4E11D8659B2001057DD /* ViewController */,
+				55C1E4E21D8659B2001057DD /* ViewModel */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		55C1E4E11D8659B2001057DD /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		55C1E4E21D8659B2001057DD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		55C1E4E31D8659B2001057DD /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				55C1E4E41D8659B2001057DD /* View */,
+				55C1E4E51D8659B2001057DD /* ViewController */,
+				55C1E4E61D8659B2001057DD /* ViewModel */,
+			);
+			path = HomePage;
+			sourceTree = "<group>";
+		};
+		55C1E4E41D8659B2001057DD /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		55C1E4E51D8659B2001057DD /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		55C1E4E61D8659B2001057DD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		55C77F471C8D206400623D74 /* LHHRegist */ = {
@@ -666,7 +791,6 @@
 				55F515851D5AC7700098CA7A /* Contacts */,
 				55F5158B1D5AC7700098CA7A /* Discover */,
 				55F515911D5AC7700098CA7A /* Me */,
-				550583F11D74311F00D62126 /* WyList */,
 			);
 			path = LHHWeChat;
 			sourceTree = "<group>";
@@ -847,6 +971,8 @@
 			children = (
 				ACFC21F61AB6D3DC5EFC60DE /* Pods-WYPlatformoc.debug.xcconfig */,
 				C4F3EBF552AA94C3D54ACDB7 /* Pods-WYPlatformoc.release.xcconfig */,
+				CA73A6EE8F04DB0D3B5CA1FC /* Pods-WYPlatformocTests.debug.xcconfig */,
+				A371F72AEE680CCC801B5DAE /* Pods-WYPlatformocTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -878,9 +1004,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 55177D8E1C88130500C02910 /* Build configuration list for PBXNativeTarget "WYPlatformocTests" */;
 			buildPhases = (
+				FC24A1DDF95161634EAF1117 /* 📦 Check Pods Manifest.lock */,
 				55177D7E1C88130500C02910 /* Sources */,
 				55177D7F1C88130500C02910 /* Frameworks */,
 				55177D801C88130500C02910 /* Resources */,
+				F4602D0D95B76D6CE692FFC5 /* 📦 Embed Pods Frameworks */,
+				B25AB7BB054DE915A4D92788 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -995,6 +1124,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		B25AB7BB054DE915A4D92788 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WYPlatformocTests/Pods-WYPlatformocTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E43686731EF26A5402962F62 /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1010,6 +1154,36 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WYPlatformoc/Pods-WYPlatformoc-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F4602D0D95B76D6CE692FFC5 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WYPlatformocTests/Pods-WYPlatformocTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC24A1DDF95161634EAF1117 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1019,21 +1193,20 @@
 			files = (
 				55C4AB441D63FE110048FD2F /* LHHSearchController.m in Sources */,
 				55EBBFA41D4AFBE20014342C /* LHHLaunchViewController.m in Sources */,
+				55C1E4EB1D865D51001057DD /* LHHRacBaseModel.m in Sources */,
 				55F2CF5C1D4604B9007F06CA /* LHHBaseServiceSession.m in Sources */,
 				55177D711C88130500C02910 /* LHHAppDelegate.m in Sources */,
-				550584131D752BE700D62126 /* LHHVoteModel.m in Sources */,
+				55C1E4EE1D865D79001057DD /* LHHRacArticleModel.m in Sources */,
 				55F5159E1D5AC7700098CA7A /* LHHMeViewController.m in Sources */,
 				55F2CF6A1D484F8B007F06CA /* LHHMainViewController.m in Sources */,
+				55C1E4D61D865793001057DD /* LHHPercentBar.m in Sources */,
 				55CE33841D48BACD000621F2 /* LHHBaseViewController.m in Sources */,
-				550584021D7523DB00D62126 /* LHHWyListViewController.m in Sources */,
 				55F515A81D5B01F10098CA7A /* LHHMeSettingViewController.m in Sources */,
+				55C1E4D31D865793001057DD /* LHHWyNumberViewController.m in Sources */,
 				55177D9E1C88137D00C02910 /* LHHLoginTableViewCell.m in Sources */,
 				55F515B71D5B4DAC0098CA7A /* LHHWeChatButtonCell.m in Sources */,
-				5535B20B1D7675FA00A0AEAA /* LHHVoteCell.m in Sources */,
 				55CE336B1D489EC7000621F2 /* UIDevice+UIDeviceExt.m in Sources */,
 				5587B5901D6165DD003252C6 /* LHHMeLoadingViewController.m in Sources */,
-				5576CF341D780CE8006E707A /* LHHVoteView.m in Sources */,
-				5576CF371D782922006E707A /* LHHPercentBar.m in Sources */,
 				55F515BA1D5C24FA0098CA7A /* LHHBaseViewController+Navigation.m in Sources */,
 				55F5159F1D5AC7700098CA7A /* LHHMeCommonCell.m in Sources */,
 				55CE33851D48BACD000621F2 /* LHHActionSheet.m in Sources */,
@@ -1053,10 +1226,14 @@
 				55F515B31D5B437E0098CA7A /* LHHMeSettingCellModel.m in Sources */,
 				55CE33861D48BACD000621F2 /* LHHAlertView.m in Sources */,
 				55CE336A1D489EC7000621F2 /* LHHAdaptiveManager.m in Sources */,
+				55C1E4D41D865793001057DD /* LHHVoteViewController.m in Sources */,
+				55C1E4D81D865793001057DD /* LHHVoteView.m in Sources */,
 				5587B5B01D62C122003252C6 /* LHHPager.m in Sources */,
 				55177D9F1C88137D00C02910 /* LHHLoginViewController.m in Sources */,
 				55CE33771D48A4A3000621F2 /* LHHUser.m in Sources */,
+				55C1E4D71D865793001057DD /* LHHVoteCell.m in Sources */,
 				55CE33781D48A4A3000621F2 /* LHHUserManager.m in Sources */,
+				55C1E4D91D865793001057DD /* LHHWyListViewController.m in Sources */,
 				55C77F4A1C8D209000623D74 /* LHHRegistViewController.m in Sources */,
 				55F515AB1D5B20890098CA7A /* LHHMeSettingCell.m in Sources */,
 				5587B5A11D61C11D003252C6 /* LHHChatsContentCell.m in Sources */,
@@ -1067,9 +1244,8 @@
 				55C1E4A61D7D6793001057DD /* UIView+LHHDraggable.m in Sources */,
 				55F2CF5F1D4604FA007F06CA /* LHHRegistSession.m in Sources */,
 				55F5159B1D5AC7700098CA7A /* LHHChatsViewController.m in Sources */,
-				55C1E4AD1D7D6856001057DD /* LHHWyNumberViewController.m in Sources */,
+				55C1E4D51D865793001057DD /* LHHVoteModel.m in Sources */,
 				5587B59C1D61B78A003252C6 /* LHHChats.m in Sources */,
-				5505840C1D75244B00D62126 /* LHHVoteViewController.m in Sources */,
 				55177D6E1C88130500C02910 /* main.m in Sources */,
 				55EBBFBA1D5211910014342C /* LHHUserPreferences.m in Sources */,
 			);
@@ -1218,6 +1394,7 @@
 		};
 		55177D8F1C88130500C02910 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA73A6EE8F04DB0D3B5CA1FC /* Pods-WYPlatformocTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = WYPlatformocTests/Info.plist;
@@ -1230,6 +1407,7 @@
 		};
 		55177D901C88130500C02910 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A371F72AEE680CCC801B5DAE /* Pods-WYPlatformocTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = WYPlatformocTests/Info.plist;

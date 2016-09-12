@@ -40,6 +40,13 @@ PODS:
   - MBProgressHUD (0.9.2)
   - MJExtension (3.0.10)
   - Reachability (3.2)
+  - ReactiveCocoa (2.5):
+    - ReactiveCocoa/UI (= 2.5)
+  - ReactiveCocoa/Core (2.5):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.5)
+  - ReactiveCocoa/UI (2.5):
+    - ReactiveCocoa/Core
   - WYLibraries (1.1.5):
     - WYLibraries/WYFoundation (= 1.1.5)
     - WYLibraries/WYUIKit (= 1.1.5)
@@ -53,6 +60,7 @@ DEPENDENCIES:
   - MBProgressHUD (~> 0.9.2)
   - MJExtension (~> 3.0.10)
   - Reachability (~> 3.2)
+  - ReactiveCocoa (= 2.5)
   - WYLibraries (~> 1.1.5)
 
 SPEC CHECKSUMS:
@@ -61,8 +69,9 @@ SPEC CHECKSUMS:
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MJExtension: d86aacb740c87519d20e3cca55b6fa4be6cc7548
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   WYLibraries: 39e772ac99dbebd7025f9a70b35dfe021067607d
 
-PODFILE CHECKSUM: 58a77aaeb097324c15bf79ac48c5c73f418e86bb
+PODFILE CHECKSUM: 25d0f82e767bad1e32de00e21acaa9a1cbce27d8
 
 COCOAPODS: 1.0.0

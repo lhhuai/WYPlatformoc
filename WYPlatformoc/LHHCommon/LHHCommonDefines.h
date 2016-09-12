@@ -39,8 +39,20 @@
 #define kLHHGotoWechatViewController                     @"LHHGotoWechatViewController"
 
 #if __IPHONE_OS_VERSION_MIN_REQUIRED >= 70000
-#define WY_TEXTSIZE(text, font) [text length] > 0 ? [text sizeWithAttributes:@{NSFontAttributeName:font}] : CGSizeZero;
+#define WY_TEXTSIZE(text, font) [text length] > 0 ? [text sizeWithAttributes:@{NSFontAttributeName:font}] : CGSizeZero
 #else
-#define WY_TEXTSIZE(text, font) [text length] > 0 ? [text sizeWithFont:font] : CGSizeZero;
+#define WY_TEXTSIZE(text, font) [text length] > 0 ? [text sizeWithFont:font] : CGSizeZero
 
 #endif
+
+
+
+#define WY_DOCUMENT_DIRECTORY    NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject
+
+#define WY_APP_NAME              ([[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleName"])
+#define WY_APP_VERSION           ([[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"])
+#define WY_APP_BUILD             ([[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"])
+
+
+
+
