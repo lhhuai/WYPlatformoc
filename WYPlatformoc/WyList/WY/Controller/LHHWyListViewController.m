@@ -29,8 +29,6 @@
 - (void)loadView {
     [super loadView];
     
-    self.view.backgroundColor = COLOR_MAIN_BG;
-    
     CGRect tableViewFrame = CGRectMake(0, 0, SCREEN_WIDTH, VIEW_HIDETABBAR_HEIGHT);
     self.tableView = [[UITableView alloc] initWithFrame:tableViewFrame style:UITableViewStylePlain];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -38,7 +36,7 @@
     self.tableView.backgroundColor = [UIColor clearColor];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    [self.view addSubview:_tableView];
+    [self.view addSubview:self.tableView];
 }
 
 - (void)viewDidLoad {
@@ -47,7 +45,8 @@
     
     self.dataArray = @[@[@{kSectionBlankHeight:@WY_SIZE(22), kCellSelectionStyle:@"None"},
                          @{kImageName:@"wechat_me_setting", kTitleName:@"Vote", kClassName:@"LHHVoteViewController", kCellType:@"Common", kCellSelectionStyle:@"Default"},
-                         @{kImageName:@"wechat_me_setting", kTitleName:@"Number", kClassName:@"LHHWyNumberViewController", kCellType:@"Common", kCellSelectionStyle:@"Default"}],
+                         @{kImageName:@"wechat_me_setting", kTitleName:@"Number", kClassName:@"LHHWyNumberViewController", kCellType:@"Common", kCellSelectionStyle:@"Default"},
+                         @{kImageName:@"wechat_me_setting", kTitleName:@"RacMvvm", kClassName:@"LHHRacMvvmViewController", kCellType:@"Common", kCellSelectionStyle:@"Default"}],
                        
                        @[@{kSectionBlankHeight:@WY_SIZE(22), kCellSelectionStyle:@"None"},
                          @{kImageName:@"wechat_me_setting", kTitleName:@"test", kClassName:@"", kCellType:@"Common", kCellSelectionStyle:@"Default"}]

@@ -39,8 +39,14 @@
 		55C1E4D71D865793001057DD /* LHHVoteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C1E4C91D865793001057DD /* LHHVoteCell.m */; };
 		55C1E4D81D865793001057DD /* LHHVoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C1E4CB1D865793001057DD /* LHHVoteView.m */; };
 		55C1E4D91D865793001057DD /* LHHWyListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C1E4D01D865793001057DD /* LHHWyListViewController.m */; };
-		55C1E4EB1D865D51001057DD /* LHHRacBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C1E4EA1D865D51001057DD /* LHHRacBaseModel.m */; };
-		55C1E4EE1D865D79001057DD /* LHHRacArticleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C1E4ED1D865D79001057DD /* LHHRacArticleModel.m */; };
+		55C1E5101D868387001057DD /* LHHRacArticleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C1E4FE1D868386001057DD /* LHHRacArticleModel.m */; };
+		55C1E5111D868387001057DD /* LHHRacBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C1E5011D868386001057DD /* LHHRacBaseModel.m */; };
+		55C1E5121D868387001057DD /* LHHRacBaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C1E5071D868387001057DD /* LHHRacBaseViewModel.m */; };
+		55C1E5131D868387001057DD /* LHHRacRequestViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C1E5091D868387001057DD /* LHHRacRequestViewModel.m */; };
+		55C1E5141D868387001057DD /* LHHRacMvvmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C1E50E1D868387001057DD /* LHHRacMvvmViewController.m */; };
+		55C1E5171D868B28001057DD /* LHHRacArticleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C1E5161D868B28001057DD /* LHHRacArticleCell.m */; };
+		55C1E51A1D869377001057DD /* LHHRacArticleViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C1E5191D869377001057DD /* LHHRacArticleViewModel.m */; };
+		55C1E51D1D869393001057DD /* LHHRacArticleCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C1E51C1D869393001057DD /* LHHRacArticleCellViewModel.m */; };
 		55C4AB441D63FE110048FD2F /* LHHSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C4AB431D63FE110048FD2F /* LHHSearchController.m */; };
 		55C77F4A1C8D209000623D74 /* LHHRegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C77F491C8D209000623D74 /* LHHRegistViewController.m */; };
 		55C77F501C8D503800623D74 /* LHHRegistTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C77F4F1C8D503800623D74 /* LHHRegistTableViewCell.m */; };
@@ -157,11 +163,23 @@
 		55C1E4CB1D865793001057DD /* LHHVoteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHVoteView.m; sourceTree = "<group>"; };
 		55C1E4CF1D865793001057DD /* LHHWyListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHWyListViewController.h; sourceTree = "<group>"; };
 		55C1E4D01D865793001057DD /* LHHWyListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHWyListViewController.m; sourceTree = "<group>"; };
-		55C1E4E81D865B2E001057DD /* LHHRacSQLInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHRacSQLInterface.h; sourceTree = "<group>"; };
-		55C1E4E91D865D51001057DD /* LHHRacBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHRacBaseModel.h; sourceTree = "<group>"; };
-		55C1E4EA1D865D51001057DD /* LHHRacBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHRacBaseModel.m; sourceTree = "<group>"; };
-		55C1E4EC1D865D79001057DD /* LHHRacArticleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHRacArticleModel.h; sourceTree = "<group>"; };
-		55C1E4ED1D865D79001057DD /* LHHRacArticleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHRacArticleModel.m; sourceTree = "<group>"; };
+		55C1E4FA1D868386001057DD /* LHHRacSQLInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHRacSQLInterface.h; sourceTree = "<group>"; };
+		55C1E4FD1D868386001057DD /* LHHRacArticleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHRacArticleModel.h; sourceTree = "<group>"; };
+		55C1E4FE1D868386001057DD /* LHHRacArticleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHRacArticleModel.m; sourceTree = "<group>"; };
+		55C1E5001D868386001057DD /* LHHRacBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHRacBaseModel.h; sourceTree = "<group>"; };
+		55C1E5011D868386001057DD /* LHHRacBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHRacBaseModel.m; sourceTree = "<group>"; };
+		55C1E5061D868386001057DD /* LHHRacBaseViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHRacBaseViewModel.h; sourceTree = "<group>"; };
+		55C1E5071D868387001057DD /* LHHRacBaseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHRacBaseViewModel.m; sourceTree = "<group>"; };
+		55C1E5081D868387001057DD /* LHHRacRequestViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHRacRequestViewModel.h; sourceTree = "<group>"; };
+		55C1E5091D868387001057DD /* LHHRacRequestViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHRacRequestViewModel.m; sourceTree = "<group>"; };
+		55C1E50D1D868387001057DD /* LHHRacMvvmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHRacMvvmViewController.h; sourceTree = "<group>"; };
+		55C1E50E1D868387001057DD /* LHHRacMvvmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHRacMvvmViewController.m; sourceTree = "<group>"; };
+		55C1E5151D868B28001057DD /* LHHRacArticleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHRacArticleCell.h; sourceTree = "<group>"; };
+		55C1E5161D868B28001057DD /* LHHRacArticleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHRacArticleCell.m; sourceTree = "<group>"; };
+		55C1E5181D869377001057DD /* LHHRacArticleViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHRacArticleViewModel.h; sourceTree = "<group>"; };
+		55C1E5191D869377001057DD /* LHHRacArticleViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHRacArticleViewModel.m; sourceTree = "<group>"; };
+		55C1E51B1D869393001057DD /* LHHRacArticleCellViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHRacArticleCellViewModel.h; sourceTree = "<group>"; };
+		55C1E51C1D869393001057DD /* LHHRacArticleCellViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHRacArticleCellViewModel.m; sourceTree = "<group>"; };
 		55C4AB421D63FE110048FD2F /* LHHSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHSearchController.h; sourceTree = "<group>"; };
 		55C4AB431D63FE110048FD2F /* LHHSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHSearchController.m; sourceTree = "<group>"; };
 		55C77F481C8D209000623D74 /* LHHRegistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHRegistViewController.h; sourceTree = "<group>"; };
@@ -431,7 +449,7 @@
 				55C1E4CD1D865793001057DD /* WY */,
 				55C1E4BE1D865793001057DD /* Vote */,
 				55C1E4B81D865793001057DD /* Number */,
-				55C1E4DA1D8659B2001057DD /* MVVM */,
+				55C1E4F81D868386001057DD /* RacMvvm */,
 			);
 			path = WyList;
 			sourceTree = "<group>";
@@ -582,110 +600,122 @@
 			path = Widget;
 			sourceTree = "<group>";
 		};
-		55C1E4DA1D8659B2001057DD /* MVVM */ = {
+		55C1E4F81D868386001057DD /* RacMvvm */ = {
 			isa = PBXGroup;
 			children = (
-				55C1E4DB1D8659B2001057DD /* Interface */,
-				55C1E4DC1D8659B2001057DD /* Model */,
-				55C1E4DF1D8659B2001057DD /* Module */,
+				55C1E4F91D868386001057DD /* Interface */,
+				55C1E4FB1D868386001057DD /* Model */,
+				55C1E5021D868386001057DD /* Module */,
 			);
-			path = MVVM;
+			path = RacMvvm;
 			sourceTree = "<group>";
 		};
-		55C1E4DB1D8659B2001057DD /* Interface */ = {
+		55C1E4F91D868386001057DD /* Interface */ = {
 			isa = PBXGroup;
 			children = (
-				55C1E4E81D865B2E001057DD /* LHHRacSQLInterface.h */,
+				55C1E4FA1D868386001057DD /* LHHRacSQLInterface.h */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
 		};
-		55C1E4DC1D8659B2001057DD /* Model */ = {
+		55C1E4FB1D868386001057DD /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				55C1E4DD1D8659B2001057DD /* Article */,
-				55C1E4DE1D8659B2001057DD /* Base */,
+				55C1E4FC1D868386001057DD /* Article */,
+				55C1E4FF1D868386001057DD /* Base */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		55C1E4DD1D8659B2001057DD /* Article */ = {
+		55C1E4FC1D868386001057DD /* Article */ = {
 			isa = PBXGroup;
 			children = (
-				55C1E4EC1D865D79001057DD /* LHHRacArticleModel.h */,
-				55C1E4ED1D865D79001057DD /* LHHRacArticleModel.m */,
+				55C1E4FD1D868386001057DD /* LHHRacArticleModel.h */,
+				55C1E4FE1D868386001057DD /* LHHRacArticleModel.m */,
 			);
 			path = Article;
 			sourceTree = "<group>";
 		};
-		55C1E4DE1D8659B2001057DD /* Base */ = {
+		55C1E4FF1D868386001057DD /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				55C1E4E91D865D51001057DD /* LHHRacBaseModel.h */,
-				55C1E4EA1D865D51001057DD /* LHHRacBaseModel.m */,
+				55C1E5001D868386001057DD /* LHHRacBaseModel.h */,
+				55C1E5011D868386001057DD /* LHHRacBaseModel.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
 		};
-		55C1E4DF1D8659B2001057DD /* Module */ = {
+		55C1E5021D868386001057DD /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				55C1E4E01D8659B2001057DD /* Base */,
-				55C1E4E31D8659B2001057DD /* HomePage */,
+				55C1E5031D868386001057DD /* Base */,
+				55C1E50A1D868387001057DD /* HomePage */,
 			);
 			path = Module;
 			sourceTree = "<group>";
 		};
-		55C1E4E01D8659B2001057DD /* Base */ = {
+		55C1E5031D868386001057DD /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				55C1E4E11D8659B2001057DD /* ViewController */,
-				55C1E4E21D8659B2001057DD /* ViewModel */,
+				55C1E5041D868386001057DD /* ViewController */,
+				55C1E5051D868386001057DD /* ViewModel */,
 			);
 			path = Base;
 			sourceTree = "<group>";
 		};
-		55C1E4E11D8659B2001057DD /* ViewController */ = {
+		55C1E5041D868386001057DD /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		55C1E4E21D8659B2001057DD /* ViewModel */ = {
+		55C1E5051D868386001057DD /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				55C1E5061D868386001057DD /* LHHRacBaseViewModel.h */,
+				55C1E5071D868387001057DD /* LHHRacBaseViewModel.m */,
+				55C1E5081D868387001057DD /* LHHRacRequestViewModel.h */,
+				55C1E5091D868387001057DD /* LHHRacRequestViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		55C1E4E31D8659B2001057DD /* HomePage */ = {
+		55C1E50A1D868387001057DD /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
-				55C1E4E41D8659B2001057DD /* View */,
-				55C1E4E51D8659B2001057DD /* ViewController */,
-				55C1E4E61D8659B2001057DD /* ViewModel */,
+				55C1E50B1D868387001057DD /* View */,
+				55C1E50C1D868387001057DD /* ViewController */,
+				55C1E50F1D868387001057DD /* ViewModel */,
 			);
 			path = HomePage;
 			sourceTree = "<group>";
 		};
-		55C1E4E41D8659B2001057DD /* View */ = {
+		55C1E50B1D868387001057DD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				55C1E5151D868B28001057DD /* LHHRacArticleCell.h */,
+				55C1E5161D868B28001057DD /* LHHRacArticleCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		55C1E4E51D8659B2001057DD /* ViewController */ = {
+		55C1E50C1D868387001057DD /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				55C1E50D1D868387001057DD /* LHHRacMvvmViewController.h */,
+				55C1E50E1D868387001057DD /* LHHRacMvvmViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		55C1E4E61D8659B2001057DD /* ViewModel */ = {
+		55C1E50F1D868387001057DD /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				55C1E5181D869377001057DD /* LHHRacArticleViewModel.h */,
+				55C1E5191D869377001057DD /* LHHRacArticleViewModel.m */,
+				55C1E51B1D869393001057DD /* LHHRacArticleCellViewModel.h */,
+				55C1E51C1D869393001057DD /* LHHRacArticleCellViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1193,10 +1223,10 @@
 			files = (
 				55C4AB441D63FE110048FD2F /* LHHSearchController.m in Sources */,
 				55EBBFA41D4AFBE20014342C /* LHHLaunchViewController.m in Sources */,
-				55C1E4EB1D865D51001057DD /* LHHRacBaseModel.m in Sources */,
+				55C1E5111D868387001057DD /* LHHRacBaseModel.m in Sources */,
 				55F2CF5C1D4604B9007F06CA /* LHHBaseServiceSession.m in Sources */,
 				55177D711C88130500C02910 /* LHHAppDelegate.m in Sources */,
-				55C1E4EE1D865D79001057DD /* LHHRacArticleModel.m in Sources */,
+				55C1E5131D868387001057DD /* LHHRacRequestViewModel.m in Sources */,
 				55F5159E1D5AC7700098CA7A /* LHHMeViewController.m in Sources */,
 				55F2CF6A1D484F8B007F06CA /* LHHMainViewController.m in Sources */,
 				55C1E4D61D865793001057DD /* LHHPercentBar.m in Sources */,
@@ -1211,10 +1241,13 @@
 				55F5159F1D5AC7700098CA7A /* LHHMeCommonCell.m in Sources */,
 				55CE33851D48BACD000621F2 /* LHHActionSheet.m in Sources */,
 				55F2CF621D4760F2007F06CA /* LHHLoginSession.m in Sources */,
+				55C1E51D1D869393001057DD /* LHHRacArticleCellViewModel.m in Sources */,
 				5587B5A51D61C126003252C6 /* LHHChatsSession.m in Sources */,
 				5587B5A81D61C14B003252C6 /* LHHChatsSearchViewController.m in Sources */,
 				55C77F501C8D503800623D74 /* LHHRegistTableViewCell.m in Sources */,
 				5587B5A21D61C11D003252C6 /* LHHChatsHeaderCell.m in Sources */,
+				55C1E5141D868387001057DD /* LHHRacMvvmViewController.m in Sources */,
+				55C1E51A1D869377001057DD /* LHHRacArticleViewModel.m in Sources */,
 				55F515A01D5AC7700098CA7A /* LHHMeHeaderCell.m in Sources */,
 				55EBBFA81D4B5AAB0014342C /* LHHReachability.m in Sources */,
 				55F5159C1D5AC7700098CA7A /* LHHContactsViewController.m in Sources */,
@@ -1232,6 +1265,7 @@
 				55177D9F1C88137D00C02910 /* LHHLoginViewController.m in Sources */,
 				55CE33771D48A4A3000621F2 /* LHHUser.m in Sources */,
 				55C1E4D71D865793001057DD /* LHHVoteCell.m in Sources */,
+				55C1E5171D868B28001057DD /* LHHRacArticleCell.m in Sources */,
 				55CE33781D48A4A3000621F2 /* LHHUserManager.m in Sources */,
 				55C1E4D91D865793001057DD /* LHHWyListViewController.m in Sources */,
 				55C77F4A1C8D209000623D74 /* LHHRegistViewController.m in Sources */,
@@ -1243,10 +1277,12 @@
 				5514E5811D659F62000CBFE3 /* LHHChatsSearchResultsViewController.m in Sources */,
 				55C1E4A61D7D6793001057DD /* UIView+LHHDraggable.m in Sources */,
 				55F2CF5F1D4604FA007F06CA /* LHHRegistSession.m in Sources */,
+				55C1E5121D868387001057DD /* LHHRacBaseViewModel.m in Sources */,
 				55F5159B1D5AC7700098CA7A /* LHHChatsViewController.m in Sources */,
 				55C1E4D51D865793001057DD /* LHHVoteModel.m in Sources */,
 				5587B59C1D61B78A003252C6 /* LHHChats.m in Sources */,
 				55177D6E1C88130500C02910 /* main.m in Sources */,
+				55C1E5101D868387001057DD /* LHHRacArticleModel.m in Sources */,
 				55EBBFBA1D5211910014342C /* LHHUserPreferences.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

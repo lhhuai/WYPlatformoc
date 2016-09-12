@@ -7,7 +7,12 @@
 //
 
 #import "LHHRacArticleModel.h"
+#import <MJExtension/MJExtension.h>
 
 @implementation LHHRacArticleModel
+
++ (NSDictionary *)mj_replacedKeyFromPropertyName {
+    return @{@"articleId" : @"id"};
+}
 
 @end
